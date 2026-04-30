@@ -1,0 +1,23 @@
+project:
+  name: recomart_recommendation_pipeline
+  environment: dev
+
+aws:
+  region: ap-south-1
+  s3_bucket: recomartdatalake
+
+s3_paths:
+  events: raw/recomart/events
+  item_properties: raw/recomart/item_properties
+  category_tree: raw/recomart/category_tree
+  external_products: raw/external_api/dummyjson_products
+
+local_paths:
+  events: data/source/recomart/events.csv
+  item_properties_part1: data/source/recomart/item_properties_part1.csv
+  item_properties_part2: data/source/recomart/item_properties_part2.csv
+  category_tree: data/source/recomart/category_tree.csv
+
+external_api:
+  products_url: https://dummyjson.com/products
+  limit: 100

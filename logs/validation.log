@@ -1,0 +1,71 @@
+2026-04-30 16:10:09,856 | INFO | recomart_validation | Starting RecoMart data profiling and validation pipeline
+2026-04-30 16:10:10,816 | INFO | recomart_validation | Executing SQL file: sql/validation/01_profile_raw_data.sql
+2026-04-30 16:10:10,961 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:10:11,113 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:10:11,432 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:10:11,617 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:10:11,922 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:10:12,340 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:10:12,532 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:10:12,689 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:10:12,690 | INFO | recomart_validation | Executing SQL file: sql/validation/02_validate_raw_to_validated.sql
+2026-04-30 16:10:16,848 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:10:16,986 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:10:17,267 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:10:17,503 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:10:17,774 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:10:18,068 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:10:18,221 | ERROR | recomart_validation | Failed SQL statement: -- ============================================================
+-- Validate RecoMart events
+-- ============================================================
+
+INSERT INTO VALIDATED.RECOMART_EVENTS (
+    EVENT_ID,
+    EVENT_TIMESTAMP_MS,
+    EVENT_TS,
+    VISITOR_ID,
+    EVENT_TYPE,
+    ITEM_ID,
+    TR
+2026-04-30 16:10:18,222 | ERROR | recomart_validation | Error: 002211 (02000): SQL compilation error: error line 87 at position 4
+Session variable '$VALIDATION_BATCH_ID' does not exist
+2026-04-30 16:10:18,222 | ERROR | recomart_validation | Validation pipeline failed: 002211 (02000): SQL compilation error: error line 87 at position 4
+Session variable '$VALIDATION_BATCH_ID' does not exist
+2026-04-30 16:10:18,456 | INFO | recomart_validation | Snowflake connection closed
+2026-04-30 16:17:46,869 | INFO | recomart_validation | Starting RecoMart data profiling and validation pipeline
+2026-04-30 16:17:48,309 | INFO | recomart_validation | Executing SQL file: sql/validation/01_profile_raw_data.sql
+2026-04-30 16:17:48,445 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:17:48,562 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:17:48,699 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:17:48,813 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:17:48,923 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:17:49,065 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:17:49,188 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:17:49,307 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:17:49,307 | INFO | recomart_validation | Executing SQL file: sql/validation/02_validate_raw_to_validated.sql
+2026-04-30 16:17:49,420 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:17:49,531 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:17:49,674 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:17:49,800 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:17:49,914 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:17:50,193 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:17:50,467 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:17:50,705 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:17:50,956 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:17:55,601 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:18:07,747 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:18:09,061 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:18:09,375 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:18:09,376 | INFO | recomart_validation | Executing SQL file: sql/validation/03_data_quality_checks.sql
+2026-04-30 16:18:09,490 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:18:09,604 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:18:09,908 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:18:10,248 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:18:10,627 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:18:13,909 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:18:14,275 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:18:14,909 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:18:16,870 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:18:17,286 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 16:18:17,286 | INFO | recomart_validation | RecoMart data validation completed successfully
+2026-04-30 16:18:17,473 | INFO | recomart_validation | Snowflake connection closed
