@@ -1,0 +1,14 @@
+============================================================
+Starting command at Thu Apr 30 20:06:52 IST 2026
+Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python orchestration/run_sql_file.py sql/load_raw_from_s3.sql
+============================================================
+============================================================
+Finished command at Thu Apr 30 20:06:52 IST 2026 with exit code 0
+============================================================
+============================================================
+Starting command at Thu Apr 30 20:30:32 IST 2026
+Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python orchestration/run_sql_file.py sql/load_raw_from_s3.sql
+============================================================
+============================================================
+Finished command at Thu Apr 30 20:30:32 IST 2026 with exit code 0
+============================================================

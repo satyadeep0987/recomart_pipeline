@@ -1,5 +1,6 @@
 .env
 .venv
+airflow_cli_venv
 __pycache__/
 *.pyc
 data/source/recomart/*.csv

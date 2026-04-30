@@ -1,0 +1,39 @@
+2026-04-30 18:29:11,406 | INFO | recomart_model_training | Starting model training. run_id=c9ad0eb2-6594-45fa-b99a-54a485a014bc
+2026-04-30 18:29:13,525 | INFO | recomart_model_training | Using source_validation_batch_id=20260430030321
+2026-04-30 18:29:17,500 | INFO | recomart_model_training | Loaded training rows: 76603
+2026-04-30 18:58:11,349 | INFO | recomart_model_training | Starting model training. run_id=3571852c-5f20-4896-9202-1069a909c253
+2026-04-30 18:58:13,286 | INFO | recomart_model_training | Using source_validation_batch_id=20260430030321
+2026-04-30 18:58:23,466 | INFO | recomart_model_training | Loaded training rows: 10677
+2026-04-30 18:58:36,968 | INFO | recomart_model_training | Model training completed successfully. run_id=3571852c-5f20-4896-9202-1069a909c253
+2026-04-30 18:58:36,969 | INFO | recomart_model_training | Metrics: {
+  "precision_at_k": 0.008854166666666672,
+  "recall_at_k": 0.08854166666666667,
+  "ndcg_at_k": 0.05563388818864936,
+  "hit_rate_at_k": 0.08854166666666667,
+  "evaluated_users": 384
+}
+2026-04-30 18:58:37,155 | INFO | recomart_model_training | Snowflake connection closed
+2026-04-30 20:10:34,804 | INFO | recomart_model_training | Starting model training. run_id=26046283-e600-4c8c-84a4-991880d319dd
+2026-04-30 20:10:37,010 | INFO | recomart_model_training | Using source_validation_batch_id=20260430030321
+2026-04-30 20:10:38,841 | INFO | recomart_model_training | Loaded training rows: 10675
+2026-04-30 20:10:47,412 | INFO | recomart_model_training | Model training completed successfully. run_id=26046283-e600-4c8c-84a4-991880d319dd
+2026-04-30 20:10:47,412 | INFO | recomart_model_training | Metrics: {
+  "precision_at_k": 0.01059431524547804,
+  "recall_at_k": 0.10594315245478036,
+  "ndcg_at_k": 0.06589714858572993,
+  "hit_rate_at_k": 0.10594315245478036,
+  "evaluated_users": 387
+}
+2026-04-30 20:10:47,695 | INFO | recomart_model_training | Snowflake connection closed
+2026-04-30 20:33:42,815 | INFO | recomart_model_training | Starting model training. run_id=b34eab25-6666-46fc-9022-db9515a8df24
+2026-04-30 20:33:44,229 | INFO | recomart_model_training | Using source_validation_batch_id=20260430075931
+2026-04-30 20:33:48,021 | INFO | recomart_model_training | Loaded training rows: 10723
+2026-04-30 20:33:50,626 | INFO | recomart_model_training | Model training completed successfully. run_id=b34eab25-6666-46fc-9022-db9515a8df24
+2026-04-30 20:33:50,626 | INFO | recomart_model_training | Metrics: {
+  "precision_at_k": 0.007792207792207796,
+  "recall_at_k": 0.07792207792207792,
+  "ndcg_at_k": 0.049459165353990704,
+  "hit_rate_at_k": 0.07792207792207792,
+  "evaluated_users": 385
+}
+2026-04-30 20:33:50,851 | INFO | recomart_model_training | Snowflake connection closed

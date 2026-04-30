@@ -100,3 +100,105 @@
 2026-04-30 17:36:43,019 | INFO | recomart_preparation | Statement executed successfully
 2026-04-30 17:36:43,019 | INFO | recomart_preparation | RecoMart data preparation completed successfully
 2026-04-30 17:36:43,213 | INFO | recomart_preparation | Snowflake connection closed
+2026-04-30 20:07:58,408 | INFO | recomart_preparation | Starting RecoMart data preparation pipeline
+2026-04-30 20:07:59,004 | INFO | recomart_preparation | Executing SQL file: sql/preparation/00_add_preparation_objects.sql
+2026-04-30 20:07:59,150 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:07:59,275 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:07:59,424 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:07:59,562 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:07:59,760 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:07:59,875 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:07:59,989 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:00,112 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:00,231 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:00,360 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:00,476 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:00,592 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:00,714 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:00,840 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:00,960 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:00,961 | INFO | recomart_preparation | Executing SQL file: sql/preparation/01_prepare_clean_datasets.sql
+2026-04-30 20:08:01,073 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:01,196 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:01,408 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:01,527 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:01,647 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:09,261 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:09,579 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:09,839 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:10,191 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:12,166 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:37,359 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:41,585 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:42,014 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:42,014 | INFO | recomart_preparation | Executing SQL file: sql/preparation/02_create_user_item_interactions.sql
+2026-04-30 20:08:42,129 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:42,260 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:42,532 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:42,657 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:42,921 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:43,948 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:43,948 | INFO | recomart_preparation | Executing SQL file: sql/preparation/03_create_user_item_features.sql
+2026-04-30 20:08:44,063 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:44,178 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:44,306 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:44,416 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:47,663 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:50,645 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:50,934 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:52,722 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:53,882 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:56,598 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:08:56,598 | INFO | recomart_preparation | RecoMart data preparation completed successfully
+2026-04-30 20:08:56,790 | INFO | recomart_preparation | Snowflake connection closed
+2026-04-30 20:32:00,589 | INFO | recomart_preparation | Starting RecoMart data preparation pipeline
+2026-04-30 20:32:05,499 | INFO | recomart_preparation | Executing SQL file: sql/preparation/00_add_preparation_objects.sql
+2026-04-30 20:32:05,648 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:05,780 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:05,916 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:06,043 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:06,174 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:06,294 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:06,416 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:06,585 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:06,728 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:06,851 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:06,970 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:07,090 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:07,218 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:07,341 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:07,457 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:07,457 | INFO | recomart_preparation | Executing SQL file: sql/preparation/01_prepare_clean_datasets.sql
+2026-04-30 20:32:07,581 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:07,694 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:07,946 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:08,070 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:08,193 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:08,401 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:08,594 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:08,777 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:09,035 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:11,404 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:33,248 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:33,769 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:35,499 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:35,499 | INFO | recomart_preparation | Executing SQL file: sql/preparation/02_create_user_item_interactions.sql
+2026-04-30 20:32:35,622 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:35,748 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:35,958 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:36,089 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:36,293 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:40,396 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:40,396 | INFO | recomart_preparation | Executing SQL file: sql/preparation/03_create_user_item_features.sql
+2026-04-30 20:32:40,521 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:40,637 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:40,797 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:40,926 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:41,210 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:41,498 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:41,776 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:44,422 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:45,524 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:50,100 | INFO | recomart_preparation | Statement executed successfully
+2026-04-30 20:32:50,100 | INFO | recomart_preparation | RecoMart data preparation completed successfully
+2026-04-30 20:32:50,314 | INFO | recomart_preparation | Snowflake connection closed

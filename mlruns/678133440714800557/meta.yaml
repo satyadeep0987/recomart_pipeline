@@ -1,0 +1,6 @@
+artifact_location: file:///Users/sd/Desktop/recomart_pipeline/mlruns/678133440714800557
+creation_time: 1777555703844
+experiment_id: '678133440714800557'
+last_update_time: 1777555703844
+lifecycle_stage: active
+name: recomart_recommendation_experiments

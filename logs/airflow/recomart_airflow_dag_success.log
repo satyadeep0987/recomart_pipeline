@@ -1,0 +1,104 @@
+/Users/sd/Desktop/recomart_pipeline/airflow_cli_venv/lib/python3.11/site-packages/airflow/cli/commands/dag_command.py:48 UserWarning: Could not import graphviz. Rendering graph to the graphical format will not be possible.
+[2026-04-30T20:41:25.378+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/sd/Desktop/recomart_pipeline/airflow_cli_home/dags
+[2026-04-30T20:41:25.405+0530] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/Users/sd/Desktop/recomart_pipeline/airflow_cli_venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2026-04-30T20:41:25.405+0530] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2026-04-30T20:41:25.413+0530] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2026-04-30T20:41:25.413+0530] {tutorial_taskflow_api_virtualenv.py:29} WARNING - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.
+[2026-04-30T20:41:25.433+0530] {example_python_decorator.py:80} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2026-04-30T20:41:25.482+0530] {workday.py:41} WARNING - Could not import pandas. Holidays will not be considered.
+[2026-04-30T20:41:25.484+0530] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2026-04-30T20:41:25.501+0530] {workday.py:41} WARNING - Could not import pandas. Holidays will not be considered.
+[2026-04-30T20:41:25.520+0530] {dag.py:4435} INFO - dagrun id: recomart_cli_end_to_end_pipeline
+[2026-04-30T20:41:25.534+0530] {dag.py:4451} INFO - created dagrun <DagRun recomart_cli_end_to_end_pipeline @ 2026-04-30 00:00:00+00:00: manual__2026-04-30T00:00:00+00:00, state:running, queued_at: None. externally triggered: False>
+[2026-04-30T20:41:25.582+0530] {dag.py:4396} INFO - [DAG TEST] starting task_id=start_pipeline map_index=-1
+[2026-04-30T20:41:25.582+0530] {dag.py:4399} INFO - [DAG TEST] running task <TaskInstance: recomart_cli_end_to_end_pipeline.start_pipeline manual__2026-04-30T00:00:00+00:00 [scheduled]>
+[2026-04-30T20:41:25.591+0530] {workday.py:41} WARNING - Could not import pandas. Holidays will not be considered.
+[2026-04-30 20:41:25,604] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='start_pipeline' AIRFLOW_CTX_EXECUTION_DATE='2026-04-30T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-30T00:00:00+00:00'
+[2026-04-30T20:41:25.604+0530] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='start_pipeline' AIRFLOW_CTX_EXECUTION_DATE='2026-04-30T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-30T00:00:00+00:00'
+Task instance is in running state
+ Previous state of the Task instance: queued
+Current task name:start_pipeline state:scheduled start_date:None
+Dag name:recomart_cli_end_to_end_pipeline and current dag run status:running
+[2026-04-30T20:41:25.606+0530] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-30T20:41:25.608+0530] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-30T20:41:25.608+0530] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=recomart_cli_end_to_end_pipeline, task_id=start_pipeline, run_id=manual__2026-04-30T00:00:00+00:00, execution_date=20260430T000000, start_date=, end_date=20260430T151125
+Task instance in success state
+ Previous state of the Task instance: running
+Dag name:recomart_cli_end_to_end_pipeline queued_at:None
+Task hostname:satyadeeps-macbook-air.local operator:EmptyOperator
+[2026-04-30T20:41:25.614+0530] {dag.py:4410} INFO - [DAG TEST] end task task_id=start_pipeline map_index=-1
+[2026-04-30T20:41:25.621+0530] {dag.py:4396} INFO - [DAG TEST] starting task_id=check_environment map_index=-1
+[2026-04-30T20:41:25.621+0530] {dag.py:4399} INFO - [DAG TEST] running task <TaskInstance: recomart_cli_end_to_end_pipeline.check_environment manual__2026-04-30T00:00:00+00:00 [scheduled]>
+[2026-04-30 20:41:25,629] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='check_environment' AIRFLOW_CTX_EXECUTION_DATE='2026-04-30T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-30T00:00:00+00:00'
+[2026-04-30T20:41:25.629+0530] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='check_environment' AIRFLOW_CTX_EXECUTION_DATE='2026-04-30T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-30T00:00:00+00:00'
+Task instance is in running state
+ Previous state of the Task instance: queued
+Current task name:check_environment state:scheduled start_date:None
+Dag name:recomart_cli_end_to_end_pipeline and current dag run status:running
+[2026-04-30T20:41:25.630+0530] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-30 20:41:25,630] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-04-30T20:41:25.630+0530] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-04-30 20:41:25,631] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    echo "Command: test -d "/Users/sd/Desktop/recomart_pipeline" && test -f "/Users/sd/Desktop/recomart_pipeline/.env" && test -x "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" && "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" --version && echo "Project environment check passed"" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    test -d "/Users/sd/Desktop/recomart_pipeline" && test -f "/Users/sd/Desktop/recomart_pipeline/.env" && test -x "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" && "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" --version && echo "Project environment check passed" 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    exit $EXIT_CODE\n    ']
+[2026-04-30T20:41:25.631+0530] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    echo "Command: test -d "/Users/sd/Desktop/recomart_pipeline" && test -f "/Users/sd/Desktop/recomart_pipeline/.env" && test -x "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" && "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" --version && echo "Project environment check passed"" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    test -d "/Users/sd/Desktop/recomart_pipeline" && test -f "/Users/sd/Desktop/recomart_pipeline/.env" && test -x "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" && "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" --version && echo "Project environment check passed" 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    exit $EXIT_CODE\n    ']
+[2026-04-30 20:41:25,636] {subprocess.py:99} INFO - Output:
+[2026-04-30T20:41:25.636+0530] {subprocess.py:99} INFO - Output:
+[2026-04-30 20:41:25,652] {subprocess.py:106} INFO - ============================================================
+[2026-04-30T20:41:25.652+0530] {subprocess.py:106} INFO - ============================================================
+[2026-04-30 20:41:25,656] {subprocess.py:106} INFO - Starting command at Thu Apr 30 20:41:25 IST 2026
+[2026-04-30T20:41:25.656+0530] {subprocess.py:106} INFO - Starting command at Thu Apr 30 20:41:25 IST 2026
+[2026-04-30 20:41:25,660] {subprocess.py:106} INFO - Command: test -d /Users/sd/Desktop/recomart_pipeline && test -f /Users/sd/Desktop/recomart_pipeline/.env && test -x /Users/sd/Desktop/recomart_pipeline/.venv/bin/python && /Users/sd/Desktop/recomart_pipeline/.venv/bin/python --version && echo Project environment check passed
+[2026-04-30T20:41:25.660+0530] {subprocess.py:106} INFO - Command: test -d /Users/sd/Desktop/recomart_pipeline && test -f /Users/sd/Desktop/recomart_pipeline/.env && test -x /Users/sd/Desktop/recomart_pipeline/.venv/bin/python && /Users/sd/Desktop/recomart_pipeline/.venv/bin/python --version && echo Project environment check passed
+[2026-04-30 20:41:25,663] {subprocess.py:106} INFO - ============================================================
+[2026-04-30T20:41:25.663+0530] {subprocess.py:106} INFO - ============================================================
+[2026-04-30 20:41:25,675] {subprocess.py:106} INFO - Python 3.11.5
+[2026-04-30T20:41:25.675+0530] {subprocess.py:106} INFO - Python 3.11.5
+[2026-04-30 20:41:25,679] {subprocess.py:106} INFO - Project environment check passed
+[2026-04-30T20:41:25.679+0530] {subprocess.py:106} INFO - Project environment check passed
+[2026-04-30 20:41:25,682] {subprocess.py:106} INFO - ============================================================
+[2026-04-30T20:41:25.682+0530] {subprocess.py:106} INFO - ============================================================
+[2026-04-30 20:41:25,686] {subprocess.py:106} INFO - Finished command at Thu Apr 30 20:41:25 IST 2026 with exit code 0
+[2026-04-30T20:41:25.686+0530] {subprocess.py:106} INFO - Finished command at Thu Apr 30 20:41:25 IST 2026 with exit code 0
+[2026-04-30 20:41:25,691] {subprocess.py:106} INFO - ============================================================
+[2026-04-30T20:41:25.691+0530] {subprocess.py:106} INFO - ============================================================
+[2026-04-30 20:41:25,692] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-04-30T20:41:25.692+0530] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-04-30T20:41:25.699+0530] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-30T20:41:25.699+0530] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=recomart_cli_end_to_end_pipeline, task_id=check_environment, run_id=manual__2026-04-30T00:00:00+00:00, execution_date=20260430T000000, start_date=, end_date=20260430T151125
+Task instance in success state
+ Previous state of the Task instance: running
+Dag name:recomart_cli_end_to_end_pipeline queued_at:None
+Task hostname:satyadeeps-macbook-air.local operator:BashOperator
+[2026-04-30T20:41:25.703+0530] {dag.py:4410} INFO - [DAG TEST] end task task_id=check_environment map_index=-1
+[2026-04-30T20:41:25.710+0530] {dag.py:4396} INFO - [DAG TEST] starting task_id=ingest_source_data_to_s3_and_load_raw_snowflake map_index=-1
+[2026-04-30T20:41:25.711+0530] {dag.py:4399} INFO - [DAG TEST] running task <TaskInstance: recomart_cli_end_to_end_pipeline.ingest_source_data_to_s3_and_load_raw_snowflake manual__2026-04-30T00:00:00+00:00 [scheduled]>
+[2026-04-30 20:41:25,718] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='ingest_source_data_to_s3_and_load_raw_snowflake' AIRFLOW_CTX_EXECUTION_DATE='2026-04-30T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-30T00:00:00+00:00'
+[2026-04-30T20:41:25.718+0530] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='ingest_source_data_to_s3_and_load_raw_snowflake' AIRFLOW_CTX_EXECUTION_DATE='2026-04-30T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-30T00:00:00+00:00'
+Task instance is in running state
+ Previous state of the Task instance: queued
+Current task name:ingest_source_data_to_s3_and_load_raw_snowflake state:scheduled start_date:None
+Dag name:recomart_cli_end_to_end_pipeline and current dag run status:running
+[2026-04-30T20:41:25.718+0530] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-30 20:41:25,719] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-04-30T20:41:25.719+0530] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-04-30 20:41:25,719] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    echo "Command: "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" ingestion/run_ingestion.py" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" ingestion/run_ingestion.py 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    exit $EXIT_CODE\n    ']
+[2026-04-30T20:41:25.719+0530] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    echo "Command: "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" ingestion/run_ingestion.py" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" ingestion/run_ingestion.py 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    exit $EXIT_CODE\n    ']
+[2026-04-30 20:41:25,723] {subprocess.py:99} INFO - Output:
+[2026-04-30T20:41:25.723+0530] {subprocess.py:99} INFO - Output:
+[2026-04-30 20:41:25,741] {subprocess.py:106} INFO - ============================================================
+[2026-04-30T20:41:25.741+0530] {subprocess.py:106} INFO - ============================================================
+[2026-04-30 20:41:25,746] {subprocess.py:106} INFO - Starting command at Thu Apr 30 20:41:25 IST 2026
+[2026-04-30T20:41:25.746+0530] {subprocess.py:106} INFO - Starting command at Thu Apr 30 20:41:25 IST 2026
+[2026-04-30 20:41:25,749] {subprocess.py:106} INFO - Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python ingestion/run_ingestion.py
+[2026-04-30T20:41:25.749+0530] {subprocess.py:106} INFO - Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python ingestion/run_ingestion.py
+[2026-04-30 20:41:25,752] {subprocess.py:106} INFO - ============================================================
+[2026-04-30T20:41:25.752+0530] {subprocess.py:106} INFO - ============================================================
+[2026-04-30 20:41:26,501] {subprocess.py:106} INFO - 2026-04-30 20:41:26,500 | INFO | run_ingestion | Starting RecoMart ingestion pipeline
+[2026-04-30T20:41:26.501+0530] {subprocess.py:106} INFO - 2026-04-30 20:41:26,500 | INFO | run_ingestion | Starting RecoMart ingestion pipeline
+[2026-04-30 20:41:26,623] {subprocess.py:106} INFO - 2026-04-30 20:41:26,622 | INFO | recomart_csv_ingestion | Starting RecoMart CSV ingestion. batch_id=bd537dc6-9c2e-4da8-a719-66b0483e56ce
+[2026-04-30T20:41:26.623+0530] {subprocess.py:106} INFO - 2026-04-30 20:41:26,622 | INFO | recomart_csv_ingestion | Starting RecoMart CSV ingestion. batch_id=bd537dc6-9c2e-4da8-a719-66b0483e56ce
+[2026-04-30 20:41:26,623] {subprocess.py:106} INFO - 2026-04-30 20:41:26,623 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/events.csv to s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-04-30/events.csv
+[2026-04-30T20:41:26.623+0530] {subprocess.py:106} INFO - 2026-04-30 20:41:26,623 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/events.csv to s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-04-30/events.csv

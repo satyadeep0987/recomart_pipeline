@@ -1,12 +1,21 @@
+import os
+import sys
 import json
 import logging
+from pathlib import Path
 from datetime import datetime, timezone
 
-from ingest_recomart_to_s3 import ingest_recomart_files
-from ingest_external_api_to_s3 import ingest_external_products
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(PROJECT_ROOT))
+
+from ingestion.ingest_recomart_to_s3 import ingest_recomart_files
+from ingestion.ingest_external_api_to_s3 import ingest_external_products
+from snowflake_load.load_raw_from_s3 import load_raw_from_s3
 
 
 def setup_logger() -> logging.Logger:
+    os.makedirs("logs", exist_ok=True)
+
     logger = logging.getLogger("run_ingestion")
     logger.setLevel(logging.INFO)
 
@@ -37,15 +46,26 @@ def main() -> None:
     recomart_result = ingest_recomart_files()
     external_api_result = ingest_external_products()
 
+    if recomart_result["status"] not in ("SUCCESS", "PARTIAL_FAILURE"):
+        raise RuntimeError("RecoMart CSV ingestion failed before Snowflake RAW load")
+
+    if external_api_result["status"] != "SUCCESS":
+        raise RuntimeError("External API ingestion failed before Snowflake RAW load")
+
+    logger.info("S3 upload completed. Starting automated S3 to Snowflake RAW load.")
+
+    load_raw_from_s3()
+
     pipeline_result = {
-        "pipeline_name": "recomart_raw_data_ingestion",
+        "pipeline_name": "recomart_raw_data_ingestion_and_snowflake_load",
         "pipeline_start_time": pipeline_start_time,
         "pipeline_end_time": datetime.now(timezone.utc).isoformat(),
         "recomart_csv_ingestion": recomart_result,
         "external_api_ingestion": external_api_result,
+        "snowflake_raw_load": "SUCCESS",
     }
 
-    logger.info("RecoMart ingestion pipeline completed")
+    logger.info("RecoMart ingestion + Snowflake RAW load pipeline completed")
     logger.info(json.dumps(pipeline_result, indent=2))
 
 

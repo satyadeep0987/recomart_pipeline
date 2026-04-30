@@ -1,0 +1,14 @@
+============================================================
+Starting command at Thu Apr 30 20:10:47 IST 2026
+Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python orchestration/run_sql_file.py sql/orchestration/final_health_check.sql
+============================================================
+============================================================
+Finished command at Thu Apr 30 20:10:47 IST 2026 with exit code 0
+============================================================
+============================================================
+Starting command at Thu Apr 30 20:33:51 IST 2026
+Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python orchestration/run_sql_file.py sql/orchestration/final_health_check.sql
+============================================================
+============================================================
+Finished command at Thu Apr 30 20:33:51 IST 2026 with exit code 0
+============================================================

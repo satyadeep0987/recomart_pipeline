@@ -1,0 +1,88 @@
+============================================================
+Starting command at Thu Apr 30 20:06:52 IST 2026
+Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python validation/run_validation.py
+============================================================
+2026-04-30 20:06:53,747 | INFO | recomart_validation | Starting RecoMart data profiling and validation pipeline
+2026-04-30 20:06:56,286 | INFO | recomart_validation | Executing SQL file: sql/validation/01_profile_raw_data.sql
+2026-04-30 20:06:56,490 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:06:56,646 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:06:56,842 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:06:56,980 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:06:57,149 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:06:57,310 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:06:57,454 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:06:57,610 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:06:57,610 | INFO | recomart_validation | Executing SQL file: sql/validation/02_validate_raw_to_validated.sql
+2026-04-30 20:06:57,720 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:06:57,831 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:00,771 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:00,889 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:01,003 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:07,077 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:11,280 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:11,554 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:11,782 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:20,153 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:31,957 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:34,037 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:34,496 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:34,497 | INFO | recomart_validation | Executing SQL file: sql/validation/03_data_quality_checks.sql
+2026-04-30 20:07:34,623 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:34,724 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:35,162 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:41,497 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:41,980 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:45,779 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:46,139 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:52,151 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:56,509 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:57,449 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:07:57,449 | INFO | recomart_validation | RecoMart data validation completed successfully
+2026-04-30 20:07:57,639 | INFO | recomart_validation | Snowflake connection closed
+============================================================
+Finished command at Thu Apr 30 20:07:57 IST 2026 with exit code 0
+============================================================
+============================================================
+Starting command at Thu Apr 30 20:30:32 IST 2026
+Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python validation/run_validation.py
+============================================================
+2026-04-30 20:30:33,683 | INFO | recomart_validation | Starting RecoMart data profiling and validation pipeline
+2026-04-30 20:30:34,355 | INFO | recomart_validation | Executing SQL file: sql/validation/01_profile_raw_data.sql
+2026-04-30 20:30:34,513 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:30:34,652 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:30:40,485 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:30:40,738 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:30:42,205 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:30:46,524 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:30:46,742 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:30:46,893 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:30:46,893 | INFO | recomart_validation | Executing SQL file: sql/validation/02_validate_raw_to_validated.sql
+2026-04-30 20:30:47,024 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:30:47,154 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:30:47,315 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:30:47,456 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:30:47,592 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:30:47,858 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:30:48,103 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:30:48,378 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:30:48,620 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:30:55,483 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:31:18,776 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:31:29,867 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:31:40,321 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:31:40,322 | INFO | recomart_validation | Executing SQL file: sql/validation/03_data_quality_checks.sql
+2026-04-30 20:31:40,529 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:31:40,690 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:31:44,514 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:31:44,885 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:31:49,275 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:31:50,622 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:31:53,985 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:31:54,379 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:31:55,335 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:31:59,349 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:31:59,350 | INFO | recomart_validation | RecoMart data validation completed successfully
+2026-04-30 20:31:59,679 | INFO | recomart_validation | Snowflake connection closed
+============================================================
+Finished command at Thu Apr 30 20:31:59 IST 2026 with exit code 0
+============================================================

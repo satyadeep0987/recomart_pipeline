@@ -1,0 +1,27 @@
+model:
+  name: recomart_svd_recommender
+  version: v1
+  type: collaborative_filtering_svd
+  n_components: 20
+  random_state: 42
+  top_k: 10
+
+training:
+  feature_version: v1
+  min_user_interactions: 2
+
+  # Smaller demo limits for faster execution
+  max_users: 500
+  max_items: 1000
+  max_training_rows: 50000
+
+  # Only generate recommendations for limited users
+  recommendation_sample_users: 20
+
+artifacts:
+  model_dir: models/recommendation_model
+  report_path: reports/model_performance_report.md
+
+mlflow:
+  tracking_uri: file:./mlruns
+  experiment_name: recomart_recommendation_experiments
