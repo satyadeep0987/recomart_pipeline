@@ -1,0 +1,11 @@
+stages:
+  generate_dataset_manifest:
+    cmd: python lineage/generate_dataset_manifest.py
+    deps:
+      - lineage/generate_dataset_manifest.py
+      - data/source/recomart/events.csv
+      - data/source/recomart/item_properties_part1.csv
+      - data/source/recomart/item_properties_part2.csv
+      - data/source/recomart/category_tree.csv
+    outs:
+      - data/metadata/dataset_version_manifest.json
