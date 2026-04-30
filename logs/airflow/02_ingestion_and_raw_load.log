@@ -126,3 +126,98 @@ Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python ingestion/run_inge
 2026-04-30 20:41:26,500 | INFO | run_ingestion | Starting RecoMart ingestion pipeline
 2026-04-30 20:41:26,622 | INFO | recomart_csv_ingestion | Starting RecoMart CSV ingestion. batch_id=bd537dc6-9c2e-4da8-a719-66b0483e56ce
 2026-04-30 20:41:26,623 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/events.csv to s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-04-30/events.csv
+2026-04-30 20:42:09,243 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-04-30/events.csv
+2026-04-30 20:42:09,244 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/item_properties_part1.csv to s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-04-30/item_properties_part1.csv
+2026-04-30 20:42:15,667 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-04-30/item_properties_part1.csv
+2026-04-30 20:45:17,096 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-04-30/item_properties_part1.csv
+2026-04-30 20:45:17,097 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/item_properties_part2.csv to s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-04-30/item_properties_part2.csv
+2026-04-30 20:46:42,318 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-04-30/item_properties_part2.csv
+2026-04-30 20:46:42,319 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/category_tree.csv to s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-04-30/category_tree.csv
+2026-04-30 20:46:42,405 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-04-30/category_tree.csv
+2026-04-30 20:46:42,405 | INFO | recomart_csv_ingestion | RecoMart CSV ingestion completed with status=SUCCESS
+2026-04-30 20:46:42,409 | INFO | external_api_ingestion | Starting external API ingestion. batch_id=a73e21b1-cbb2-4b72-a71b-0568114672fe
+2026-04-30 20:46:42,409 | INFO | external_api_ingestion | Fetching external product data from API: https://dummyjson.com/products
+2026-04-30 20:46:43,010 | INFO | external_api_ingestion | External API fetch successful
+2026-04-30 20:46:43,053 | INFO | external_api_ingestion | Uploading external API JSON to s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-04-30/products.json
+2026-04-30 20:46:43,324 | INFO | external_api_ingestion | Upload successful: s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-04-30/products.json
+2026-04-30 20:46:43,325 | INFO | external_api_ingestion | External API ingestion completed with status=SUCCESS
+2026-04-30 20:46:43,327 | INFO | run_ingestion | S3 upload completed. Starting automated S3 to Snowflake RAW load.
+2026-04-30 20:46:43,328 | INFO | snowflake_raw_loader | Starting automated S3 to Snowflake RAW load
+2026-04-30 20:46:44,458 | INFO | snowflake_raw_loader | Executing SQL file: sql/load_raw_from_s3.sql
+2026-04-30 20:46:44,458 | INFO | snowflake_raw_loader | Running statement 1/15
+2026-04-30 20:46:44,658 | INFO | snowflake_raw_loader | Statement 1 completed successfully
+2026-04-30 20:46:44,658 | INFO | snowflake_raw_loader | Running statement 2/15
+2026-04-30 20:46:44,804 | INFO | snowflake_raw_loader | Statement 2 completed successfully
+2026-04-30 20:46:44,804 | INFO | snowflake_raw_loader | Running statement 3/15
+2026-04-30 20:46:44,946 | INFO | snowflake_raw_loader | Statement 3 completed successfully
+2026-04-30 20:46:44,946 | INFO | snowflake_raw_loader | Running statement 4/15
+2026-04-30 20:46:45,102 | INFO | snowflake_raw_loader | Statement 4 completed successfully
+2026-04-30 20:46:45,102 | INFO | snowflake_raw_loader | Running statement 5/15
+2026-04-30 20:46:45,259 | INFO | snowflake_raw_loader | Statement 5 completed successfully
+2026-04-30 20:46:45,260 | INFO | snowflake_raw_loader | Running statement 6/15
+2026-04-30 20:46:45,399 | INFO | snowflake_raw_loader | Statement 6 completed successfully
+2026-04-30 20:46:45,399 | INFO | snowflake_raw_loader | Running statement 7/15
+2026-04-30 20:46:55,104 | INFO | snowflake_raw_loader | Statement 7 completed successfully
+2026-04-30 20:46:55,105 | INFO | snowflake_raw_loader | Running statement 8/15
+2026-04-30 20:47:14,181 | INFO | snowflake_raw_loader | Statement 8 completed successfully
+2026-04-30 20:47:14,182 | INFO | snowflake_raw_loader | Running statement 9/15
+2026-04-30 20:47:15,760 | INFO | snowflake_raw_loader | Statement 9 completed successfully
+2026-04-30 20:47:15,761 | INFO | snowflake_raw_loader | Running statement 10/15
+2026-04-30 20:47:19,103 | INFO | snowflake_raw_loader | Statement 10 completed successfully
+2026-04-30 20:47:19,103 | INFO | snowflake_raw_loader | Running statement 11/15
+2026-04-30 20:47:19,600 | INFO | snowflake_raw_loader | Statement 11 completed successfully
+2026-04-30 20:47:19,600 | INFO | snowflake_raw_loader | Running statement 12/15
+2026-04-30 20:47:22,494 | INFO | snowflake_raw_loader | Statement 12 completed successfully
+2026-04-30 20:47:22,494 | INFO | snowflake_raw_loader | Running statement 13/15
+2026-04-30 20:47:27,551 | INFO | snowflake_raw_loader | Statement 13 completed successfully
+2026-04-30 20:47:27,552 | INFO | snowflake_raw_loader | Running statement 14/15
+2026-04-30 20:47:29,320 | INFO | snowflake_raw_loader | Statement 14 completed successfully
+2026-04-30 20:47:29,320 | INFO | snowflake_raw_loader | Running statement 15/15
+2026-04-30 20:47:29,587 | INFO | snowflake_raw_loader | Statement 15 completed successfully
+2026-04-30 20:47:29,587 | INFO | snowflake_raw_loader | Automated S3 to Snowflake RAW load completed successfully
+2026-04-30 20:47:29,820 | INFO | snowflake_raw_loader | Snowflake connection closed
+2026-04-30 20:47:29,820 | INFO | run_ingestion | RecoMart ingestion + Snowflake RAW load pipeline completed
+2026-04-30 20:47:29,821 | INFO | run_ingestion | {
+  "pipeline_name": "recomart_raw_data_ingestion_and_snowflake_load",
+  "pipeline_start_time": "2026-04-30T15:11:26.500606+00:00",
+  "pipeline_end_time": "2026-04-30T15:17:29.820807+00:00",
+  "recomart_csv_ingestion": {
+    "batch_id": "bd537dc6-9c2e-4da8-a719-66b0483e56ce",
+    "ingestion_date": "2026-04-30",
+    "status": "SUCCESS",
+    "uploaded_files": [
+      {
+        "source_name": "events",
+        "local_path": "data/source/recomart/events.csv",
+        "s3_path": "s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-04-30/events.csv"
+      },
+      {
+        "source_name": "item_properties_part1",
+        "local_path": "data/source/recomart/item_properties_part1.csv",
+        "s3_path": "s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-04-30/item_properties_part1.csv"
+      },
+      {
+        "source_name": "item_properties_part2",
+        "local_path": "data/source/recomart/item_properties_part2.csv",
+        "s3_path": "s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-04-30/item_properties_part2.csv"
+      },
+      {
+        "source_name": "category_tree",
+        "local_path": "data/source/recomart/category_tree.csv",
+        "s3_path": "s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-04-30/category_tree.csv"
+      }
+    ],
+    "failed_files": []
+  },
+  "external_api_ingestion": {
+    "batch_id": "a73e21b1-cbb2-4b72-a71b-0568114672fe",
+    "ingestion_date": "2026-04-30",
+    "source_name": "dummyjson_products_api",
+    "status": "SUCCESS",
+    "s3_path": "s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-04-30/products.json"
+  },
+  "snowflake_raw_load": "SUCCESS"
+}
+============================================================
+Finished command at Thu Apr 30 20:47:29 IST 2026 with exit code 0
+============================================================

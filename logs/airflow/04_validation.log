@@ -86,3 +86,47 @@ Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python validation/run_val
 ============================================================
 Finished command at Thu Apr 30 20:31:59 IST 2026 with exit code 0
 ============================================================
+============================================================
+Starting command at Thu Apr 30 20:47:30 IST 2026
+Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python validation/run_validation.py
+============================================================
+2026-04-30 20:47:31,063 | INFO | recomart_validation | Starting RecoMart data profiling and validation pipeline
+2026-04-30 20:47:35,504 | INFO | recomart_validation | Executing SQL file: sql/validation/01_profile_raw_data.sql
+2026-04-30 20:47:35,675 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:47:35,807 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:47:37,467 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:47:37,658 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:47:38,423 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:47:45,526 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:47:45,665 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:47:45,816 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:47:45,816 | INFO | recomart_validation | Executing SQL file: sql/validation/02_validate_raw_to_validated.sql
+2026-04-30 20:47:46,003 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:47:46,141 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:47:46,294 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:47:46,408 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:47:46,521 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:47:46,809 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:47:47,054 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:47:47,349 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:47:47,564 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:47:53,367 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:48:34,021 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:48:34,687 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:48:35,104 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:48:35,104 | INFO | recomart_validation | Executing SQL file: sql/validation/03_data_quality_checks.sql
+2026-04-30 20:48:35,211 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:48:35,318 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:48:35,792 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:48:36,202 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:48:36,605 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:48:37,427 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:48:37,801 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:48:38,230 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:48:38,615 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:48:38,957 | INFO | recomart_validation | Statement executed successfully
+2026-04-30 20:48:38,957 | INFO | recomart_validation | RecoMart data validation completed successfully
+2026-04-30 20:48:39,144 | INFO | recomart_validation | Snowflake connection closed
+============================================================
+Finished command at Thu Apr 30 20:48:39 IST 2026 with exit code 0
+============================================================

@@ -188,3 +188,45 @@ invalid identifier 'SOURCE_VALIDATION_BATCH_ID'
 2026-04-30 20:33:32,287 | INFO | recomart_feature_store | Statement executed successfully
 2026-04-30 20:33:32,287 | INFO | recomart_feature_store | RecoMart feature store pipeline completed successfully
 2026-04-30 20:33:32,471 | INFO | recomart_feature_store | Snowflake connection closed
+2026-04-30 20:49:49,243 | INFO | recomart_feature_store | Starting RecoMart feature store pipeline
+2026-04-30 20:49:50,326 | INFO | recomart_feature_store | Executing SQL file: sql/feature_store/00_create_feature_store_objects.sql
+2026-04-30 20:49:50,501 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:50,632 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:50,749 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:50,888 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:51,013 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:51,138 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:51,255 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:51,256 | INFO | recomart_feature_store | Executing SQL file: sql/feature_store/01_register_feature_metadata.sql
+2026-04-30 20:49:51,380 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:51,497 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:51,689 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:51,815 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:52,014 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:52,491 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:52,492 | INFO | recomart_feature_store | Executing SQL file: sql/feature_store/02_publish_offline_features.sql
+2026-04-30 20:49:52,608 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:52,721 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:52,869 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:52,983 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:53,185 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:54,473 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:54,473 | INFO | recomart_feature_store | Executing SQL file: sql/feature_store/03_publish_online_features.sql
+2026-04-30 20:49:54,588 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:54,704 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:54,887 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:55,006 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:55,191 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:56,241 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:56,241 | INFO | recomart_feature_store | Executing SQL file: sql/feature_store/04_feature_retrieval_demo.sql
+2026-04-30 20:49:56,386 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:56,494 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:56,639 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:56,757 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:56,995 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:57,139 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:57,313 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:57,514 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:57,915 | INFO | recomart_feature_store | Statement executed successfully
+2026-04-30 20:49:57,915 | INFO | recomart_feature_store | RecoMart feature store pipeline completed successfully
+2026-04-30 20:49:58,108 | INFO | recomart_feature_store | Snowflake connection closed

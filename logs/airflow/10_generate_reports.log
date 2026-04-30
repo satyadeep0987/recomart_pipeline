@@ -1,0 +1,23 @@
+============================================================
+Starting command at Thu Apr 30 20:50:14 IST 2026
+Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python reporting/generate_reports.py
+============================================================
+2026-04-30 20:50:15,179 | INFO | recomart_report_generator | Starting RecoMart report generation
+2026-04-30 20:50:22,657 | INFO | recomart_report_generator | RecoMart report generation completed successfully
+2026-04-30 20:50:22,893 | INFO | recomart_report_generator | Snowflake connection closed
+
+RecoMart Reports Generated
+============================================================
+- reports/data_quality_report.md
+- reports/eda_report.md
+- reports/feature_engineering_report.md
+- reports/feature_store_report.md
+- reports/lineage_report.md
+- reports/model_performance_report.md
+- reports/orchestration_report.md
+- reports/report_index.md
+============================================================
+Detailed CSV exports are available under reports/exports/
+============================================================
+Finished command at Thu Apr 30 20:50:22 IST 2026 with exit code 0
+============================================================

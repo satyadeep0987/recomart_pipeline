@@ -1,0 +1,71 @@
+# Feature Store Report
+
+**Generated At:** 2026-04-30 15:20:21 UTC
+
+**Project:** RecoMart Recommendation Data Pipeline
+
+---
+## Feature Registry Summary
+
+**CSV Export:** `reports/exports/feature_registry_summary.csv`
+
+| FEATURE_GROUP   | ENTITY_TYPE   | FEATURE_VERSION   |   FEATURE_COUNT |
+|:----------------|:--------------|:------------------|----------------:|
+| interaction     | user_item     | v1                |               3 |
+| item_popularity | item          | v1                |              15 |
+| training_label  | user_item     | v1                |               3 |
+| user_activity   | user          | v1                |              15 |
+
+---
+## Offline Feature Store Summary
+
+**CSV Export:** `reports/exports/offline_feature_store_summary.csv`
+
+| FEATURE_VERSION   |   SOURCE_VALIDATION_BATCH_ID |   OFFLINE_FEATURE_ROWS | FIRST_PUBLISHED_TS         | LAST_PUBLISHED_TS          |
+|:------------------|-----------------------------:|-----------------------:|:---------------------------|:---------------------------|
+| v1                |               20260430081645 |                2145179 | 2026-04-30 08:19:53.258000 | 2026-04-30 08:19:53.258000 |
+| v1                |               20260430075931 |                2145179 | 2026-04-30 08:03:26.606000 | 2026-04-30 08:03:26.606000 |
+| v1                |               20260430030321 |                2145179 | 2026-04-30 07:39:48.625000 | 2026-04-30 07:39:48.625000 |
+
+---
+## Online Feature Sample
+
+**CSV Export:** `reports/exports/online_feature_sample.csv`
+
+|   USER_ID |   ITEM_ID | USER_ACTIVITY_LEVEL   |   ITEM_POPULARITY_SCORE |   ITEM_CONVERSION_RATE |   USER_ITEM_IMPLICIT_SCORE |   RECOMMENDATION_CANDIDATE_SCORE | FEATURE_VERSION   |   SOURCE_VALIDATION_BATCH_ID |
+|----------:|----------:|:----------------------|------------------------:|-----------------------:|---------------------------:|---------------------------------:|:------------------|-----------------------------:|
+|   1150086 |    461686 | HIGH                  |                    4115 |               0.052403 |                         45 |                          1257.01 | v1                |               20260430081645 |
+|   1150086 |    461686 | HIGH                  |                    4115 |               0.052403 |                         45 |                          1257.01 | v1                |               20260430030321 |
+|   1150086 |    461686 | HIGH                  |                    4115 |               0.052403 |                         45 |                          1257.01 | v1                |               20260430075931 |
+|     90729 |    461686 | MEDIUM                |                    4115 |               0.052403 |                         32 |                          1250.51 | v1                |               20260430030321 |
+|     90729 |    461686 | MEDIUM                |                    4115 |               0.052403 |                         32 |                          1250.51 | v1                |               20260430081645 |
+|     90729 |    461686 | MEDIUM                |                    4115 |               0.052403 |                         32 |                          1250.51 | v1                |               20260430075931 |
+|    968159 |    461686 | HIGH                  |                    4115 |               0.052403 |                         28 |                          1248.51 | v1                |               20260430081645 |
+|    968159 |    461686 | HIGH                  |                    4115 |               0.052403 |                         28 |                          1248.51 | v1                |               20260430075931 |
+|    968159 |    461686 | HIGH                  |                    4115 |               0.052403 |                         28 |                          1248.51 | v1                |               20260430030321 |
+|    672218 |    461686 | HIGH                  |                    4115 |               0.052403 |                         27 |                          1248.01 | v1                |               20260430075931 |
+|    672218 |    461686 | HIGH                  |                    4115 |               0.052403 |                         27 |                          1248.01 | v1                |               20260430030321 |
+|    672218 |    461686 | HIGH                  |                    4115 |               0.052403 |                         27 |                          1248.01 | v1                |               20260430081645 |
+|   1374225 |    461686 | MEDIUM                |                    4115 |               0.052403 |                         26 |                          1247.51 | v1                |               20260430030321 |
+|   1374225 |    461686 | MEDIUM                |                    4115 |               0.052403 |                         26 |                          1247.51 | v1                |               20260430075931 |
+|   1374225 |    461686 | MEDIUM                |                    4115 |               0.052403 |                         26 |                          1247.51 | v1                |               20260430081645 |
+|    292344 |    461686 | HIGH                  |                    4115 |               0.052403 |                         24 |                          1246.51 | v1                |               20260430030321 |
+|    292344 |    461686 | HIGH                  |                    4115 |               0.052403 |                         24 |                          1246.51 | v1                |               20260430081645 |
+|    642130 |    461686 | MEDIUM                |                    4115 |               0.052403 |                         24 |                          1246.51 | v1                |               20260430081645 |
+|    292344 |    461686 | HIGH                  |                    4115 |               0.052403 |                         24 |                          1246.51 | v1                |               20260430075931 |
+|    642130 |    461686 | MEDIUM                |                    4115 |               0.052403 |                         24 |                          1246.51 | v1                |               20260430075931 |
+
+---
+## Feature Retrieval Logs
+
+**CSV Export:** `reports/exports/feature_retrieval_logs.csv`
+
+| REQUEST_ID                           |   USER_ID | ITEM_ID   | FEATURE_VERSION   |   SOURCE_VALIDATION_BATCH_ID | REQUEST_TYPE          | REQUEST_TS                 | STATUS   | MESSAGE                                                      |
+|:-------------------------------------|----------:|:----------|:------------------|-----------------------------:|:----------------------|:---------------------------|:---------|:-------------------------------------------------------------|
+| 63b64518-5298-421a-bb8f-5caaf475c503 |   1150086 |           | v1                |               20260430081645 | ONLINE_INFERENCE_DEMO | 2026-04-30 08:19:57.590000 | SUCCESS  | Retrieved top online recommendation features for sample user |
+| 168ae7d0-bc52-41c3-bf3d-0f4d5fa062fe |   1150086 |           | v1                |               20260430075931 | ONLINE_INFERENCE_DEMO | 2026-04-30 08:03:31.899000 | SUCCESS  | Retrieved top online recommendation features for sample user |
+| bbe12ed0-9719-4c8a-86a3-ddeef595a531 |   1150086 |           | v1                |               20260430030321 | ONLINE_INFERENCE_DEMO | 2026-04-30 07:40:06.723000 | SUCCESS  | Retrieved top online recommendation features for sample user |
+| ac34c2c8-e64b-4ef0-81a0-93a4f4fb5b96 |   1150086 |           | v1                |               20260430030321 | ONLINE_INFERENCE_DEMO | 2026-04-30 05:07:34.086000 | SUCCESS  | Retrieved top online recommendation features for sample user |
+| b7b89c83-c85c-47b2-8b8c-fef2f72f68ac |   1150086 |           | v1                |               20260430030321 | ONLINE_INFERENCE_DEMO | 2026-04-30 04:25:32.422000 | SUCCESS  | Retrieved top online recommendation features for sample user |
+
+---

@@ -37,3 +37,15 @@
   "evaluated_users": 385
 }
 2026-04-30 20:33:50,851 | INFO | recomart_model_training | Snowflake connection closed
+2026-04-30 20:50:08,617 | INFO | recomart_model_training | Starting model training. run_id=8dab2e16-c85e-40da-a9b5-029bc9d33414
+2026-04-30 20:50:10,766 | INFO | recomart_model_training | Using source_validation_batch_id=20260430081645
+2026-04-30 20:50:11,830 | INFO | recomart_model_training | Loaded training rows: 10709
+2026-04-30 20:50:14,126 | INFO | recomart_model_training | Model training completed successfully. run_id=8dab2e16-c85e-40da-a9b5-029bc9d33414
+2026-04-30 20:50:14,126 | INFO | recomart_model_training | Metrics: {
+  "precision_at_k": 0.007792207792207796,
+  "recall_at_k": 0.07792207792207792,
+  "ndcg_at_k": 0.04977292098949356,
+  "hit_rate_at_k": 0.07792207792207792,
+  "evaluated_users": 385
+}
+2026-04-30 20:50:14,359 | INFO | recomart_model_training | Snowflake connection closed
