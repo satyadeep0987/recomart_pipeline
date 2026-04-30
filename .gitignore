@@ -3,3 +3,9 @@
 __pycache__/
 *.pyc
 data/source/recomart/*.csv
+
+# Do not commit raw data directly
+data/source/recomart/*.csv
+
+# Keep DVC pointer files
+!data/source/recomart/*.dvc
