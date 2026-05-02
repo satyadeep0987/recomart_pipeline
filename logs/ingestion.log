@@ -352,3 +352,15 @@
   },
   "snowflake_raw_load": "SUCCESS"
 }
+2026-05-02 14:25:29,647 | INFO | run_ingestion | Starting RecoMart ingestion pipeline
+2026-05-02 14:25:29,867 | INFO | recomart_csv_ingestion | Starting RecoMart CSV ingestion. batch_id=28095043-1521-40e3-b409-5cc09a0e113e
+2026-05-02 14:25:29,868 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/events.csv to s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-05-02/events.csv
+2026-05-02 14:25:50,184 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-05-02/events.csv
+2026-05-02 14:25:50,185 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/item_properties_part1.csv to s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part1.csv
+2026-05-02 14:27:32,371 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part1.csv
+2026-05-02 14:27:32,371 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/item_properties_part2.csv to s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part2.csv
+2026-05-02 14:27:55,787 | INFO | run_ingestion | Starting RecoMart ingestion pipeline
+2026-05-02 14:27:55,909 | INFO | recomart_csv_ingestion | Starting RecoMart CSV ingestion. batch_id=cce5b8b2-8eb4-4092-8a9b-23e3246cac8c
+2026-05-02 14:27:55,909 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/events.csv to s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-05-02/events.csv
+2026-05-02 14:28:41,313 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-05-02/events.csv
+2026-05-02 14:28:41,315 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/item_properties_part1.csv to s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part1.csv
