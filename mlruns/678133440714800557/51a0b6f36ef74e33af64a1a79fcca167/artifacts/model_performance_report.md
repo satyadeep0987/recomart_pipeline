@@ -7,10 +7,10 @@
 | Model Name | recomart_svd_recommender |
 | Model Version | v1 |
 | Model Type | collaborative_filtering_svd |
-| Run ID | ba1a5851-c3fe-4748-bf2e-e80e08e86c5f |
+| Run ID | 0a07195f-52e4-4a68-b77e-c41b7d004af8 |
 | Source Validation Batch ID | 20260502031153 |
 | Feature Version | v1 |
-| Model Artifact Path | models/recommendation_model/recomart_svd_recommender_ba1a5851-c3fe-4748-bf2e-e80e08e86c5f.joblib |
+| Model Artifact Path | models/recommendation_model/recomart_svd_recommender_0a07195f-52e4-4a68-b77e-c41b7d004af8.joblib |
 
 ## Parameters
 
