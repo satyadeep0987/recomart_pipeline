@@ -364,3 +364,231 @@
 2026-05-02 14:27:55,909 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/events.csv to s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-05-02/events.csv
 2026-05-02 14:28:41,313 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-05-02/events.csv
 2026-05-02 14:28:41,315 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/item_properties_part1.csv to s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part1.csv
+2026-05-02 14:30:09,087 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part2.csv
+2026-05-02 14:30:09,089 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/category_tree.csv to s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-05-02/category_tree.csv
+2026-05-02 14:30:09,202 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-05-02/category_tree.csv
+2026-05-02 14:30:09,203 | INFO | recomart_csv_ingestion | RecoMart CSV ingestion completed with status=SUCCESS
+2026-05-02 14:30:09,207 | INFO | external_api_ingestion | Starting external API ingestion. batch_id=ba4ae6d0-a9d4-4ec5-bec6-01c9bd923da4
+2026-05-02 14:30:09,207 | INFO | external_api_ingestion | Fetching external product data from API: https://dummyjson.com/products
+2026-05-02 14:30:09,934 | INFO | external_api_ingestion | External API fetch successful
+2026-05-02 14:30:09,962 | INFO | external_api_ingestion | Uploading external API JSON to s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-05-02/products.json
+2026-05-02 14:30:10,578 | INFO | external_api_ingestion | Upload successful: s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-05-02/products.json
+2026-05-02 14:30:10,578 | INFO | external_api_ingestion | External API ingestion completed with status=SUCCESS
+2026-05-02 14:30:10,581 | INFO | run_ingestion | S3 upload completed. Starting automated S3 to Snowflake RAW load.
+2026-05-02 14:30:56,417 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part1.csv
+2026-05-02 14:30:56,417 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/item_properties_part2.csv to s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part2.csv
+2026-05-02 14:30:56,563 | INFO | run_ingestion | RecoMart ingestion + Snowflake RAW load pipeline completed
+2026-05-02 14:30:56,563 | INFO | run_ingestion | {
+  "pipeline_name": "recomart_raw_data_ingestion_and_snowflake_load",
+  "pipeline_start_time": "2026-05-02T08:55:29.647673+00:00",
+  "pipeline_end_time": "2026-05-02T09:00:56.563542+00:00",
+  "recomart_csv_ingestion": {
+    "batch_id": "28095043-1521-40e3-b409-5cc09a0e113e",
+    "ingestion_date": "2026-05-02",
+    "status": "SUCCESS",
+    "uploaded_files": [
+      {
+        "source_name": "events",
+        "local_path": "data/source/recomart/events.csv",
+        "s3_path": "s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-05-02/events.csv"
+      },
+      {
+        "source_name": "item_properties_part1",
+        "local_path": "data/source/recomart/item_properties_part1.csv",
+        "s3_path": "s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part1.csv"
+      },
+      {
+        "source_name": "item_properties_part2",
+        "local_path": "data/source/recomart/item_properties_part2.csv",
+        "s3_path": "s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part2.csv"
+      },
+      {
+        "source_name": "category_tree",
+        "local_path": "data/source/recomart/category_tree.csv",
+        "s3_path": "s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-05-02/category_tree.csv"
+      }
+    ],
+    "failed_files": []
+  },
+  "external_api_ingestion": {
+    "batch_id": "ba4ae6d0-a9d4-4ec5-bec6-01c9bd923da4",
+    "ingestion_date": "2026-05-02",
+    "source_name": "dummyjson_products_api",
+    "status": "SUCCESS",
+    "s3_path": "s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-05-02/products.json"
+  },
+  "snowflake_raw_load": "SUCCESS"
+}
+2026-05-02 14:32:19,925 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part2.csv
+2026-05-02 14:32:19,926 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/category_tree.csv to s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-05-02/category_tree.csv
+2026-05-02 14:32:20,026 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-05-02/category_tree.csv
+2026-05-02 14:32:20,027 | INFO | recomart_csv_ingestion | RecoMart CSV ingestion completed with status=SUCCESS
+2026-05-02 14:32:20,031 | INFO | external_api_ingestion | Starting external API ingestion. batch_id=5e763c68-9440-4b46-a88e-21be8c614a52
+2026-05-02 14:32:20,032 | INFO | external_api_ingestion | Fetching external product data from API: https://dummyjson.com/products
+2026-05-02 14:32:20,531 | INFO | external_api_ingestion | External API fetch successful
+2026-05-02 14:32:20,557 | INFO | external_api_ingestion | Uploading external API JSON to s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-05-02/products.json
+2026-05-02 14:32:20,827 | INFO | external_api_ingestion | Upload successful: s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-05-02/products.json
+2026-05-02 14:32:20,827 | INFO | external_api_ingestion | External API ingestion completed with status=SUCCESS
+2026-05-02 14:32:20,830 | INFO | run_ingestion | S3 upload completed. Starting automated S3 to Snowflake RAW load.
+2026-05-02 14:32:58,457 | INFO | run_ingestion | RecoMart ingestion + Snowflake RAW load pipeline completed
+2026-05-02 14:32:58,457 | INFO | run_ingestion | {
+  "pipeline_name": "recomart_raw_data_ingestion_and_snowflake_load",
+  "pipeline_start_time": "2026-05-02T08:57:55.787732+00:00",
+  "pipeline_end_time": "2026-05-02T09:02:58.457019+00:00",
+  "recomart_csv_ingestion": {
+    "batch_id": "cce5b8b2-8eb4-4092-8a9b-23e3246cac8c",
+    "ingestion_date": "2026-05-02",
+    "status": "SUCCESS",
+    "uploaded_files": [
+      {
+        "source_name": "events",
+        "local_path": "data/source/recomart/events.csv",
+        "s3_path": "s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-05-02/events.csv"
+      },
+      {
+        "source_name": "item_properties_part1",
+        "local_path": "data/source/recomart/item_properties_part1.csv",
+        "s3_path": "s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part1.csv"
+      },
+      {
+        "source_name": "item_properties_part2",
+        "local_path": "data/source/recomart/item_properties_part2.csv",
+        "s3_path": "s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part2.csv"
+      },
+      {
+        "source_name": "category_tree",
+        "local_path": "data/source/recomart/category_tree.csv",
+        "s3_path": "s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-05-02/category_tree.csv"
+      }
+    ],
+    "failed_files": []
+  },
+  "external_api_ingestion": {
+    "batch_id": "5e763c68-9440-4b46-a88e-21be8c614a52",
+    "ingestion_date": "2026-05-02",
+    "source_name": "dummyjson_products_api",
+    "status": "SUCCESS",
+    "s3_path": "s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-05-02/products.json"
+  },
+  "snowflake_raw_load": "SUCCESS"
+}
+2026-05-02 15:09:04,194 | INFO | run_ingestion | Starting RecoMart ingestion pipeline
+2026-05-02 15:09:04,336 | INFO | recomart_csv_ingestion | Starting RecoMart CSV ingestion. batch_id=e60d2a2b-44dd-47d1-b553-d42b29b70205
+2026-05-02 15:09:04,336 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/events.csv to s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-05-02/events.csv
+2026-05-02 15:09:24,023 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-05-02/events.csv
+2026-05-02 15:09:24,024 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/item_properties_part1.csv to s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part1.csv
+2026-05-02 15:11:03,489 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part1.csv
+2026-05-02 15:11:03,491 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/item_properties_part2.csv to s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part2.csv
+2026-05-02 15:12:27,201 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part2.csv
+2026-05-02 15:12:27,202 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/category_tree.csv to s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-05-02/category_tree.csv
+2026-05-02 15:12:27,288 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-05-02/category_tree.csv
+2026-05-02 15:12:27,289 | INFO | recomart_csv_ingestion | RecoMart CSV ingestion completed with status=SUCCESS
+2026-05-02 15:12:27,293 | INFO | external_api_ingestion | Starting external API ingestion. batch_id=e3f4d7be-509a-441c-b8a3-af4be7812a4b
+2026-05-02 15:12:27,293 | INFO | external_api_ingestion | Fetching external product data from API: https://dummyjson.com/products
+2026-05-02 15:12:29,030 | INFO | external_api_ingestion | External API fetch successful
+2026-05-02 15:12:29,059 | INFO | external_api_ingestion | Uploading external API JSON to s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-05-02/products.json
+2026-05-02 15:12:29,389 | INFO | external_api_ingestion | Upload successful: s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-05-02/products.json
+2026-05-02 15:12:29,389 | INFO | external_api_ingestion | External API ingestion completed with status=SUCCESS
+2026-05-02 15:12:29,393 | INFO | run_ingestion | S3 upload completed. Starting automated S3 to Snowflake RAW load.
+2026-05-02 15:13:14,114 | INFO | run_ingestion | RecoMart ingestion + Snowflake RAW load pipeline completed
+2026-05-02 15:13:14,115 | INFO | run_ingestion | {
+  "pipeline_name": "recomart_raw_data_ingestion_and_snowflake_load",
+  "pipeline_start_time": "2026-05-02T09:39:04.194535+00:00",
+  "pipeline_end_time": "2026-05-02T09:43:14.114734+00:00",
+  "recomart_csv_ingestion": {
+    "batch_id": "e60d2a2b-44dd-47d1-b553-d42b29b70205",
+    "ingestion_date": "2026-05-02",
+    "status": "SUCCESS",
+    "uploaded_files": [
+      {
+        "source_name": "events",
+        "local_path": "data/source/recomart/events.csv",
+        "s3_path": "s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-05-02/events.csv"
+      },
+      {
+        "source_name": "item_properties_part1",
+        "local_path": "data/source/recomart/item_properties_part1.csv",
+        "s3_path": "s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part1.csv"
+      },
+      {
+        "source_name": "item_properties_part2",
+        "local_path": "data/source/recomart/item_properties_part2.csv",
+        "s3_path": "s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part2.csv"
+      },
+      {
+        "source_name": "category_tree",
+        "local_path": "data/source/recomart/category_tree.csv",
+        "s3_path": "s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-05-02/category_tree.csv"
+      }
+    ],
+    "failed_files": []
+  },
+  "external_api_ingestion": {
+    "batch_id": "e3f4d7be-509a-441c-b8a3-af4be7812a4b",
+    "ingestion_date": "2026-05-02",
+    "source_name": "dummyjson_products_api",
+    "status": "SUCCESS",
+    "s3_path": "s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-05-02/products.json"
+  },
+  "snowflake_raw_load": "SUCCESS"
+}
+2026-05-02 15:38:27,603 | INFO | run_ingestion | Starting RecoMart ingestion pipeline
+2026-05-02 15:38:27,716 | INFO | recomart_csv_ingestion | Starting RecoMart CSV ingestion. batch_id=d4262529-3d0f-4781-945f-867237dc69e6
+2026-05-02 15:38:27,716 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/events.csv to s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-05-02/events.csv
+2026-05-02 15:38:48,084 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-05-02/events.csv
+2026-05-02 15:38:48,085 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/item_properties_part1.csv to s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part1.csv
+2026-05-02 15:40:26,650 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part1.csv
+2026-05-02 15:40:26,652 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/item_properties_part2.csv to s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part2.csv
+2026-05-02 15:41:50,434 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part2.csv
+2026-05-02 15:41:50,435 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/category_tree.csv to s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-05-02/category_tree.csv
+2026-05-02 15:41:50,528 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-05-02/category_tree.csv
+2026-05-02 15:41:50,529 | INFO | recomart_csv_ingestion | RecoMart CSV ingestion completed with status=SUCCESS
+2026-05-02 15:41:50,537 | INFO | external_api_ingestion | Starting external API ingestion. batch_id=a3669939-4f51-4b08-b3b4-ee97576c377f
+2026-05-02 15:41:50,537 | INFO | external_api_ingestion | Fetching external product data from API: https://dummyjson.com/products
+2026-05-02 15:41:51,162 | INFO | external_api_ingestion | External API fetch successful
+2026-05-02 15:41:51,189 | INFO | external_api_ingestion | Uploading external API JSON to s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-05-02/products.json
+2026-05-02 15:41:51,517 | INFO | external_api_ingestion | Upload successful: s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-05-02/products.json
+2026-05-02 15:41:51,517 | INFO | external_api_ingestion | External API ingestion completed with status=SUCCESS
+2026-05-02 15:41:51,518 | INFO | run_ingestion | S3 upload completed. Starting automated S3 to Snowflake RAW load.
+2026-05-02 15:42:28,824 | INFO | run_ingestion | RecoMart ingestion + Snowflake RAW load pipeline completed
+2026-05-02 15:42:28,825 | INFO | run_ingestion | {
+  "pipeline_name": "recomart_raw_data_ingestion_and_snowflake_load",
+  "pipeline_start_time": "2026-05-02T10:08:27.603888+00:00",
+  "pipeline_end_time": "2026-05-02T10:12:28.824085+00:00",
+  "recomart_csv_ingestion": {
+    "batch_id": "d4262529-3d0f-4781-945f-867237dc69e6",
+    "ingestion_date": "2026-05-02",
+    "status": "SUCCESS",
+    "uploaded_files": [
+      {
+        "source_name": "events",
+        "local_path": "data/source/recomart/events.csv",
+        "s3_path": "s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-05-02/events.csv"
+      },
+      {
+        "source_name": "item_properties_part1",
+        "local_path": "data/source/recomart/item_properties_part1.csv",
+        "s3_path": "s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part1.csv"
+      },
+      {
+        "source_name": "item_properties_part2",
+        "local_path": "data/source/recomart/item_properties_part2.csv",
+        "s3_path": "s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part2.csv"
+      },
+      {
+        "source_name": "category_tree",
+        "local_path": "data/source/recomart/category_tree.csv",
+        "s3_path": "s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-05-02/category_tree.csv"
+      }
+    ],
+    "failed_files": []
+  },
+  "external_api_ingestion": {
+    "batch_id": "a3669939-4f51-4b08-b3b4-ee97576c377f",
+    "ingestion_date": "2026-05-02",
+    "source_name": "dummyjson_products_api",
+    "status": "SUCCESS",
+    "s3_path": "s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-05-02/products.json"
+  },
+  "snowflake_raw_load": "SUCCESS"
+}

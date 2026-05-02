@@ -1,5 +1,5 @@
 FEATURE_GROUP,ENTITY_TYPE,FEATURE_VERSION,FEATURE_COUNT
-interaction,user_item,v1,3
-item_popularity,item,v1,15
-training_label,user_item,v1,3
-user_activity,user,v1,15
+interaction,user_item,v1,5
+item_popularity,item,v1,25
+training_label,user_item,v1,5
+user_activity,user,v1,25

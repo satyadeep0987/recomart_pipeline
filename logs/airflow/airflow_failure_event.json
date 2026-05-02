@@ -1,0 +1,8 @@
+{
+  "dag_id": "recomart_cli_end_to_end_pipeline",
+  "task_id": "final_health_check",
+  "run_id": "manual__2026-05-02T15:09:01+00:00",
+  "execution_date": "2026-05-02 15:09:01+00:00",
+  "exception": "Bash command failed. The command returned a non-zero exit code 2.",
+  "failed_at": "2026-05-02T09:48:58.969694"
+}

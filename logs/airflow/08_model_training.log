@@ -1,0 +1,56 @@
+============================================================
+Starting command at Sat May  2 15:16:39 IST 2026
+Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python model_training/train_recommendation_model.py
+============================================================
+2026-05-02 15:16:42,038 | INFO | recomart_model_training | Starting model training. run_id=bf8e9ced-46e7-4aa8-a376-95133dc88830
+RecoMart model training pipeline:   0%|          | 0/12 [00:00<?, ?step/s]Connecting to Snowflake:   0%|          | 0/12 [00:00<?, ?step/s]         Connecting to Snowflake:   8%|▊         | 1/12 [00:00<00:07,  1.49step/s]Creating model tracking objects:   8%|▊         | 1/12 [00:00<00:07,  1.49step/s]Creating model tracking objects:  17%|█▋        | 2/12 [00:01<00:07,  1.34step/s]Finding latest feature batch:  17%|█▋        | 2/12 [00:01<00:07,  1.34step/s]   2026-05-02 15:16:43,696 | INFO | recomart_model_training | Using source_validation_batch_id=20260502024231
+Finding latest feature batch:  25%|██▌       | 3/12 [00:01<00:04,  2.06step/s]Loading training data:  25%|██▌       | 3/12 [00:01<00:04,  2.06step/s]       2026-05-02 15:16:44,824 | INFO | recomart_model_training | Loaded training rows: 10742
+Loading training data:  33%|███▎      | 4/12 [00:02<00:05,  1.35step/s]Splitting train/test data:  33%|███▎      | 4/12 [00:02<00:05,  1.35step/s]Building user-item matrix:  42%|████▏     | 5/12 [00:02<00:05,  1.35step/s]Training SVD model:  50%|█████     | 6/12 [00:02<00:04,  1.35step/s]       Evaluating model:  58%|█████▊    | 7/12 [00:02<00:03,  1.35step/s]  
+Evaluating Precision/Recall/NDCG@10:   0%|          | 0/388 [00:00<?, ?user/s][A
+Evaluating Precision/Recall/NDCG@10:   2%|▏         | 7/388 [00:00<00:05, 64.23user/s][A
+Evaluating Precision/Recall/NDCG@10:   4%|▎         | 14/388 [00:00<00:06, 57.66user/s][AEvaluating Precision/Recall/NDCG@10: 100%|██████████| 388/388 [00:00<00:00, 1348.13user/s]
+Evaluating model:  67%|██████▋   | 8/12 [00:03<00:01,  3.47step/s]Saving model artifact:  67%|██████▋   | 8/12 [00:03<00:01,  3.47step/s]Generating recommendations:  75%|███████▌  | 9/12 [00:03<00:00,  3.47step/s]
+Generating sample recommendations:   0%|          | 0/20 [00:00<?, ?user/s][AGenerating sample recommendations: 100%|██████████| 20/20 [00:00<00:00, 819.47user/s]
+Writing model report:  83%|████████▎ | 10/12 [00:03<00:00,  3.47step/s]     Logging to MLflow:  92%|█████████▏| 11/12 [00:03<00:00,  3.47step/s]   Logging to MLflow: 100%|██████████| 12/12 [00:03<00:00,  6.14step/s]Writing metadata to Snowflake: 100%|██████████| 12/12 [00:03<00:00,  6.14step/s]
+Preparing recommendation insert payload:   0%|          | 0/200 [00:00<?, ?row/s][APreparing recommendation insert payload: 100%|██████████| 200/200 [00:00<00:00, 291574.83row/s]
+Model training completed: : 13step [00:05,  6.14step/s]                         Model training completed: : 13step [00:05,  2.47step/s]
+2026-05-02 15:16:47,323 | INFO | recomart_model_training | Model training completed successfully. run_id=bf8e9ced-46e7-4aa8-a376-95133dc88830
+2026-05-02 15:16:47,324 | INFO | recomart_model_training | Metrics: {
+  "precision_at_k": 0.010909090909090912,
+  "recall_at_k": 0.10909090909090909,
+  "ndcg_at_k": 0.059628248124353564,
+  "hit_rate_at_k": 0.10909090909090909,
+  "evaluated_users": 385
+}
+2026-05-02 15:16:47,512 | INFO | recomart_model_training | Snowflake connection closed
+============================================================
+Finished command at Sat May  2 15:16:47 IST 2026 with exit code 0
+============================================================
+============================================================
+Starting command at Sat May  2 15:46:30 IST 2026
+Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python model_training/train_recommendation_model.py
+============================================================
+2026-05-02 15:46:31,938 | INFO | recomart_model_training | Starting model training. run_id=b14f3158-eb22-44e4-9a60-4c6ec3e0c8ea
+RecoMart model training pipeline:   0%|          | 0/12 [00:00<?, ?step/s]Connecting to Snowflake:   0%|          | 0/12 [00:00<?, ?step/s]         Connecting to Snowflake:   8%|▊         | 1/12 [00:00<00:04,  2.56step/s]Creating model tracking objects:   8%|▊         | 1/12 [00:00<00:04,  2.56step/s]Creating model tracking objects:  17%|█▋        | 2/12 [00:01<00:06,  1.60step/s]Finding latest feature batch:  17%|█▋        | 2/12 [00:01<00:06,  1.60step/s]   2026-05-02 15:46:33,288 | INFO | recomart_model_training | Using source_validation_batch_id=20260502031153
+Finding latest feature batch:  25%|██▌       | 3/12 [00:01<00:03,  2.42step/s]Loading training data:  25%|██▌       | 3/12 [00:01<00:03,  2.42step/s]       2026-05-02 15:46:34,279 | INFO | recomart_model_training | Loaded training rows: 10693
+Loading training data:  33%|███▎      | 4/12 [00:02<00:05,  1.56step/s]Splitting train/test data:  33%|███▎      | 4/12 [00:02<00:05,  1.56step/s]Building user-item matrix:  42%|████▏     | 5/12 [00:02<00:04,  1.56step/s]Training SVD model:  50%|█████     | 6/12 [00:02<00:03,  1.56step/s]       Evaluating model:  58%|█████▊    | 7/12 [00:02<00:03,  1.56step/s]  
+Evaluating Precision/Recall/NDCG@10:   0%|          | 0/388 [00:00<?, ?user/s][A
+Evaluating Precision/Recall/NDCG@10:   1%|          | 4/388 [00:00<00:09, 39.91user/s][A
+Evaluating Precision/Recall/NDCG@10:   3%|▎         | 10/388 [00:00<00:07, 48.44user/s][AEvaluating Precision/Recall/NDCG@10: 100%|██████████| 388/388 [00:00<00:00, 1549.30user/s]
+Evaluating model:  67%|██████▋   | 8/12 [00:02<00:01,  3.90step/s]Saving model artifact:  67%|██████▋   | 8/12 [00:02<00:01,  3.90step/s]Generating recommendations:  75%|███████▌  | 9/12 [00:02<00:00,  3.90step/s]
+Generating sample recommendations:   0%|          | 0/20 [00:00<?, ?user/s][AGenerating sample recommendations: 100%|██████████| 20/20 [00:00<00:00, 10853.42user/s]
+Writing model report:  83%|████████▎ | 10/12 [00:02<00:00,  3.90step/s]     Logging to MLflow:  92%|█████████▏| 11/12 [00:02<00:00,  3.90step/s]   Logging to MLflow: 100%|██████████| 12/12 [00:02<00:00,  6.92step/s]Writing metadata to Snowflake: 100%|██████████| 12/12 [00:02<00:00,  6.92step/s]
+Preparing recommendation insert payload:   0%|          | 0/200 [00:00<?, ?row/s][APreparing recommendation insert payload: 100%|██████████| 200/200 [00:00<00:00, 305818.74row/s]
+Model training completed: : 13step [00:04,  6.92step/s]                         Model training completed: : 13step [00:04,  3.08step/s]
+2026-05-02 15:46:36,162 | INFO | recomart_model_training | Model training completed successfully. run_id=b14f3158-eb22-44e4-9a60-4c6ec3e0c8ea
+2026-05-02 15:46:36,162 | INFO | recomart_model_training | Metrics: {
+  "precision_at_k": 0.008333333333333337,
+  "recall_at_k": 0.08333333333333333,
+  "ndcg_at_k": 0.048749011071743176,
+  "hit_rate_at_k": 0.08333333333333333,
+  "evaluated_users": 384
+}
+2026-05-02 15:46:36,359 | INFO | recomart_model_training | Snowflake connection closed
+============================================================
+Finished command at Sat May  2 15:46:36 IST 2026 with exit code 0
+============================================================

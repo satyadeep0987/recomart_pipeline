@@ -66,3 +66,29 @@ Invalid expression [UUID_STRING()] in VALUES clause
 2026-04-30 20:50:06,555 | INFO | recomart_lineage | Inserted lineage step: feature_publish
 2026-04-30 20:50:06,555 | INFO | recomart_lineage | RecoMart lineage tracking completed successfully
 2026-04-30 20:50:06,765 | INFO | recomart_lineage | Snowflake connection closed
+2026-05-02 15:16:33,489 | INFO | recomart_lineage | Starting RecoMart data versioning and lineage tracking
+2026-05-02 15:16:35,436 | INFO | recomart_lineage | Registered dataset version: recomart_events::3745aa83238b1e6d44d8fda209807899f420084398f94ddf745f3cbcfecbf9e7
+2026-05-02 15:16:35,955 | INFO | recomart_lineage | Registered dataset version: recomart_item_properties_part1::30aad5aeca58b2dc27dcc73e1708565f5818e45adb3eb57401f91e87355b0b81
+2026-05-02 15:16:36,313 | INFO | recomart_lineage | Registered dataset version: recomart_item_properties_part2::d5e7d1a91dc40f522aeb596b267e6c87d8aed689a7192d12369cfb165eb987e5
+2026-05-02 15:16:36,773 | INFO | recomart_lineage | Registered dataset version: recomart_category_tree::94e865eb0a3d48cbbfe3b79079018dd92509315c88f5fd8d00d0b4b5af434f5b
+2026-05-02 15:16:36,933 | INFO | recomart_lineage | Using latest batch id for lineage: 20260502024231
+2026-05-02 15:16:37,593 | INFO | recomart_lineage | Inserted lineage step: s3_to_raw_load
+2026-05-02 15:16:37,938 | INFO | recomart_lineage | Inserted lineage step: raw_to_validated
+2026-05-02 15:16:38,412 | INFO | recomart_lineage | Inserted lineage step: validated_to_curated_preparation
+2026-05-02 15:16:38,822 | INFO | recomart_lineage | Inserted lineage step: curated_to_feature_engineering
+2026-05-02 15:16:39,334 | INFO | recomart_lineage | Inserted lineage step: feature_publish
+2026-05-02 15:16:39,334 | INFO | recomart_lineage | RecoMart lineage tracking completed successfully
+2026-05-02 15:16:39,537 | INFO | recomart_lineage | Snowflake connection closed
+2026-05-02 15:46:25,145 | INFO | recomart_lineage | Starting RecoMart data versioning and lineage tracking
+2026-05-02 15:46:26,933 | INFO | recomart_lineage | Registered dataset version: recomart_events::3745aa83238b1e6d44d8fda209807899f420084398f94ddf745f3cbcfecbf9e7
+2026-05-02 15:46:27,275 | INFO | recomart_lineage | Registered dataset version: recomart_item_properties_part1::30aad5aeca58b2dc27dcc73e1708565f5818e45adb3eb57401f91e87355b0b81
+2026-05-02 15:46:27,660 | INFO | recomart_lineage | Registered dataset version: recomart_item_properties_part2::d5e7d1a91dc40f522aeb596b267e6c87d8aed689a7192d12369cfb165eb987e5
+2026-05-02 15:46:28,023 | INFO | recomart_lineage | Registered dataset version: recomart_category_tree::94e865eb0a3d48cbbfe3b79079018dd92509315c88f5fd8d00d0b4b5af434f5b
+2026-05-02 15:46:28,192 | INFO | recomart_lineage | Using latest batch id for lineage: 20260502031153
+2026-05-02 15:46:28,528 | INFO | recomart_lineage | Inserted lineage step: s3_to_raw_load
+2026-05-02 15:46:28,866 | INFO | recomart_lineage | Inserted lineage step: raw_to_validated
+2026-05-02 15:46:29,200 | INFO | recomart_lineage | Inserted lineage step: validated_to_curated_preparation
+2026-05-02 15:46:29,580 | INFO | recomart_lineage | Inserted lineage step: curated_to_feature_engineering
+2026-05-02 15:46:29,899 | INFO | recomart_lineage | Inserted lineage step: feature_publish
+2026-05-02 15:46:29,899 | INFO | recomart_lineage | RecoMart lineage tracking completed successfully
+2026-05-02 15:46:30,095 | INFO | recomart_lineage | Snowflake connection closed

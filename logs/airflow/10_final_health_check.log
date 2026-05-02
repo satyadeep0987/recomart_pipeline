@@ -1,14 +1,57 @@
 ============================================================
-Starting command at Thu Apr 30 20:10:47 IST 2026
+Starting command at Sat May  2 15:16:58 IST 2026
 Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python orchestration/run_sql_file.py sql/orchestration/final_health_check.sql
 ============================================================
+/opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/sd/Desktop/recomart_pipeline/orchestration/run_sql_file.py': [Errno 2] No such file or directory
 ============================================================
-Finished command at Thu Apr 30 20:10:47 IST 2026 with exit code 0
+Finished command at Sat May  2 15:16:58 IST 2026 with exit code 2
 ============================================================
 ============================================================
-Starting command at Thu Apr 30 20:33:51 IST 2026
+Starting command at Sat May  2 15:18:58 IST 2026
 Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python orchestration/run_sql_file.py sql/orchestration/final_health_check.sql
 ============================================================
+/opt/homebrew/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/sd/Desktop/recomart_pipeline/orchestration/run_sql_file.py': [Errno 2] No such file or directory
 ============================================================
-Finished command at Thu Apr 30 20:33:51 IST 2026 with exit code 0
+Finished command at Sat May  2 15:18:58 IST 2026 with exit code 2
+============================================================
+============================================================
+Starting command at Sat May  2 15:46:43 IST 2026
+Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python orchestration/run_sql_file.py sql/orchestration/final_health_check.sql
+============================================================
+2026-05-02 15:46:43,751 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:46:43,752 | INFO | recomart_sql_runner | RecoMart SQL runner started
+2026-05-02 15:46:43,752 | INFO | recomart_sql_runner | Project root: /Users/sd/Desktop/recomart_pipeline
+2026-05-02 15:46:43,752 | INFO | recomart_sql_runner | Environment file: /Users/sd/Desktop/recomart_pipeline/.env
+2026-05-02 15:46:43,752 | INFO | recomart_sql_runner | SQL files received: ['sql/orchestration/final_health_check.sql']
+2026-05-02 15:46:44,372 | INFO | recomart_sql_runner | Connected to Snowflake successfully
+2026-05-02 15:46:44,372 | INFO | recomart_sql_runner | Executing SQL file: /Users/sd/Desktop/recomart_pipeline/sql/orchestration/final_health_check.sql
+2026-05-02 15:46:44,373 | INFO | recomart_sql_runner | Total SQL statements found: 3
+2026-05-02 15:46:44,374 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:46:44,374 | INFO | recomart_sql_runner | Running statement 1/3
+2026-05-02 15:46:44,374 | INFO | recomart_sql_runner | SQL preview: USE ROLE ACCOUNTADMIN
+2026-05-02 15:46:44,644 | INFO | recomart_sql_runner | Statement 1 completed successfully
+2026-05-02 15:46:44,645 | INFO | recomart_sql_runner | Statement 1: result preview columns=['status']
+2026-05-02 15:46:44,645 | INFO | recomart_sql_runner | Statement 1: row=('Statement executed successfully.',)
+2026-05-02 15:46:44,645 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:46:44,645 | INFO | recomart_sql_runner | Running statement 2/3
+2026-05-02 15:46:44,645 | INFO | recomart_sql_runner | SQL preview: USE DATABASE RECOMART_DB
+2026-05-02 15:46:44,770 | INFO | recomart_sql_runner | Statement 2 completed successfully
+2026-05-02 15:46:44,771 | INFO | recomart_sql_runner | Statement 2: result preview columns=['status']
+2026-05-02 15:46:44,771 | INFO | recomart_sql_runner | Statement 2: row=('Statement executed successfully.',)
+2026-05-02 15:46:44,771 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:46:44,771 | INFO | recomart_sql_runner | Running statement 3/3
+2026-05-02 15:46:44,771 | INFO | recomart_sql_runner | SQL preview: SELECT 'RAW_EVENTS' AS CHECK_NAME, COUNT(*) AS RECORD_COUNT FROM RAW.RAW_RECOMART_EVENTS UNION ALL SELECT 'VALIDATED_EVENTS' AS CHECK_NAME, COUNT(*) AS RECORD_COUNT FROM VALIDATED.RECOMART_EVENTS UNION ALL SELECT 'CURATED_USER_ITEM_INTERACTIONS' AS CHECK_NAME, COUNT(*) AS RECORD_COUNT FROM CURATED.U
+2026-05-02 15:46:44,924 | INFO | recomart_sql_runner | Statement 3 completed successfully
+2026-05-02 15:46:44,924 | INFO | recomart_sql_runner | Statement 3: result preview columns=['CHECK_NAME', 'RECORD_COUNT']
+2026-05-02 15:46:44,924 | INFO | recomart_sql_runner | Statement 3: row=('RAW_EVENTS', 38585414)
+2026-05-02 15:46:44,924 | INFO | recomart_sql_runner | Statement 3: row=('VALIDATED_EVENTS', 38585414)
+2026-05-02 15:46:44,924 | INFO | recomart_sql_runner | Statement 3: row=('CURATED_USER_ITEM_INTERACTIONS', 10725895)
+2026-05-02 15:46:44,925 | INFO | recomart_sql_runner | Statement 3: row=('OFFLINE_FEATURES', 10725895)
+2026-05-02 15:46:44,925 | INFO | recomart_sql_runner | Statement 3: row=('MODEL_RUNS', 7)
+2026-05-02 15:46:44,925 | INFO | recomart_sql_runner | All SQL files executed successfully
+2026-05-02 15:46:45,122 | INFO | recomart_sql_runner | Snowflake connection closed
+2026-05-02 15:46:45,122 | INFO | recomart_sql_runner | RecoMart SQL runner finished
+2026-05-02 15:46:45,122 | INFO | recomart_sql_runner | ================================================================================
+============================================================
+Finished command at Sat May  2 15:46:45 IST 2026 with exit code 0
 ============================================================

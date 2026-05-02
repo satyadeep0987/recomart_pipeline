@@ -115,19 +115,11 @@ with DAG(
         ),
     )
 
-    load_raw_data_to_snowflake = BashOperator(
-        task_id="load_raw_data_to_snowflake",
-        bash_command=build_bash_command(
-            command=f'"{PROJECT_PYTHON}" orchestration/run_sql_file.py sql/load_raw_from_s3.sql',
-            log_file=f"{LOG_DIR}/03_load_raw_to_snowflake.log",
-        ),
-    )
-
     validate_raw_data = BashOperator(
         task_id="validate_raw_data",
         bash_command=build_bash_command(
             command=f'"{PROJECT_PYTHON}" validation/run_validation.py',
-            log_file=f"{LOG_DIR}/04_validation.log",
+            log_file=f"{LOG_DIR}/03_validation.log",
         ),
     )
 
@@ -135,7 +127,7 @@ with DAG(
         task_id="prepare_curated_data",
         bash_command=build_bash_command(
             command=f'"{PROJECT_PYTHON}" preparation/run_preparation.py',
-            log_file=f"{LOG_DIR}/05_preparation.log",
+            log_file=f"{LOG_DIR}/04_preparation.log",
         ),
     )
 
@@ -143,7 +135,7 @@ with DAG(
         task_id="run_feature_engineering",
         bash_command=build_bash_command(
             command=f'"{PROJECT_PYTHON}" feature_engineering/run_feature_engineering.py',
-            log_file=f"{LOG_DIR}/06_feature_engineering.log",
+            log_file=f"{LOG_DIR}/05_feature_engineering.log",
         ),
     )
 
@@ -151,7 +143,7 @@ with DAG(
         task_id="publish_feature_store",
         bash_command=build_bash_command(
             command=f'"{PROJECT_PYTHON}" feature_store/run_feature_store.py',
-            log_file=f"{LOG_DIR}/07_feature_store.log",
+            log_file=f"{LOG_DIR}/06_feature_store.log",
         ),
     )
 
@@ -159,7 +151,7 @@ with DAG(
         task_id="track_versioning_and_lineage",
         bash_command=build_bash_command(
             command=f'"{PROJECT_PYTHON}" lineage/run_lineage_tracking.py',
-            log_file=f"{LOG_DIR}/08_lineage.log",
+            log_file=f"{LOG_DIR}/07_lineage.log",
         ),
     )
 
@@ -167,7 +159,7 @@ with DAG(
         task_id="train_and_evaluate_model",
         bash_command=build_bash_command(
             command=f'"{PROJECT_PYTHON}" model_training/train_recommendation_model.py',
-            log_file=f"{LOG_DIR}/09_model_training.log",
+            log_file=f"{LOG_DIR}/08_model_training.log",
         ),
     )
 
@@ -175,7 +167,7 @@ with DAG(
         task_id="generate_reports",
         bash_command=build_bash_command(
             command=f'"{PROJECT_PYTHON}" reporting/generate_reports.py',
-            log_file=f"{LOG_DIR}/10_generate_reports.log",
+            log_file=f"{LOG_DIR}/09_generate_reports.log",
         ),
     )
 
@@ -186,7 +178,7 @@ with DAG(
                 f'"{PROJECT_PYTHON}" orchestration/run_sql_file.py '
                 f'sql/orchestration/final_health_check.sql'
             ),
-            log_file=f"{LOG_DIR}/11_final_health_check.log",
+            log_file=f"{LOG_DIR}/10_final_health_check.log",
         ),
     )
 
@@ -204,7 +196,6 @@ with DAG(
         start_pipeline
         >> check_environment
         >> ingest_source_data_to_s3
-        >> load_raw_data_to_snowflake
         >> validate_raw_data
         >> prepare_curated_data
         >> run_feature_engineering
@@ -219,7 +210,6 @@ with DAG(
     [
         check_environment,
         ingest_source_data_to_s3,
-        load_raw_data_to_snowflake,
         validate_raw_data,
         prepare_curated_data,
         run_feature_engineering,

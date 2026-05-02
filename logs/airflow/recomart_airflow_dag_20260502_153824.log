@@ -1,0 +1,1049 @@
+[2026-05-02T15:38:26.798+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/sd/Desktop/recomart_pipeline/airflow_cli_home/dags
+[2026-05-02T15:38:26.814+0530] {dag.py:4435} INFO - dagrun id: recomart_cli_end_to_end_pipeline
+[2026-05-02T15:38:26.820+0530] {dag.py:4451} INFO - created dagrun <DagRun recomart_cli_end_to_end_pipeline @ 2026-05-02 15:38:24+00:00: manual__2026-05-02T15:38:24+00:00, state:running, queued_at: None. externally triggered: False>
+[2026-05-02T15:38:26.831+0530] {dag.py:4396} INFO - [DAG TEST] starting task_id=start_pipeline map_index=-1
+[2026-05-02T15:38:26.831+0530] {dag.py:4399} INFO - [DAG TEST] running task <TaskInstance: recomart_cli_end_to_end_pipeline.start_pipeline manual__2026-05-02T15:38:24+00:00 [scheduled]>
+[2026-05-02 15:38:26,854] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='start_pipeline' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:38:26.854+0530] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='start_pipeline' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:38:26.856+0530] {taskinstance.py:732} INFO - ::endgroup::
+[2026-05-02T15:38:26.876+0530] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-05-02T15:38:26.876+0530] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=recomart_cli_end_to_end_pipeline, task_id=start_pipeline, run_id=manual__2026-05-02T15:38:24+00:00, execution_date=20260502T153824, start_date=, end_date=20260502T100826
+[2026-05-02T15:38:26.881+0530] {dag.py:4410} INFO - [DAG TEST] end task task_id=start_pipeline map_index=-1
+[2026-05-02T15:38:26.887+0530] {dag.py:4396} INFO - [DAG TEST] starting task_id=check_environment map_index=-1
+[2026-05-02T15:38:26.887+0530] {dag.py:4399} INFO - [DAG TEST] running task <TaskInstance: recomart_cli_end_to_end_pipeline.check_environment manual__2026-05-02T15:38:24+00:00 [scheduled]>
+[2026-05-02 15:38:26,895] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='check_environment' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:38:26.895+0530] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='check_environment' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:38:26.895+0530] {taskinstance.py:732} INFO - ::endgroup::
+[2026-05-02 15:38:26,896] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-05-02T15:38:26.896+0530] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-05-02 15:38:26,897] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    echo "Command: test -d "/Users/sd/Desktop/recomart_pipeline" && test -f "/Users/sd/Desktop/recomart_pipeline/.env" && test -x "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" && "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" --version && echo "Project environment check passed"" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    test -d "/Users/sd/Desktop/recomart_pipeline" && test -f "/Users/sd/Desktop/recomart_pipeline/.env" && test -x "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" && "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" --version && echo "Project environment check passed" 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    exit $EXIT_CODE\n    ']
+[2026-05-02T15:38:26.897+0530] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    echo "Command: test -d "/Users/sd/Desktop/recomart_pipeline" && test -f "/Users/sd/Desktop/recomart_pipeline/.env" && test -x "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" && "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" --version && echo "Project environment check passed"" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    test -d "/Users/sd/Desktop/recomart_pipeline" && test -f "/Users/sd/Desktop/recomart_pipeline/.env" && test -x "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" && "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" --version && echo "Project environment check passed" 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/01_check_environment.log"\n    exit $EXIT_CODE\n    ']
+[2026-05-02 15:38:26,901] {subprocess.py:99} INFO - Output:
+[2026-05-02T15:38:26.901+0530] {subprocess.py:99} INFO - Output:
+[2026-05-02 15:38:26,908] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:38:26.908+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:38:26,911] {subprocess.py:106} INFO - Starting command at Sat May  2 15:38:26 IST 2026
+[2026-05-02T15:38:26.911+0530] {subprocess.py:106} INFO - Starting command at Sat May  2 15:38:26 IST 2026
+[2026-05-02 15:38:26,914] {subprocess.py:106} INFO - Command: test -d /Users/sd/Desktop/recomart_pipeline && test -f /Users/sd/Desktop/recomart_pipeline/.env && test -x /Users/sd/Desktop/recomart_pipeline/.venv/bin/python && /Users/sd/Desktop/recomart_pipeline/.venv/bin/python --version && echo Project environment check passed
+[2026-05-02T15:38:26.914+0530] {subprocess.py:106} INFO - Command: test -d /Users/sd/Desktop/recomart_pipeline && test -f /Users/sd/Desktop/recomart_pipeline/.env && test -x /Users/sd/Desktop/recomart_pipeline/.venv/bin/python && /Users/sd/Desktop/recomart_pipeline/.venv/bin/python --version && echo Project environment check passed
+[2026-05-02 15:38:26,916] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:38:26.916+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:38:26,925] {subprocess.py:106} INFO - Python 3.11.5
+[2026-05-02T15:38:26.925+0530] {subprocess.py:106} INFO - Python 3.11.5
+[2026-05-02 15:38:26,927] {subprocess.py:106} INFO - Project environment check passed
+[2026-05-02T15:38:26.927+0530] {subprocess.py:106} INFO - Project environment check passed
+[2026-05-02 15:38:26,930] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:38:26.930+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:38:26,933] {subprocess.py:106} INFO - Finished command at Sat May  2 15:38:26 IST 2026 with exit code 0
+[2026-05-02T15:38:26.933+0530] {subprocess.py:106} INFO - Finished command at Sat May  2 15:38:26 IST 2026 with exit code 0
+[2026-05-02 15:38:26,936] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:38:26.936+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:38:26,936] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-05-02T15:38:26.936+0530] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-05-02T15:38:26.942+0530] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-05-02T15:38:26.942+0530] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=recomart_cli_end_to_end_pipeline, task_id=check_environment, run_id=manual__2026-05-02T15:38:24+00:00, execution_date=20260502T153824, start_date=, end_date=20260502T100826
+[2026-05-02T15:38:26.946+0530] {dag.py:4410} INFO - [DAG TEST] end task task_id=check_environment map_index=-1
+[2026-05-02T15:38:26.953+0530] {dag.py:4396} INFO - [DAG TEST] starting task_id=ingest_source_data_to_s3_and_load_raw_snowflake map_index=-1
+[2026-05-02T15:38:26.953+0530] {dag.py:4399} INFO - [DAG TEST] running task <TaskInstance: recomart_cli_end_to_end_pipeline.ingest_source_data_to_s3_and_load_raw_snowflake manual__2026-05-02T15:38:24+00:00 [scheduled]>
+[2026-05-02 15:38:26,961] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='ingest_source_data_to_s3_and_load_raw_snowflake' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:38:26.961+0530] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='ingest_source_data_to_s3_and_load_raw_snowflake' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:38:26.961+0530] {taskinstance.py:732} INFO - ::endgroup::
+[2026-05-02 15:38:26,961] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-05-02T15:38:26.961+0530] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-05-02 15:38:26,962] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    echo "Command: "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" ingestion/run_ingestion.py" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" ingestion/run_ingestion.py 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    exit $EXIT_CODE\n    ']
+[2026-05-02T15:38:26.962+0530] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    echo "Command: "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" ingestion/run_ingestion.py" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" ingestion/run_ingestion.py 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/02_ingestion_and_raw_load.log"\n    exit $EXIT_CODE\n    ']
+[2026-05-02 15:38:26,966] {subprocess.py:99} INFO - Output:
+[2026-05-02T15:38:26.966+0530] {subprocess.py:99} INFO - Output:
+[2026-05-02 15:38:26,972] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:38:26.972+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:38:26,975] {subprocess.py:106} INFO - Starting command at Sat May  2 15:38:26 IST 2026
+[2026-05-02T15:38:26.975+0530] {subprocess.py:106} INFO - Starting command at Sat May  2 15:38:26 IST 2026
+[2026-05-02 15:38:26,977] {subprocess.py:106} INFO - Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python ingestion/run_ingestion.py
+[2026-05-02T15:38:26.977+0530] {subprocess.py:106} INFO - Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python ingestion/run_ingestion.py
+[2026-05-02 15:38:26,980] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:38:26.980+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:38:27,605] {subprocess.py:106} INFO - 2026-05-02 15:38:27,603 | INFO | run_ingestion | Starting RecoMart ingestion pipeline
+[2026-05-02T15:38:27.605+0530] {subprocess.py:106} INFO - 2026-05-02 15:38:27,603 | INFO | run_ingestion | Starting RecoMart ingestion pipeline
+[2026-05-02 15:38:27,716] {subprocess.py:106} INFO - 2026-05-02 15:38:27,716 | INFO | recomart_csv_ingestion | Starting RecoMart CSV ingestion. batch_id=d4262529-3d0f-4781-945f-867237dc69e6
+[2026-05-02T15:38:27.716+0530] {subprocess.py:106} INFO - 2026-05-02 15:38:27,716 | INFO | recomart_csv_ingestion | Starting RecoMart CSV ingestion. batch_id=d4262529-3d0f-4781-945f-867237dc69e6
+[2026-05-02 15:38:27,716] {subprocess.py:106} INFO - 2026-05-02 15:38:27,716 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/events.csv to s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-05-02/events.csv
+[2026-05-02T15:38:27.716+0530] {subprocess.py:106} INFO - 2026-05-02 15:38:27,716 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/events.csv to s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-05-02/events.csv
+[2026-05-02 15:38:48,085] {subprocess.py:106} INFO - 2026-05-02 15:38:48,084 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-05-02/events.csv
+[2026-05-02T15:38:48.085+0530] {subprocess.py:106} INFO - 2026-05-02 15:38:48,084 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-05-02/events.csv
+[2026-05-02 15:38:48,086] {subprocess.py:106} INFO - 2026-05-02 15:38:48,085 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/item_properties_part1.csv to s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part1.csv
+[2026-05-02T15:38:48.086+0530] {subprocess.py:106} INFO - 2026-05-02 15:38:48,085 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/item_properties_part1.csv to s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part1.csv
+[2026-05-02 15:40:26,652] {subprocess.py:106} INFO - 2026-05-02 15:40:26,650 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part1.csv
+[2026-05-02T15:40:26.652+0530] {subprocess.py:106} INFO - 2026-05-02 15:40:26,650 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part1.csv
+[2026-05-02 15:40:26,654] {subprocess.py:106} INFO - 2026-05-02 15:40:26,652 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/item_properties_part2.csv to s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part2.csv
+[2026-05-02T15:40:26.654+0530] {subprocess.py:106} INFO - 2026-05-02 15:40:26,652 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/item_properties_part2.csv to s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part2.csv
+[2026-05-02 15:41:50,436] {subprocess.py:106} INFO - 2026-05-02 15:41:50,434 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part2.csv
+[2026-05-02T15:41:50.436+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:50,434 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part2.csv
+[2026-05-02 15:41:50,437] {subprocess.py:106} INFO - 2026-05-02 15:41:50,435 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/category_tree.csv to s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-05-02/category_tree.csv
+[2026-05-02T15:41:50.437+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:50,435 | INFO | recomart_csv_ingestion | Uploading data/source/recomart/category_tree.csv to s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-05-02/category_tree.csv
+[2026-05-02 15:41:50,529] {subprocess.py:106} INFO - 2026-05-02 15:41:50,528 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-05-02/category_tree.csv
+[2026-05-02T15:41:50.529+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:50,528 | INFO | recomart_csv_ingestion | Upload successful: s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-05-02/category_tree.csv
+[2026-05-02 15:41:50,529] {subprocess.py:106} INFO - 2026-05-02 15:41:50,529 | INFO | recomart_csv_ingestion | RecoMart CSV ingestion completed with status=SUCCESS
+[2026-05-02T15:41:50.529+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:50,529 | INFO | recomart_csv_ingestion | RecoMart CSV ingestion completed with status=SUCCESS
+[2026-05-02 15:41:50,537] {subprocess.py:106} INFO - 2026-05-02 15:41:50,537 | INFO | external_api_ingestion | Starting external API ingestion. batch_id=a3669939-4f51-4b08-b3b4-ee97576c377f
+[2026-05-02T15:41:50.537+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:50,537 | INFO | external_api_ingestion | Starting external API ingestion. batch_id=a3669939-4f51-4b08-b3b4-ee97576c377f
+[2026-05-02 15:41:50,538] {subprocess.py:106} INFO - 2026-05-02 15:41:50,537 | INFO | external_api_ingestion | Fetching external product data from API: https://dummyjson.com/products
+[2026-05-02T15:41:50.538+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:50,537 | INFO | external_api_ingestion | Fetching external product data from API: https://dummyjson.com/products
+[2026-05-02 15:41:51,163] {subprocess.py:106} INFO - 2026-05-02 15:41:51,162 | INFO | external_api_ingestion | External API fetch successful
+[2026-05-02T15:41:51.163+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:51,162 | INFO | external_api_ingestion | External API fetch successful
+[2026-05-02 15:41:51,190] {subprocess.py:106} INFO - 2026-05-02 15:41:51,189 | INFO | external_api_ingestion | Uploading external API JSON to s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-05-02/products.json
+[2026-05-02T15:41:51.190+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:51,189 | INFO | external_api_ingestion | Uploading external API JSON to s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-05-02/products.json
+[2026-05-02 15:41:51,517] {subprocess.py:106} INFO - 2026-05-02 15:41:51,517 | INFO | external_api_ingestion | Upload successful: s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-05-02/products.json
+[2026-05-02T15:41:51.517+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:51,517 | INFO | external_api_ingestion | Upload successful: s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-05-02/products.json
+[2026-05-02 15:41:51,518] {subprocess.py:106} INFO - 2026-05-02 15:41:51,517 | INFO | external_api_ingestion | External API ingestion completed with status=SUCCESS
+[2026-05-02T15:41:51.518+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:51,517 | INFO | external_api_ingestion | External API ingestion completed with status=SUCCESS
+[2026-05-02 15:41:51,518] {subprocess.py:106} INFO - 2026-05-02 15:41:51,518 | INFO | run_ingestion | S3 upload completed. Starting automated S3 to Snowflake RAW load.
+[2026-05-02T15:41:51.518+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:51,518 | INFO | run_ingestion | S3 upload completed. Starting automated S3 to Snowflake RAW load.
+[2026-05-02 15:41:51,521] {subprocess.py:106} INFO - 2026-05-02 15:41:51,518 | INFO | snowflake_raw_loader | Starting automated S3 to Snowflake RAW load
+[2026-05-02T15:41:51.521+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:51,518 | INFO | snowflake_raw_loader | Starting automated S3 to Snowflake RAW load
+[2026-05-02 15:41:52,604] {subprocess.py:106} INFO - 2026-05-02 15:41:52,603 | INFO | snowflake_raw_loader | Executing SQL file: sql/load_raw_from_s3.sql
+[2026-05-02T15:41:52.604+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:52,603 | INFO | snowflake_raw_loader | Executing SQL file: sql/load_raw_from_s3.sql
+[2026-05-02 15:41:52,604] {subprocess.py:106} INFO - 2026-05-02 15:41:52,604 | INFO | snowflake_raw_loader | Running statement 1/15
+[2026-05-02T15:41:52.604+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:52,604 | INFO | snowflake_raw_loader | Running statement 1/15
+[2026-05-02 15:41:52,780] {subprocess.py:106} INFO - 2026-05-02 15:41:52,780 | INFO | snowflake_raw_loader | Statement 1 completed successfully
+[2026-05-02T15:41:52.780+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:52,780 | INFO | snowflake_raw_loader | Statement 1 completed successfully
+[2026-05-02 15:41:52,781] {subprocess.py:106} INFO - 2026-05-02 15:41:52,780 | INFO | snowflake_raw_loader | Running statement 2/15
+[2026-05-02T15:41:52.781+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:52,780 | INFO | snowflake_raw_loader | Running statement 2/15
+[2026-05-02 15:41:52,901] {subprocess.py:106} INFO - 2026-05-02 15:41:52,901 | INFO | snowflake_raw_loader | Statement 2 completed successfully
+[2026-05-02T15:41:52.901+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:52,901 | INFO | snowflake_raw_loader | Statement 2 completed successfully
+[2026-05-02 15:41:52,902] {subprocess.py:106} INFO - 2026-05-02 15:41:52,901 | INFO | snowflake_raw_loader | Running statement 3/15
+[2026-05-02T15:41:52.902+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:52,901 | INFO | snowflake_raw_loader | Running statement 3/15
+[2026-05-02 15:41:53,019] {subprocess.py:106} INFO - 2026-05-02 15:41:53,019 | INFO | snowflake_raw_loader | Statement 3 completed successfully
+[2026-05-02T15:41:53.019+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:53,019 | INFO | snowflake_raw_loader | Statement 3 completed successfully
+[2026-05-02 15:41:53,020] {subprocess.py:106} INFO - 2026-05-02 15:41:53,019 | INFO | snowflake_raw_loader | Running statement 4/15
+[2026-05-02T15:41:53.020+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:53,019 | INFO | snowflake_raw_loader | Running statement 4/15
+[2026-05-02 15:41:53,131] {subprocess.py:106} INFO - 2026-05-02 15:41:53,130 | INFO | snowflake_raw_loader | Statement 4 completed successfully
+[2026-05-02T15:41:53.131+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:53,130 | INFO | snowflake_raw_loader | Statement 4 completed successfully
+[2026-05-02 15:41:53,131] {subprocess.py:106} INFO - 2026-05-02 15:41:53,131 | INFO | snowflake_raw_loader | Running statement 5/15
+[2026-05-02T15:41:53.131+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:53,131 | INFO | snowflake_raw_loader | Running statement 5/15
+[2026-05-02 15:41:53,596] {subprocess.py:106} INFO - 2026-05-02 15:41:53,596 | INFO | snowflake_raw_loader | Statement 5 completed successfully
+[2026-05-02T15:41:53.596+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:53,596 | INFO | snowflake_raw_loader | Statement 5 completed successfully
+[2026-05-02 15:41:53,597] {subprocess.py:106} INFO - 2026-05-02 15:41:53,596 | INFO | snowflake_raw_loader | Running statement 6/15
+[2026-05-02T15:41:53.597+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:53,596 | INFO | snowflake_raw_loader | Running statement 6/15
+[2026-05-02 15:41:53,750] {subprocess.py:106} INFO - 2026-05-02 15:41:53,750 | INFO | snowflake_raw_loader | Statement 6 completed successfully
+[2026-05-02T15:41:53.750+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:53,750 | INFO | snowflake_raw_loader | Statement 6 completed successfully
+[2026-05-02 15:41:53,751] {subprocess.py:106} INFO - 2026-05-02 15:41:53,750 | INFO | snowflake_raw_loader | Running statement 7/15
+[2026-05-02T15:41:53.751+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:53,750 | INFO | snowflake_raw_loader | Running statement 7/15
+[2026-05-02 15:41:59,780] {subprocess.py:106} INFO - 2026-05-02 15:41:59,780 | INFO | snowflake_raw_loader | Statement 7 completed successfully
+[2026-05-02T15:41:59.780+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:59,780 | INFO | snowflake_raw_loader | Statement 7 completed successfully
+[2026-05-02 15:41:59,781] {subprocess.py:106} INFO - 2026-05-02 15:41:59,780 | INFO | snowflake_raw_loader | Running statement 8/15
+[2026-05-02T15:41:59.781+0530] {subprocess.py:106} INFO - 2026-05-02 15:41:59,780 | INFO | snowflake_raw_loader | Running statement 8/15
+[2026-05-02 15:42:24,120] {subprocess.py:106} INFO - 2026-05-02 15:42:24,118 | INFO | snowflake_raw_loader | Statement 8 completed successfully
+[2026-05-02T15:42:24.120+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:24,118 | INFO | snowflake_raw_loader | Statement 8 completed successfully
+[2026-05-02 15:42:24,120] {subprocess.py:106} INFO - 2026-05-02 15:42:24,119 | INFO | snowflake_raw_loader | Running statement 9/15
+[2026-05-02T15:42:24.120+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:24,119 | INFO | snowflake_raw_loader | Running statement 9/15
+[2026-05-02 15:42:25,346] {subprocess.py:106} INFO - 2026-05-02 15:42:25,345 | INFO | snowflake_raw_loader | Statement 9 completed successfully
+[2026-05-02T15:42:25.346+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:25,345 | INFO | snowflake_raw_loader | Statement 9 completed successfully
+[2026-05-02 15:42:25,346] {subprocess.py:106} INFO - 2026-05-02 15:42:25,345 | INFO | snowflake_raw_loader | Running statement 10/15
+[2026-05-02T15:42:25.346+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:25,345 | INFO | snowflake_raw_loader | Running statement 10/15
+[2026-05-02 15:42:26,753] {subprocess.py:106} INFO - 2026-05-02 15:42:26,752 | INFO | snowflake_raw_loader | Statement 10 completed successfully
+[2026-05-02T15:42:26.753+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:26,752 | INFO | snowflake_raw_loader | Statement 10 completed successfully
+[2026-05-02 15:42:26,753] {subprocess.py:106} INFO - 2026-05-02 15:42:26,753 | INFO | snowflake_raw_loader | Running statement 11/15
+[2026-05-02T15:42:26.753+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:26,753 | INFO | snowflake_raw_loader | Running statement 11/15
+[2026-05-02 15:42:27,252] {subprocess.py:106} INFO - 2026-05-02 15:42:27,252 | INFO | snowflake_raw_loader | Statement 11 completed successfully
+[2026-05-02T15:42:27.252+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:27,252 | INFO | snowflake_raw_loader | Statement 11 completed successfully
+[2026-05-02 15:42:27,253] {subprocess.py:106} INFO - 2026-05-02 15:42:27,252 | INFO | snowflake_raw_loader | Running statement 12/15
+[2026-05-02T15:42:27.253+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:27,252 | INFO | snowflake_raw_loader | Running statement 12/15
+[2026-05-02 15:42:27,600] {subprocess.py:106} INFO - 2026-05-02 15:42:27,599 | INFO | snowflake_raw_loader | Statement 12 completed successfully
+[2026-05-02T15:42:27.600+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:27,599 | INFO | snowflake_raw_loader | Statement 12 completed successfully
+[2026-05-02 15:42:27,601] {subprocess.py:106} INFO - 2026-05-02 15:42:27,600 | INFO | snowflake_raw_loader | Running statement 13/15
+[2026-05-02T15:42:27.601+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:27,600 | INFO | snowflake_raw_loader | Running statement 13/15
+[2026-05-02 15:42:27,974] {subprocess.py:106} INFO - 2026-05-02 15:42:27,973 | INFO | snowflake_raw_loader | Statement 13 completed successfully
+[2026-05-02T15:42:27.974+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:27,973 | INFO | snowflake_raw_loader | Statement 13 completed successfully
+[2026-05-02 15:42:27,975] {subprocess.py:106} INFO - 2026-05-02 15:42:27,974 | INFO | snowflake_raw_loader | Running statement 14/15
+[2026-05-02T15:42:27.975+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:27,974 | INFO | snowflake_raw_loader | Running statement 14/15
+[2026-05-02 15:42:28,379] {subprocess.py:106} INFO - 2026-05-02 15:42:28,378 | INFO | snowflake_raw_loader | Statement 14 completed successfully
+[2026-05-02T15:42:28.379+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:28,378 | INFO | snowflake_raw_loader | Statement 14 completed successfully
+[2026-05-02 15:42:28,380] {subprocess.py:106} INFO - 2026-05-02 15:42:28,379 | INFO | snowflake_raw_loader | Running statement 15/15
+[2026-05-02T15:42:28.380+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:28,379 | INFO | snowflake_raw_loader | Running statement 15/15
+[2026-05-02 15:42:28,630] {subprocess.py:106} INFO - 2026-05-02 15:42:28,629 | INFO | snowflake_raw_loader | Statement 15 completed successfully
+[2026-05-02T15:42:28.630+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:28,629 | INFO | snowflake_raw_loader | Statement 15 completed successfully
+[2026-05-02 15:42:28,631] {subprocess.py:106} INFO - 2026-05-02 15:42:28,630 | INFO | snowflake_raw_loader | Automated S3 to Snowflake RAW load completed successfully
+[2026-05-02T15:42:28.631+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:28,630 | INFO | snowflake_raw_loader | Automated S3 to Snowflake RAW load completed successfully
+[2026-05-02 15:42:28,824] {subprocess.py:106} INFO - 2026-05-02 15:42:28,823 | INFO | snowflake_raw_loader | Snowflake connection closed
+[2026-05-02T15:42:28.824+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:28,823 | INFO | snowflake_raw_loader | Snowflake connection closed
+[2026-05-02 15:42:28,825] {subprocess.py:106} INFO - 2026-05-02 15:42:28,824 | INFO | run_ingestion | RecoMart ingestion + Snowflake RAW load pipeline completed
+[2026-05-02T15:42:28.825+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:28,824 | INFO | run_ingestion | RecoMart ingestion + Snowflake RAW load pipeline completed
+[2026-05-02 15:42:28,826] {subprocess.py:106} INFO - 2026-05-02 15:42:28,825 | INFO | run_ingestion | {
+[2026-05-02T15:42:28.826+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:28,825 | INFO | run_ingestion | {
+[2026-05-02 15:42:28,826] {subprocess.py:106} INFO -   "pipeline_name": "recomart_raw_data_ingestion_and_snowflake_load",
+[2026-05-02T15:42:28.826+0530] {subprocess.py:106} INFO -   "pipeline_name": "recomart_raw_data_ingestion_and_snowflake_load",
+[2026-05-02 15:42:28,826] {subprocess.py:106} INFO -   "pipeline_start_time": "2026-05-02T10:08:27.603888+00:00",
+[2026-05-02T15:42:28.826+0530] {subprocess.py:106} INFO -   "pipeline_start_time": "2026-05-02T10:08:27.603888+00:00",
+[2026-05-02 15:42:28,827] {subprocess.py:106} INFO -   "pipeline_end_time": "2026-05-02T10:12:28.824085+00:00",
+[2026-05-02T15:42:28.827+0530] {subprocess.py:106} INFO -   "pipeline_end_time": "2026-05-02T10:12:28.824085+00:00",
+[2026-05-02 15:42:28,827] {subprocess.py:106} INFO -   "recomart_csv_ingestion": {
+[2026-05-02T15:42:28.827+0530] {subprocess.py:106} INFO -   "recomart_csv_ingestion": {
+[2026-05-02 15:42:28,828] {subprocess.py:106} INFO -     "batch_id": "d4262529-3d0f-4781-945f-867237dc69e6",
+[2026-05-02T15:42:28.828+0530] {subprocess.py:106} INFO -     "batch_id": "d4262529-3d0f-4781-945f-867237dc69e6",
+[2026-05-02 15:42:28,829] {subprocess.py:106} INFO -     "ingestion_date": "2026-05-02",
+[2026-05-02T15:42:28.829+0530] {subprocess.py:106} INFO -     "ingestion_date": "2026-05-02",
+[2026-05-02 15:42:28,829] {subprocess.py:106} INFO -     "status": "SUCCESS",
+[2026-05-02T15:42:28.829+0530] {subprocess.py:106} INFO -     "status": "SUCCESS",
+[2026-05-02 15:42:28,830] {subprocess.py:106} INFO -     "uploaded_files": [
+[2026-05-02T15:42:28.830+0530] {subprocess.py:106} INFO -     "uploaded_files": [
+[2026-05-02 15:42:28,831] {subprocess.py:106} INFO -       {
+[2026-05-02T15:42:28.831+0530] {subprocess.py:106} INFO -       {
+[2026-05-02 15:42:28,831] {subprocess.py:106} INFO -         "source_name": "events",
+[2026-05-02T15:42:28.831+0530] {subprocess.py:106} INFO -         "source_name": "events",
+[2026-05-02 15:42:28,831] {subprocess.py:106} INFO -         "local_path": "data/source/recomart/events.csv",
+[2026-05-02T15:42:28.831+0530] {subprocess.py:106} INFO -         "local_path": "data/source/recomart/events.csv",
+[2026-05-02 15:42:28,832] {subprocess.py:106} INFO -         "s3_path": "s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-05-02/events.csv"
+[2026-05-02T15:42:28.832+0530] {subprocess.py:106} INFO -         "s3_path": "s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-05-02/events.csv"
+[2026-05-02 15:42:28,832] {subprocess.py:106} INFO -       },
+[2026-05-02T15:42:28.832+0530] {subprocess.py:106} INFO -       },
+[2026-05-02 15:42:28,832] {subprocess.py:106} INFO -       {
+[2026-05-02T15:42:28.832+0530] {subprocess.py:106} INFO -       {
+[2026-05-02 15:42:28,832] {subprocess.py:106} INFO -         "source_name": "item_properties_part1",
+[2026-05-02T15:42:28.832+0530] {subprocess.py:106} INFO -         "source_name": "item_properties_part1",
+[2026-05-02 15:42:28,833] {subprocess.py:106} INFO -         "local_path": "data/source/recomart/item_properties_part1.csv",
+[2026-05-02T15:42:28.833+0530] {subprocess.py:106} INFO -         "local_path": "data/source/recomart/item_properties_part1.csv",
+[2026-05-02 15:42:28,833] {subprocess.py:106} INFO -         "s3_path": "s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part1.csv"
+[2026-05-02T15:42:28.833+0530] {subprocess.py:106} INFO -         "s3_path": "s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part1.csv"
+[2026-05-02 15:42:28,833] {subprocess.py:106} INFO -       },
+[2026-05-02T15:42:28.833+0530] {subprocess.py:106} INFO -       },
+[2026-05-02 15:42:28,833] {subprocess.py:106} INFO -       {
+[2026-05-02T15:42:28.833+0530] {subprocess.py:106} INFO -       {
+[2026-05-02 15:42:28,834] {subprocess.py:106} INFO -         "source_name": "item_properties_part2",
+[2026-05-02T15:42:28.834+0530] {subprocess.py:106} INFO -         "source_name": "item_properties_part2",
+[2026-05-02 15:42:28,834] {subprocess.py:106} INFO -         "local_path": "data/source/recomart/item_properties_part2.csv",
+[2026-05-02T15:42:28.834+0530] {subprocess.py:106} INFO -         "local_path": "data/source/recomart/item_properties_part2.csv",
+[2026-05-02 15:42:28,834] {subprocess.py:106} INFO -         "s3_path": "s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part2.csv"
+[2026-05-02T15:42:28.834+0530] {subprocess.py:106} INFO -         "s3_path": "s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part2.csv"
+[2026-05-02 15:42:28,835] {subprocess.py:106} INFO -       },
+[2026-05-02T15:42:28.835+0530] {subprocess.py:106} INFO -       },
+[2026-05-02 15:42:28,835] {subprocess.py:106} INFO -       {
+[2026-05-02T15:42:28.835+0530] {subprocess.py:106} INFO -       {
+[2026-05-02 15:42:28,835] {subprocess.py:106} INFO -         "source_name": "category_tree",
+[2026-05-02T15:42:28.835+0530] {subprocess.py:106} INFO -         "source_name": "category_tree",
+[2026-05-02 15:42:28,835] {subprocess.py:106} INFO -         "local_path": "data/source/recomart/category_tree.csv",
+[2026-05-02T15:42:28.835+0530] {subprocess.py:106} INFO -         "local_path": "data/source/recomart/category_tree.csv",
+[2026-05-02 15:42:28,836] {subprocess.py:106} INFO -         "s3_path": "s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-05-02/category_tree.csv"
+[2026-05-02T15:42:28.836+0530] {subprocess.py:106} INFO -         "s3_path": "s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-05-02/category_tree.csv"
+[2026-05-02 15:42:28,836] {subprocess.py:106} INFO -       }
+[2026-05-02T15:42:28.836+0530] {subprocess.py:106} INFO -       }
+[2026-05-02 15:42:28,836] {subprocess.py:106} INFO -     ],
+[2026-05-02T15:42:28.836+0530] {subprocess.py:106} INFO -     ],
+[2026-05-02 15:42:28,836] {subprocess.py:106} INFO -     "failed_files": []
+[2026-05-02T15:42:28.836+0530] {subprocess.py:106} INFO -     "failed_files": []
+[2026-05-02 15:42:28,837] {subprocess.py:106} INFO -   },
+[2026-05-02T15:42:28.837+0530] {subprocess.py:106} INFO -   },
+[2026-05-02 15:42:28,837] {subprocess.py:106} INFO -   "external_api_ingestion": {
+[2026-05-02T15:42:28.837+0530] {subprocess.py:106} INFO -   "external_api_ingestion": {
+[2026-05-02 15:42:28,837] {subprocess.py:106} INFO -     "batch_id": "a3669939-4f51-4b08-b3b4-ee97576c377f",
+[2026-05-02T15:42:28.837+0530] {subprocess.py:106} INFO -     "batch_id": "a3669939-4f51-4b08-b3b4-ee97576c377f",
+[2026-05-02 15:42:28,837] {subprocess.py:106} INFO -     "ingestion_date": "2026-05-02",
+[2026-05-02T15:42:28.837+0530] {subprocess.py:106} INFO -     "ingestion_date": "2026-05-02",
+[2026-05-02 15:42:28,837] {subprocess.py:106} INFO -     "source_name": "dummyjson_products_api",
+[2026-05-02T15:42:28.837+0530] {subprocess.py:106} INFO -     "source_name": "dummyjson_products_api",
+[2026-05-02 15:42:28,838] {subprocess.py:106} INFO -     "status": "SUCCESS",
+[2026-05-02T15:42:28.838+0530] {subprocess.py:106} INFO -     "status": "SUCCESS",
+[2026-05-02 15:42:28,838] {subprocess.py:106} INFO -     "s3_path": "s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-05-02/products.json"
+[2026-05-02T15:42:28.838+0530] {subprocess.py:106} INFO -     "s3_path": "s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-05-02/products.json"
+[2026-05-02 15:42:28,838] {subprocess.py:106} INFO -   },
+[2026-05-02T15:42:28.838+0530] {subprocess.py:106} INFO -   },
+[2026-05-02 15:42:28,839] {subprocess.py:106} INFO -   "snowflake_raw_load": "SUCCESS"
+[2026-05-02T15:42:28.839+0530] {subprocess.py:106} INFO -   "snowflake_raw_load": "SUCCESS"
+[2026-05-02 15:42:28,839] {subprocess.py:106} INFO - }
+[2026-05-02T15:42:28.839+0530] {subprocess.py:106} INFO - }
+[2026-05-02 15:42:28,965] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:42:28.965+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:42:28,970] {subprocess.py:106} INFO - Finished command at Sat May  2 15:42:28 IST 2026 with exit code 0
+[2026-05-02T15:42:28.970+0530] {subprocess.py:106} INFO - Finished command at Sat May  2 15:42:28 IST 2026 with exit code 0
+[2026-05-02 15:42:28,972] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:42:28.972+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:42:28,973] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-05-02T15:42:28.973+0530] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-05-02T15:42:28.981+0530] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-05-02T15:42:28.982+0530] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=recomart_cli_end_to_end_pipeline, task_id=ingest_source_data_to_s3_and_load_raw_snowflake, run_id=manual__2026-05-02T15:38:24+00:00, execution_date=20260502T153824, start_date=, end_date=20260502T101228
+[2026-05-02T15:42:28.986+0530] {dag.py:4410} INFO - [DAG TEST] end task task_id=ingest_source_data_to_s3_and_load_raw_snowflake map_index=-1
+[2026-05-02T15:42:28.994+0530] {dag.py:4396} INFO - [DAG TEST] starting task_id=validate_raw_data map_index=-1
+[2026-05-02T15:42:28.994+0530] {dag.py:4399} INFO - [DAG TEST] running task <TaskInstance: recomart_cli_end_to_end_pipeline.validate_raw_data manual__2026-05-02T15:38:24+00:00 [scheduled]>
+[2026-05-02 15:42:29,002] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='validate_raw_data' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:42:29.002+0530] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='validate_raw_data' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:42:29.002+0530] {taskinstance.py:732} INFO - ::endgroup::
+[2026-05-02 15:42:29,003] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-05-02T15:42:29.003+0530] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-05-02 15:42:29,003] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/03_validation.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/03_validation.log"\n    echo "Command: "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" validation/run_validation.py" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/03_validation.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/03_validation.log"\n    "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" validation/run_validation.py 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/03_validation.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/03_validation.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/03_validation.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/03_validation.log"\n    exit $EXIT_CODE\n    ']
+[2026-05-02T15:42:29.003+0530] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/03_validation.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/03_validation.log"\n    echo "Command: "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" validation/run_validation.py" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/03_validation.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/03_validation.log"\n    "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" validation/run_validation.py 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/03_validation.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/03_validation.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/03_validation.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/03_validation.log"\n    exit $EXIT_CODE\n    ']
+[2026-05-02 15:42:29,006] {subprocess.py:99} INFO - Output:
+[2026-05-02T15:42:29.006+0530] {subprocess.py:99} INFO - Output:
+[2026-05-02 15:42:29,014] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:42:29.014+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:42:29,016] {subprocess.py:106} INFO - Starting command at Sat May  2 15:42:29 IST 2026
+[2026-05-02T15:42:29.016+0530] {subprocess.py:106} INFO - Starting command at Sat May  2 15:42:29 IST 2026
+[2026-05-02 15:42:29,018] {subprocess.py:106} INFO - Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python validation/run_validation.py
+[2026-05-02T15:42:29.018+0530] {subprocess.py:106} INFO - Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python validation/run_validation.py
+[2026-05-02 15:42:29,021] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:42:29.021+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:42:29,716] {subprocess.py:106} INFO - 2026-05-02 15:42:29,716 | INFO | recomart_validation | Starting RecoMart data profiling and validation pipeline
+[2026-05-02T15:42:29.716+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:29,716 | INFO | recomart_validation | Starting RecoMart data profiling and validation pipeline
+[2026-05-02 15:42:30,336] {subprocess.py:106} INFO - 2026-05-02 15:42:30,336 | INFO | recomart_validation | Executing SQL file: sql/validation/01_profile_raw_data.sql
+[2026-05-02T15:42:30.336+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:30,336 | INFO | recomart_validation | Executing SQL file: sql/validation/01_profile_raw_data.sql
+[2026-05-02 15:42:30,499] {subprocess.py:106} INFO - 2026-05-02 15:42:30,499 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:42:30.499+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:30,499 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:42:30,633] {subprocess.py:106} INFO - 2026-05-02 15:42:30,632 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:42:30.633+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:30,632 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:42:31,430] {subprocess.py:106} INFO - 2026-05-02 15:42:31,430 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:42:31.430+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:31,430 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:42:31,662] {subprocess.py:106} INFO - 2026-05-02 15:42:31,662 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:42:31.662+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:31,662 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:42:33,035] {subprocess.py:106} INFO - 2026-05-02 15:42:33,035 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:42:33.035+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:33,035 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:42:35,748] {subprocess.py:106} INFO - 2026-05-02 15:42:35,748 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:42:35.748+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:35,748 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:42:35,901] {subprocess.py:106} INFO - 2026-05-02 15:42:35,900 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:42:35.901+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:35,900 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:42:36,048] {subprocess.py:106} INFO - 2026-05-02 15:42:36,048 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:42:36.048+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:36,048 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:42:36,050] {subprocess.py:106} INFO - 2026-05-02 15:42:36,049 | INFO | recomart_validation | Executing SQL file: sql/validation/02_validate_raw_to_validated.sql
+[2026-05-02T15:42:36.050+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:36,049 | INFO | recomart_validation | Executing SQL file: sql/validation/02_validate_raw_to_validated.sql
+[2026-05-02 15:42:36,166] {subprocess.py:106} INFO - 2026-05-02 15:42:36,165 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:42:36.166+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:36,165 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:42:36,282] {subprocess.py:106} INFO - 2026-05-02 15:42:36,281 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:42:36.282+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:36,281 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:42:36,437] {subprocess.py:106} INFO - 2026-05-02 15:42:36,437 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:42:36.437+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:36,437 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:42:36,560] {subprocess.py:106} INFO - 2026-05-02 15:42:36,560 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:42:36.560+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:36,560 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:42:36,684] {subprocess.py:106} INFO - 2026-05-02 15:42:36,683 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:42:36.684+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:36,683 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:42:36,929] {subprocess.py:106} INFO - 2026-05-02 15:42:36,928 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:42:36.929+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:36,928 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:42:37,206] {subprocess.py:106} INFO - 2026-05-02 15:42:37,206 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:42:37.206+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:37,206 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:42:37,587] {subprocess.py:106} INFO - 2026-05-02 15:42:37,586 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:42:37.587+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:37,586 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:42:37,809] {subprocess.py:106} INFO - 2026-05-02 15:42:37,809 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:42:37.809+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:37,809 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:42:53,629] {subprocess.py:106} INFO - 2026-05-02 15:42:53,628 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:42:53.629+0530] {subprocess.py:106} INFO - 2026-05-02 15:42:53,628 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:45:04,282] {subprocess.py:106} INFO - 2026-05-02 15:45:04,282 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:45:04.282+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:04,282 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:45:05,218] {subprocess.py:106} INFO - 2026-05-02 15:45:05,218 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:45:05.218+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:05,218 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:45:05,864] {subprocess.py:106} INFO - 2026-05-02 15:45:05,863 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:45:05.864+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:05,863 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:45:05,865] {subprocess.py:106} INFO - 2026-05-02 15:45:05,864 | INFO | recomart_validation | Executing SQL file: sql/validation/03_data_quality_checks.sql
+[2026-05-02T15:45:05.865+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:05,864 | INFO | recomart_validation | Executing SQL file: sql/validation/03_data_quality_checks.sql
+[2026-05-02 15:45:05,978] {subprocess.py:106} INFO - 2026-05-02 15:45:05,978 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:45:05.978+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:05,978 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:45:06,094] {subprocess.py:106} INFO - 2026-05-02 15:45:06,094 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:45:06.094+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:06,094 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:45:06,547] {subprocess.py:106} INFO - 2026-05-02 15:45:06,547 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:45:06.547+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:06,547 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:45:06,946] {subprocess.py:106} INFO - 2026-05-02 15:45:06,945 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:45:06.946+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:06,945 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:45:07,406] {subprocess.py:106} INFO - 2026-05-02 15:45:07,406 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:45:07.406+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:07,406 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:45:09,019] {subprocess.py:106} INFO - 2026-05-02 15:45:09,018 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:45:09.019+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:09,018 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:45:09,650] {subprocess.py:106} INFO - 2026-05-02 15:45:09,650 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:45:09.650+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:09,650 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:45:10,116] {subprocess.py:106} INFO - 2026-05-02 15:45:10,115 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:45:10.116+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:10,115 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:45:10,451] {subprocess.py:106} INFO - 2026-05-02 15:45:10,451 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:45:10.451+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:10,451 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:45:10,830] {subprocess.py:106} INFO - 2026-05-02 15:45:10,829 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02T15:45:10.830+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:10,829 | INFO | recomart_validation | Statement executed successfully
+[2026-05-02 15:45:10,831] {subprocess.py:106} INFO - 2026-05-02 15:45:10,830 | INFO | recomart_validation | RecoMart data validation completed successfully
+[2026-05-02T15:45:10.831+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:10,830 | INFO | recomart_validation | RecoMart data validation completed successfully
+[2026-05-02 15:45:11,032] {subprocess.py:106} INFO - 2026-05-02 15:45:11,031 | INFO | recomart_validation | Snowflake connection closed
+[2026-05-02T15:45:11.032+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:11,031 | INFO | recomart_validation | Snowflake connection closed
+[2026-05-02 15:45:11,132] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:45:11.132+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:45:11,135] {subprocess.py:106} INFO - Finished command at Sat May  2 15:45:11 IST 2026 with exit code 0
+[2026-05-02T15:45:11.135+0530] {subprocess.py:106} INFO - Finished command at Sat May  2 15:45:11 IST 2026 with exit code 0
+[2026-05-02 15:45:11,137] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:45:11.137+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:45:11,138] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-05-02T15:45:11.138+0530] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-05-02T15:45:11.145+0530] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-05-02T15:45:11.145+0530] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=recomart_cli_end_to_end_pipeline, task_id=validate_raw_data, run_id=manual__2026-05-02T15:38:24+00:00, execution_date=20260502T153824, start_date=, end_date=20260502T101511
+[2026-05-02T15:45:11.149+0530] {dag.py:4410} INFO - [DAG TEST] end task task_id=validate_raw_data map_index=-1
+[2026-05-02T15:45:11.155+0530] {dag.py:4396} INFO - [DAG TEST] starting task_id=prepare_curated_data map_index=-1
+[2026-05-02T15:45:11.155+0530] {dag.py:4399} INFO - [DAG TEST] running task <TaskInstance: recomart_cli_end_to_end_pipeline.prepare_curated_data manual__2026-05-02T15:38:24+00:00 [scheduled]>
+[2026-05-02 15:45:11,162] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='prepare_curated_data' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:45:11.162+0530] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='prepare_curated_data' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:45:11.162+0530] {taskinstance.py:732} INFO - ::endgroup::
+[2026-05-02 15:45:11,163] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-05-02T15:45:11.163+0530] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-05-02 15:45:11,163] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/04_preparation.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/04_preparation.log"\n    echo "Command: "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" preparation/run_preparation.py" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/04_preparation.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/04_preparation.log"\n    "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" preparation/run_preparation.py 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/04_preparation.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/04_preparation.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/04_preparation.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/04_preparation.log"\n    exit $EXIT_CODE\n    ']
+[2026-05-02T15:45:11.163+0530] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/04_preparation.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/04_preparation.log"\n    echo "Command: "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" preparation/run_preparation.py" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/04_preparation.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/04_preparation.log"\n    "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" preparation/run_preparation.py 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/04_preparation.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/04_preparation.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/04_preparation.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/04_preparation.log"\n    exit $EXIT_CODE\n    ']
+[2026-05-02 15:45:11,167] {subprocess.py:99} INFO - Output:
+[2026-05-02T15:45:11.167+0530] {subprocess.py:99} INFO - Output:
+[2026-05-02 15:45:11,173] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:45:11.173+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:45:11,176] {subprocess.py:106} INFO - Starting command at Sat May  2 15:45:11 IST 2026
+[2026-05-02T15:45:11.176+0530] {subprocess.py:106} INFO - Starting command at Sat May  2 15:45:11 IST 2026
+[2026-05-02 15:45:11,178] {subprocess.py:106} INFO - Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python preparation/run_preparation.py
+[2026-05-02T15:45:11.178+0530] {subprocess.py:106} INFO - Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python preparation/run_preparation.py
+[2026-05-02 15:45:11,180] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:45:11.180+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:45:11,828] {subprocess.py:106} INFO - 2026-05-02 15:45:11,828 | INFO | recomart_preparation | Starting RecoMart data preparation pipeline
+[2026-05-02T15:45:11.828+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:11,828 | INFO | recomart_preparation | Starting RecoMart data preparation pipeline
+[2026-05-02 15:45:12,447] {subprocess.py:106} INFO - 2026-05-02 15:45:12,446 | INFO | recomart_preparation | Executing SQL file: sql/preparation/00_add_preparation_objects.sql
+[2026-05-02T15:45:12.447+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:12,446 | INFO | recomart_preparation | Executing SQL file: sql/preparation/00_add_preparation_objects.sql
+[2026-05-02 15:45:12,608] {subprocess.py:106} INFO - 2026-05-02 15:45:12,608 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:12.608+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:12,608 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:12,727] {subprocess.py:106} INFO - 2026-05-02 15:45:12,726 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:12.727+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:12,726 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:12,854] {subprocess.py:106} INFO - 2026-05-02 15:45:12,854 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:12.854+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:12,854 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:12,960] {subprocess.py:106} INFO - 2026-05-02 15:45:12,959 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:12.960+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:12,959 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:13,080] {subprocess.py:106} INFO - 2026-05-02 15:45:13,080 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:13.080+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:13,080 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:13,193] {subprocess.py:106} INFO - 2026-05-02 15:45:13,192 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:13.193+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:13,192 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:13,332] {subprocess.py:106} INFO - 2026-05-02 15:45:13,331 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:13.332+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:13,331 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:13,462] {subprocess.py:106} INFO - 2026-05-02 15:45:13,462 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:13.462+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:13,462 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:13,574] {subprocess.py:106} INFO - 2026-05-02 15:45:13,574 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:13.574+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:13,574 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:13,692] {subprocess.py:106} INFO - 2026-05-02 15:45:13,691 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:13.692+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:13,691 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:13,798] {subprocess.py:106} INFO - 2026-05-02 15:45:13,797 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:13.798+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:13,797 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:13,921] {subprocess.py:106} INFO - 2026-05-02 15:45:13,920 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:13.921+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:13,920 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:14,069] {subprocess.py:106} INFO - 2026-05-02 15:45:14,068 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:14.069+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:14,068 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:14,192] {subprocess.py:106} INFO - 2026-05-02 15:45:14,191 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:14.192+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:14,191 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:14,712] {subprocess.py:106} INFO - 2026-05-02 15:45:14,711 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:14.712+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:14,711 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:14,713] {subprocess.py:106} INFO - 2026-05-02 15:45:14,712 | INFO | recomart_preparation | Executing SQL file: sql/preparation/01_prepare_clean_datasets.sql
+[2026-05-02T15:45:14.713+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:14,712 | INFO | recomart_preparation | Executing SQL file: sql/preparation/01_prepare_clean_datasets.sql
+[2026-05-02 15:45:14,823] {subprocess.py:106} INFO - 2026-05-02 15:45:14,823 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:14.823+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:14,823 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:14,926] {subprocess.py:106} INFO - 2026-05-02 15:45:14,926 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:14.926+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:14,926 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:15,191] {subprocess.py:106} INFO - 2026-05-02 15:45:15,191 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:15.191+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:15,191 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:15,316] {subprocess.py:106} INFO - 2026-05-02 15:45:15,316 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:15.316+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:15,316 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:15,418] {subprocess.py:106} INFO - 2026-05-02 15:45:15,418 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:15.418+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:15,418 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:15,605] {subprocess.py:106} INFO - 2026-05-02 15:45:15,604 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:15.605+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:15,604 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:15,793] {subprocess.py:106} INFO - 2026-05-02 15:45:15,793 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:15.793+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:15,793 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:15,971] {subprocess.py:106} INFO - 2026-05-02 15:45:15,971 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:15.971+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:15,971 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:16,269] {subprocess.py:106} INFO - 2026-05-02 15:45:16,269 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:16.269+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:16,269 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:18,509] {subprocess.py:106} INFO - 2026-05-02 15:45:18,509 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:18.509+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:18,509 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:43,581] {subprocess.py:106} INFO - 2026-05-02 15:45:43,580 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:43.581+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:43,580 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:44,289] {subprocess.py:106} INFO - 2026-05-02 15:45:44,289 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:44.289+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:44,289 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:44,905] {subprocess.py:106} INFO - 2026-05-02 15:45:44,905 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:44.905+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:44,905 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:44,906] {subprocess.py:106} INFO - 2026-05-02 15:45:44,905 | INFO | recomart_preparation | Executing SQL file: sql/preparation/02_create_user_item_interactions.sql
+[2026-05-02T15:45:44.906+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:44,905 | INFO | recomart_preparation | Executing SQL file: sql/preparation/02_create_user_item_interactions.sql
+[2026-05-02 15:45:45,011] {subprocess.py:106} INFO - 2026-05-02 15:45:45,010 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:45.011+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:45,010 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:45,118] {subprocess.py:106} INFO - 2026-05-02 15:45:45,117 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:45.118+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:45,117 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:45,392] {subprocess.py:106} INFO - 2026-05-02 15:45:45,392 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:45.392+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:45,392 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:45,519] {subprocess.py:106} INFO - 2026-05-02 15:45:45,519 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:45.519+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:45,519 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:45,708] {subprocess.py:106} INFO - 2026-05-02 15:45:45,708 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:45.708+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:45,708 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:46,665] {subprocess.py:106} INFO - 2026-05-02 15:45:46,664 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:46.665+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:46,664 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:46,665] {subprocess.py:106} INFO - 2026-05-02 15:45:46,665 | INFO | recomart_preparation | Executing SQL file: sql/preparation/03_create_user_item_features.sql
+[2026-05-02T15:45:46.665+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:46,665 | INFO | recomart_preparation | Executing SQL file: sql/preparation/03_create_user_item_features.sql
+[2026-05-02 15:45:46,772] {subprocess.py:106} INFO - 2026-05-02 15:45:46,771 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:46.772+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:46,771 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:46,879] {subprocess.py:106} INFO - 2026-05-02 15:45:46,878 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:46.879+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:46,878 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:47,084] {subprocess.py:106} INFO - 2026-05-02 15:45:47,083 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:47.084+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:47,083 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:47,209] {subprocess.py:106} INFO - 2026-05-02 15:45:47,208 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:47.209+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:47,208 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:47,498] {subprocess.py:106} INFO - 2026-05-02 15:45:47,498 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:47.498+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:47,498 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:47,862] {subprocess.py:106} INFO - 2026-05-02 15:45:47,862 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:47.862+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:47,862 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:48,234] {subprocess.py:106} INFO - 2026-05-02 15:45:48,234 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:48.234+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:48,234 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:49,533] {subprocess.py:106} INFO - 2026-05-02 15:45:49,532 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:49.533+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:49,532 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:50,801] {subprocess.py:106} INFO - 2026-05-02 15:45:50,801 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:50.801+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:50,801 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:55,929] {subprocess.py:106} INFO - 2026-05-02 15:45:55,929 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02T15:45:55.929+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:55,929 | INFO | recomart_preparation | Statement executed successfully
+[2026-05-02 15:45:55,930] {subprocess.py:106} INFO - 2026-05-02 15:45:55,929 | INFO | recomart_preparation | RecoMart data preparation completed successfully
+[2026-05-02T15:45:55.930+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:55,929 | INFO | recomart_preparation | RecoMart data preparation completed successfully
+[2026-05-02 15:45:56,103] {subprocess.py:106} INFO - 2026-05-02 15:45:56,102 | INFO | recomart_preparation | Snowflake connection closed
+[2026-05-02T15:45:56.103+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:56,102 | INFO | recomart_preparation | Snowflake connection closed
+[2026-05-02 15:45:56,202] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:45:56.202+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:45:56,206] {subprocess.py:106} INFO - Finished command at Sat May  2 15:45:56 IST 2026 with exit code 0
+[2026-05-02T15:45:56.206+0530] {subprocess.py:106} INFO - Finished command at Sat May  2 15:45:56 IST 2026 with exit code 0
+[2026-05-02 15:45:56,209] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:45:56.209+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:45:56,209] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-05-02T15:45:56.209+0530] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-05-02T15:45:56.216+0530] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-05-02T15:45:56.216+0530] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=recomart_cli_end_to_end_pipeline, task_id=prepare_curated_data, run_id=manual__2026-05-02T15:38:24+00:00, execution_date=20260502T153824, start_date=, end_date=20260502T101556
+[2026-05-02T15:45:56.220+0530] {dag.py:4410} INFO - [DAG TEST] end task task_id=prepare_curated_data map_index=-1
+[2026-05-02T15:45:56.227+0530] {dag.py:4396} INFO - [DAG TEST] starting task_id=run_feature_engineering map_index=-1
+[2026-05-02T15:45:56.227+0530] {dag.py:4399} INFO - [DAG TEST] running task <TaskInstance: recomart_cli_end_to_end_pipeline.run_feature_engineering manual__2026-05-02T15:38:24+00:00 [scheduled]>
+[2026-05-02 15:45:56,235] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='run_feature_engineering' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:45:56.235+0530] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='run_feature_engineering' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:45:56.235+0530] {taskinstance.py:732} INFO - ::endgroup::
+[2026-05-02 15:45:56,235] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-05-02T15:45:56.235+0530] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-05-02 15:45:56,235] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/05_feature_engineering.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/05_feature_engineering.log"\n    echo "Command: "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" feature_engineering/run_feature_engineering.py" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/05_feature_engineering.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/05_feature_engineering.log"\n    "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" feature_engineering/run_feature_engineering.py 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/05_feature_engineering.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/05_feature_engineering.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/05_feature_engineering.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/05_feature_engineering.log"\n    exit $EXIT_CODE\n    ']
+[2026-05-02T15:45:56.235+0530] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/05_feature_engineering.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/05_feature_engineering.log"\n    echo "Command: "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" feature_engineering/run_feature_engineering.py" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/05_feature_engineering.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/05_feature_engineering.log"\n    "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" feature_engineering/run_feature_engineering.py 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/05_feature_engineering.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/05_feature_engineering.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/05_feature_engineering.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/05_feature_engineering.log"\n    exit $EXIT_CODE\n    ']
+[2026-05-02 15:45:56,239] {subprocess.py:99} INFO - Output:
+[2026-05-02T15:45:56.239+0530] {subprocess.py:99} INFO - Output:
+[2026-05-02 15:45:56,248] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:45:56.248+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:45:56,251] {subprocess.py:106} INFO - Starting command at Sat May  2 15:45:56 IST 2026
+[2026-05-02T15:45:56.251+0530] {subprocess.py:106} INFO - Starting command at Sat May  2 15:45:56 IST 2026
+[2026-05-02 15:45:56,255] {subprocess.py:106} INFO - Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python feature_engineering/run_feature_engineering.py
+[2026-05-02T15:45:56.255+0530] {subprocess.py:106} INFO - Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python feature_engineering/run_feature_engineering.py
+[2026-05-02 15:45:56,257] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:45:56.257+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:45:56,945] {subprocess.py:106} INFO - 2026-05-02 15:45:56,945 | INFO | recomart_feature_engineering | Starting RecoMart feature engineering pipeline
+[2026-05-02T15:45:56.945+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:56,945 | INFO | recomart_feature_engineering | Starting RecoMart feature engineering pipeline
+[2026-05-02 15:45:57,535] {subprocess.py:106} INFO - 2026-05-02 15:45:57,534 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/00_create_feature_objects.sql
+[2026-05-02T15:45:57.535+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:57,534 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/00_create_feature_objects.sql
+[2026-05-02 15:45:57,700] {subprocess.py:106} INFO - 2026-05-02 15:45:57,700 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:45:57.700+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:57,700 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:45:57,815] {subprocess.py:106} INFO - 2026-05-02 15:45:57,814 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:45:57.815+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:57,814 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:45:57,941] {subprocess.py:106} INFO - 2026-05-02 15:45:57,940 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:45:57.941+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:57,940 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:45:58,063] {subprocess.py:106} INFO - 2026-05-02 15:45:58,062 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:45:58.063+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:58,062 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:45:58,179] {subprocess.py:106} INFO - 2026-05-02 15:45:58,178 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:45:58.179+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:58,178 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:45:58,300] {subprocess.py:106} INFO - 2026-05-02 15:45:58,300 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:45:58.300+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:58,300 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:45:58,422] {subprocess.py:106} INFO - 2026-05-02 15:45:58,421 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:45:58.422+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:58,421 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:45:58,539] {subprocess.py:106} INFO - 2026-05-02 15:45:58,538 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:45:58.539+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:58,538 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:45:58,540] {subprocess.py:106} INFO - 2026-05-02 15:45:58,539 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/01_create_user_activity_features.sql
+[2026-05-02T15:45:58.540+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:58,539 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/01_create_user_activity_features.sql
+[2026-05-02 15:45:58,645] {subprocess.py:106} INFO - 2026-05-02 15:45:58,644 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:45:58.645+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:58,644 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:45:58,741] {subprocess.py:106} INFO - 2026-05-02 15:45:58,741 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:45:58.741+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:58,741 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:45:58,977] {subprocess.py:106} INFO - 2026-05-02 15:45:58,976 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:45:58.977+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:58,976 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:45:59,085] {subprocess.py:106} INFO - 2026-05-02 15:45:59,085 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:45:59.085+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:59,085 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:45:59,192] {subprocess.py:106} INFO - 2026-05-02 15:45:59,192 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:45:59.192+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:59,192 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:45:59,412] {subprocess.py:106} INFO - 2026-05-02 15:45:59,411 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:45:59.412+0530] {subprocess.py:106} INFO - 2026-05-02 15:45:59,411 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:02,163] {subprocess.py:106} INFO - 2026-05-02 15:46:02,162 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:02.163+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:02,162 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:02,163] {subprocess.py:106} INFO - 2026-05-02 15:46:02,163 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/02_create_item_popularity_features.sql
+[2026-05-02T15:46:02.163+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:02,163 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/02_create_item_popularity_features.sql
+[2026-05-02 15:46:02,266] {subprocess.py:106} INFO - 2026-05-02 15:46:02,266 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:02.266+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:02,266 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:02,369] {subprocess.py:106} INFO - 2026-05-02 15:46:02,368 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:02.369+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:02,368 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:02,516] {subprocess.py:106} INFO - 2026-05-02 15:46:02,516 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:02.516+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:02,516 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:02,624] {subprocess.py:106} INFO - 2026-05-02 15:46:02,623 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:02.624+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:02,623 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:02,732] {subprocess.py:106} INFO - 2026-05-02 15:46:02,731 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:02.732+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:02,731 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:02,985] {subprocess.py:106} INFO - 2026-05-02 15:46:02,985 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:02.985+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:02,985 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:03,805] {subprocess.py:106} INFO - 2026-05-02 15:46:03,804 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:03.805+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:03,804 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:03,805] {subprocess.py:106} INFO - 2026-05-02 15:46:03,805 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/03_create_user_category_affinity.sql
+[2026-05-02T15:46:03.805+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:03,805 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/03_create_user_category_affinity.sql
+[2026-05-02 15:46:03,957] {subprocess.py:106} INFO - 2026-05-02 15:46:03,957 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:03.957+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:03,957 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:04,058] {subprocess.py:106} INFO - 2026-05-02 15:46:04,057 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:04.058+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:04,057 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:04,210] {subprocess.py:106} INFO - 2026-05-02 15:46:04,210 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:04.210+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:04,210 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:04,321] {subprocess.py:106} INFO - 2026-05-02 15:46:04,321 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:04.321+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:04,321 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:04,436] {subprocess.py:106} INFO - 2026-05-02 15:46:04,435 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:04.436+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:04,435 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:04,642] {subprocess.py:106} INFO - 2026-05-02 15:46:04,642 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:04.642+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:04,642 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:06,996] {subprocess.py:106} INFO - 2026-05-02 15:46:06,996 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:06.996+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:06,996 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:06,997] {subprocess.py:106} INFO - 2026-05-02 15:46:06,996 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/04_create_item_similarity_features.sql
+[2026-05-02T15:46:06.997+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:06,996 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/04_create_item_similarity_features.sql
+[2026-05-02 15:46:07,101] {subprocess.py:106} INFO - 2026-05-02 15:46:07,100 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:07.101+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:07,100 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:07,202] {subprocess.py:106} INFO - 2026-05-02 15:46:07,201 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:07.202+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:07,201 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:07,353] {subprocess.py:106} INFO - 2026-05-02 15:46:07,352 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:07.353+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:07,352 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:07,460] {subprocess.py:106} INFO - 2026-05-02 15:46:07,460 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:07.460+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:07,460 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:07,566] {subprocess.py:106} INFO - 2026-05-02 15:46:07,566 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:07.566+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:07,566 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:07,784] {subprocess.py:106} INFO - 2026-05-02 15:46:07,784 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:07.784+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:07,784 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:07,959] {subprocess.py:106} INFO - 2026-05-02 15:46:07,958 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:07.959+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:07,958 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:09,635] {subprocess.py:106} INFO - 2026-05-02 15:46:09,634 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:09.635+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:09,634 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:11,075] {subprocess.py:106} INFO - 2026-05-02 15:46:11,074 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:11.075+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:11,074 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:11,075] {subprocess.py:106} INFO - 2026-05-02 15:46:11,075 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/05_create_training_dataset.sql
+[2026-05-02T15:46:11.075+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:11,075 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/05_create_training_dataset.sql
+[2026-05-02 15:46:11,180] {subprocess.py:106} INFO - 2026-05-02 15:46:11,179 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:11.180+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:11,179 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:11,283] {subprocess.py:106} INFO - 2026-05-02 15:46:11,283 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:11.283+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:11,283 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:11,438] {subprocess.py:106} INFO - 2026-05-02 15:46:11,438 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:11.438+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:11,438 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:11,569] {subprocess.py:106} INFO - 2026-05-02 15:46:11,568 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:11.569+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:11,568 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:11,684] {subprocess.py:106} INFO - 2026-05-02 15:46:11,683 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:11.684+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:11,683 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:11,884] {subprocess.py:106} INFO - 2026-05-02 15:46:11,883 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:11.884+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:11,883 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:13,830] {subprocess.py:106} INFO - 2026-05-02 15:46:13,829 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02T15:46:13.830+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:13,829 | INFO | recomart_feature_engineering | Statement executed successfully
+[2026-05-02 15:46:13,831] {subprocess.py:106} INFO - 2026-05-02 15:46:13,830 | INFO | recomart_feature_engineering | RecoMart feature engineering completed successfully
+[2026-05-02T15:46:13.831+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:13,830 | INFO | recomart_feature_engineering | RecoMart feature engineering completed successfully
+[2026-05-02 15:46:13,999] {subprocess.py:106} INFO - 2026-05-02 15:46:13,999 | INFO | recomart_feature_engineering | Snowflake connection closed
+[2026-05-02T15:46:13.999+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:13,999 | INFO | recomart_feature_engineering | Snowflake connection closed
+[2026-05-02 15:46:14,100] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:14.100+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:14,103] {subprocess.py:106} INFO - Finished command at Sat May  2 15:46:14 IST 2026 with exit code 0
+[2026-05-02T15:46:14.103+0530] {subprocess.py:106} INFO - Finished command at Sat May  2 15:46:14 IST 2026 with exit code 0
+[2026-05-02 15:46:14,105] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:14.105+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:14,105] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-05-02T15:46:14.105+0530] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-05-02T15:46:14.110+0530] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-05-02T15:46:14.110+0530] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=recomart_cli_end_to_end_pipeline, task_id=run_feature_engineering, run_id=manual__2026-05-02T15:38:24+00:00, execution_date=20260502T153824, start_date=, end_date=20260502T101614
+[2026-05-02T15:46:14.114+0530] {dag.py:4410} INFO - [DAG TEST] end task task_id=run_feature_engineering map_index=-1
+[2026-05-02T15:46:14.121+0530] {dag.py:4396} INFO - [DAG TEST] starting task_id=publish_feature_store map_index=-1
+[2026-05-02T15:46:14.121+0530] {dag.py:4399} INFO - [DAG TEST] running task <TaskInstance: recomart_cli_end_to_end_pipeline.publish_feature_store manual__2026-05-02T15:38:24+00:00 [scheduled]>
+[2026-05-02 15:46:14,128] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='publish_feature_store' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:46:14.128+0530] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='publish_feature_store' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:46:14.128+0530] {taskinstance.py:732} INFO - ::endgroup::
+[2026-05-02 15:46:14,129] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-05-02T15:46:14.129+0530] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-05-02 15:46:14,129] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/06_feature_store.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/06_feature_store.log"\n    echo "Command: "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" feature_store/run_feature_store.py" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/06_feature_store.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/06_feature_store.log"\n    "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" feature_store/run_feature_store.py 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/06_feature_store.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/06_feature_store.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/06_feature_store.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/06_feature_store.log"\n    exit $EXIT_CODE\n    ']
+[2026-05-02T15:46:14.129+0530] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/06_feature_store.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/06_feature_store.log"\n    echo "Command: "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" feature_store/run_feature_store.py" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/06_feature_store.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/06_feature_store.log"\n    "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" feature_store/run_feature_store.py 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/06_feature_store.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/06_feature_store.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/06_feature_store.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/06_feature_store.log"\n    exit $EXIT_CODE\n    ']
+[2026-05-02 15:46:14,133] {subprocess.py:99} INFO - Output:
+[2026-05-02T15:46:14.133+0530] {subprocess.py:99} INFO - Output:
+[2026-05-02 15:46:14,139] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:14.139+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:14,142] {subprocess.py:106} INFO - Starting command at Sat May  2 15:46:14 IST 2026
+[2026-05-02T15:46:14.142+0530] {subprocess.py:106} INFO - Starting command at Sat May  2 15:46:14 IST 2026
+[2026-05-02 15:46:14,144] {subprocess.py:106} INFO - Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python feature_store/run_feature_store.py
+[2026-05-02T15:46:14.144+0530] {subprocess.py:106} INFO - Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python feature_store/run_feature_store.py
+[2026-05-02 15:46:14,146] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:14.146+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:14,706] {subprocess.py:106} INFO - 2026-05-02 15:46:14,705 | INFO | recomart_feature_store | Starting RecoMart feature store pipeline
+[2026-05-02T15:46:14.706+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:14,705 | INFO | recomart_feature_store | Starting RecoMart feature store pipeline
+[2026-05-02 15:46:15,348] {subprocess.py:106} INFO - 2026-05-02 15:46:15,348 | INFO | recomart_feature_store | Executing SQL file: sql/feature_store/00_create_feature_store_objects.sql
+[2026-05-02T15:46:15.348+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:15,348 | INFO | recomart_feature_store | Executing SQL file: sql/feature_store/00_create_feature_store_objects.sql
+[2026-05-02 15:46:15,501] {subprocess.py:106} INFO - 2026-05-02 15:46:15,501 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:15.501+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:15,501 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:15,631] {subprocess.py:106} INFO - 2026-05-02 15:46:15,630 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:15.631+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:15,630 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:15,756] {subprocess.py:106} INFO - 2026-05-02 15:46:15,755 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:15.756+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:15,755 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:15,901] {subprocess.py:106} INFO - 2026-05-02 15:46:15,901 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:15.901+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:15,901 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:16,026] {subprocess.py:106} INFO - 2026-05-02 15:46:16,026 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:16.026+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:16,026 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:16,159] {subprocess.py:106} INFO - 2026-05-02 15:46:16,159 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:16.159+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:16,159 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:16,288] {subprocess.py:106} INFO - 2026-05-02 15:46:16,288 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:16.288+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:16,288 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:16,289] {subprocess.py:106} INFO - 2026-05-02 15:46:16,288 | INFO | recomart_feature_store | Executing SQL file: sql/feature_store/01_register_feature_metadata.sql
+[2026-05-02T15:46:16.289+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:16,288 | INFO | recomart_feature_store | Executing SQL file: sql/feature_store/01_register_feature_metadata.sql
+[2026-05-02 15:46:16,404] {subprocess.py:106} INFO - 2026-05-02 15:46:16,403 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:16.404+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:16,403 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:16,519] {subprocess.py:106} INFO - 2026-05-02 15:46:16,518 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:16.519+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:16,518 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:16,727] {subprocess.py:106} INFO - 2026-05-02 15:46:16,726 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:16.727+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:16,726 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:16,848] {subprocess.py:106} INFO - 2026-05-02 15:46:16,847 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:16.848+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:16,847 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:17,043] {subprocess.py:106} INFO - 2026-05-02 15:46:17,043 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:17.043+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:17,043 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:17,593] {subprocess.py:106} INFO - 2026-05-02 15:46:17,592 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:17.593+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:17,592 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:17,594] {subprocess.py:106} INFO - 2026-05-02 15:46:17,593 | INFO | recomart_feature_store | Executing SQL file: sql/feature_store/02_publish_offline_features.sql
+[2026-05-02T15:46:17.594+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:17,593 | INFO | recomart_feature_store | Executing SQL file: sql/feature_store/02_publish_offline_features.sql
+[2026-05-02 15:46:17,710] {subprocess.py:106} INFO - 2026-05-02 15:46:17,709 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:17.710+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:17,709 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:17,824] {subprocess.py:106} INFO - 2026-05-02 15:46:17,824 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:17.824+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:17,824 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:18,013] {subprocess.py:106} INFO - 2026-05-02 15:46:18,013 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:18.013+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:18,013 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:18,153] {subprocess.py:106} INFO - 2026-05-02 15:46:18,152 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:18.153+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:18,152 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:18,356] {subprocess.py:106} INFO - 2026-05-02 15:46:18,354 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:18.356+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:18,354 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:19,774] {subprocess.py:106} INFO - 2026-05-02 15:46:19,773 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:19.774+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:19,773 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:19,774] {subprocess.py:106} INFO - 2026-05-02 15:46:19,774 | INFO | recomart_feature_store | Executing SQL file: sql/feature_store/03_publish_online_features.sql
+[2026-05-02T15:46:19.774+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:19,774 | INFO | recomart_feature_store | Executing SQL file: sql/feature_store/03_publish_online_features.sql
+[2026-05-02 15:46:19,894] {subprocess.py:106} INFO - 2026-05-02 15:46:19,892 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:19.894+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:19,892 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:20,003] {subprocess.py:106} INFO - 2026-05-02 15:46:20,002 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:20.003+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:20,002 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:20,199] {subprocess.py:106} INFO - 2026-05-02 15:46:20,199 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:20.199+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:20,199 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:20,318] {subprocess.py:106} INFO - 2026-05-02 15:46:20,317 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:20.318+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:20,317 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:20,541] {subprocess.py:106} INFO - 2026-05-02 15:46:20,540 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:20.541+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:20,540 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:22,322] {subprocess.py:106} INFO - 2026-05-02 15:46:22,321 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:22.322+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:22,321 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:22,323] {subprocess.py:106} INFO - 2026-05-02 15:46:22,322 | INFO | recomart_feature_store | Executing SQL file: sql/feature_store/04_feature_retrieval_demo.sql
+[2026-05-02T15:46:22.323+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:22,322 | INFO | recomart_feature_store | Executing SQL file: sql/feature_store/04_feature_retrieval_demo.sql
+[2026-05-02 15:46:22,450] {subprocess.py:106} INFO - 2026-05-02 15:46:22,449 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:22.450+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:22,449 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:22,566] {subprocess.py:106} INFO - 2026-05-02 15:46:22,566 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:22.566+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:22,566 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:22,789] {subprocess.py:106} INFO - 2026-05-02 15:46:22,789 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:22.789+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:22,789 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:23,065] {subprocess.py:106} INFO - 2026-05-02 15:46:23,065 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:23.065+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:23,065 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:23,279] {subprocess.py:106} INFO - 2026-05-02 15:46:23,278 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:23.279+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:23,278 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:23,432] {subprocess.py:106} INFO - 2026-05-02 15:46:23,431 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:23.432+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:23,431 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:23,624] {subprocess.py:106} INFO - 2026-05-02 15:46:23,624 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:23.624+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:23,624 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:23,832] {subprocess.py:106} INFO - 2026-05-02 15:46:23,832 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:23.832+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:23,832 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:24,200] {subprocess.py:106} INFO - 2026-05-02 15:46:24,200 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02T15:46:24.200+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:24,200 | INFO | recomart_feature_store | Statement executed successfully
+[2026-05-02 15:46:24,201] {subprocess.py:106} INFO - 2026-05-02 15:46:24,200 | INFO | recomart_feature_store | RecoMart feature store pipeline completed successfully
+[2026-05-02T15:46:24.201+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:24,200 | INFO | recomart_feature_store | RecoMart feature store pipeline completed successfully
+[2026-05-02 15:46:24,435] {subprocess.py:106} INFO - 2026-05-02 15:46:24,435 | INFO | recomart_feature_store | Snowflake connection closed
+[2026-05-02T15:46:24.435+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:24,435 | INFO | recomart_feature_store | Snowflake connection closed
+[2026-05-02 15:46:24,535] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:24.535+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:24,539] {subprocess.py:106} INFO - Finished command at Sat May  2 15:46:24 IST 2026 with exit code 0
+[2026-05-02T15:46:24.539+0530] {subprocess.py:106} INFO - Finished command at Sat May  2 15:46:24 IST 2026 with exit code 0
+[2026-05-02 15:46:24,541] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:24.541+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:24,541] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-05-02T15:46:24.541+0530] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-05-02T15:46:24.546+0530] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-05-02T15:46:24.546+0530] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=recomart_cli_end_to_end_pipeline, task_id=publish_feature_store, run_id=manual__2026-05-02T15:38:24+00:00, execution_date=20260502T153824, start_date=, end_date=20260502T101624
+[2026-05-02T15:46:24.550+0530] {dag.py:4410} INFO - [DAG TEST] end task task_id=publish_feature_store map_index=-1
+[2026-05-02T15:46:24.557+0530] {dag.py:4396} INFO - [DAG TEST] starting task_id=track_versioning_and_lineage map_index=-1
+[2026-05-02T15:46:24.557+0530] {dag.py:4399} INFO - [DAG TEST] running task <TaskInstance: recomart_cli_end_to_end_pipeline.track_versioning_and_lineage manual__2026-05-02T15:38:24+00:00 [scheduled]>
+[2026-05-02 15:46:24,564] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='track_versioning_and_lineage' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:46:24.564+0530] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='track_versioning_and_lineage' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:46:24.564+0530] {taskinstance.py:732} INFO - ::endgroup::
+[2026-05-02 15:46:24,565] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-05-02T15:46:24.565+0530] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-05-02 15:46:24,565] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/07_lineage.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/07_lineage.log"\n    echo "Command: "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" lineage/run_lineage_tracking.py" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/07_lineage.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/07_lineage.log"\n    "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" lineage/run_lineage_tracking.py 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/07_lineage.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/07_lineage.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/07_lineage.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/07_lineage.log"\n    exit $EXIT_CODE\n    ']
+[2026-05-02T15:46:24.565+0530] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/07_lineage.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/07_lineage.log"\n    echo "Command: "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" lineage/run_lineage_tracking.py" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/07_lineage.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/07_lineage.log"\n    "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" lineage/run_lineage_tracking.py 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/07_lineage.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/07_lineage.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/07_lineage.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/07_lineage.log"\n    exit $EXIT_CODE\n    ']
+[2026-05-02 15:46:24,568] {subprocess.py:99} INFO - Output:
+[2026-05-02T15:46:24.568+0530] {subprocess.py:99} INFO - Output:
+[2026-05-02 15:46:24,575] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:24.575+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:24,578] {subprocess.py:106} INFO - Starting command at Sat May  2 15:46:24 IST 2026
+[2026-05-02T15:46:24.578+0530] {subprocess.py:106} INFO - Starting command at Sat May  2 15:46:24 IST 2026
+[2026-05-02 15:46:24,580] {subprocess.py:106} INFO - Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python lineage/run_lineage_tracking.py
+[2026-05-02T15:46:24.580+0530] {subprocess.py:106} INFO - Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python lineage/run_lineage_tracking.py
+[2026-05-02 15:46:24,582] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:24.582+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:25,146] {subprocess.py:106} INFO - 2026-05-02 15:46:25,145 | INFO | recomart_lineage | Starting RecoMart data versioning and lineage tracking
+[2026-05-02T15:46:25.146+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:25,145 | INFO | recomart_lineage | Starting RecoMart data versioning and lineage tracking
+[2026-05-02 15:46:26,933] {subprocess.py:106} INFO - 2026-05-02 15:46:26,933 | INFO | recomart_lineage | Registered dataset version: recomart_events::3745aa83238b1e6d44d8fda209807899f420084398f94ddf745f3cbcfecbf9e7
+[2026-05-02T15:46:26.933+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:26,933 | INFO | recomart_lineage | Registered dataset version: recomart_events::3745aa83238b1e6d44d8fda209807899f420084398f94ddf745f3cbcfecbf9e7
+[2026-05-02 15:46:27,276] {subprocess.py:106} INFO - 2026-05-02 15:46:27,275 | INFO | recomart_lineage | Registered dataset version: recomart_item_properties_part1::30aad5aeca58b2dc27dcc73e1708565f5818e45adb3eb57401f91e87355b0b81
+[2026-05-02T15:46:27.276+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:27,275 | INFO | recomart_lineage | Registered dataset version: recomart_item_properties_part1::30aad5aeca58b2dc27dcc73e1708565f5818e45adb3eb57401f91e87355b0b81
+[2026-05-02 15:46:27,660] {subprocess.py:106} INFO - 2026-05-02 15:46:27,660 | INFO | recomart_lineage | Registered dataset version: recomart_item_properties_part2::d5e7d1a91dc40f522aeb596b267e6c87d8aed689a7192d12369cfb165eb987e5
+[2026-05-02T15:46:27.660+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:27,660 | INFO | recomart_lineage | Registered dataset version: recomart_item_properties_part2::d5e7d1a91dc40f522aeb596b267e6c87d8aed689a7192d12369cfb165eb987e5
+[2026-05-02 15:46:28,024] {subprocess.py:106} INFO - 2026-05-02 15:46:28,023 | INFO | recomart_lineage | Registered dataset version: recomart_category_tree::94e865eb0a3d48cbbfe3b79079018dd92509315c88f5fd8d00d0b4b5af434f5b
+[2026-05-02T15:46:28.024+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:28,023 | INFO | recomart_lineage | Registered dataset version: recomart_category_tree::94e865eb0a3d48cbbfe3b79079018dd92509315c88f5fd8d00d0b4b5af434f5b
+[2026-05-02 15:46:28,192] {subprocess.py:106} INFO - 2026-05-02 15:46:28,192 | INFO | recomart_lineage | Using latest batch id for lineage: 20260502031153
+[2026-05-02T15:46:28.192+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:28,192 | INFO | recomart_lineage | Using latest batch id for lineage: 20260502031153
+[2026-05-02 15:46:28,529] {subprocess.py:106} INFO - 2026-05-02 15:46:28,528 | INFO | recomart_lineage | Inserted lineage step: s3_to_raw_load
+[2026-05-02T15:46:28.529+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:28,528 | INFO | recomart_lineage | Inserted lineage step: s3_to_raw_load
+[2026-05-02 15:46:28,867] {subprocess.py:106} INFO - 2026-05-02 15:46:28,866 | INFO | recomart_lineage | Inserted lineage step: raw_to_validated
+[2026-05-02T15:46:28.867+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:28,866 | INFO | recomart_lineage | Inserted lineage step: raw_to_validated
+[2026-05-02 15:46:29,200] {subprocess.py:106} INFO - 2026-05-02 15:46:29,200 | INFO | recomart_lineage | Inserted lineage step: validated_to_curated_preparation
+[2026-05-02T15:46:29.200+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:29,200 | INFO | recomart_lineage | Inserted lineage step: validated_to_curated_preparation
+[2026-05-02 15:46:29,580] {subprocess.py:106} INFO - 2026-05-02 15:46:29,580 | INFO | recomart_lineage | Inserted lineage step: curated_to_feature_engineering
+[2026-05-02T15:46:29.580+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:29,580 | INFO | recomart_lineage | Inserted lineage step: curated_to_feature_engineering
+[2026-05-02 15:46:29,899] {subprocess.py:106} INFO - 2026-05-02 15:46:29,899 | INFO | recomart_lineage | Inserted lineage step: feature_publish
+[2026-05-02T15:46:29.899+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:29,899 | INFO | recomart_lineage | Inserted lineage step: feature_publish
+[2026-05-02 15:46:29,900] {subprocess.py:106} INFO - 2026-05-02 15:46:29,899 | INFO | recomart_lineage | RecoMart lineage tracking completed successfully
+[2026-05-02T15:46:29.900+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:29,899 | INFO | recomart_lineage | RecoMart lineage tracking completed successfully
+[2026-05-02 15:46:30,095] {subprocess.py:106} INFO - 2026-05-02 15:46:30,095 | INFO | recomart_lineage | Snowflake connection closed
+[2026-05-02T15:46:30.095+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:30,095 | INFO | recomart_lineage | Snowflake connection closed
+[2026-05-02 15:46:30,195] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:30.195+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:30,198] {subprocess.py:106} INFO - Finished command at Sat May  2 15:46:30 IST 2026 with exit code 0
+[2026-05-02T15:46:30.198+0530] {subprocess.py:106} INFO - Finished command at Sat May  2 15:46:30 IST 2026 with exit code 0
+[2026-05-02 15:46:30,200] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:30.200+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:30,201] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-05-02T15:46:30.201+0530] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-05-02T15:46:30.205+0530] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-05-02T15:46:30.205+0530] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=recomart_cli_end_to_end_pipeline, task_id=track_versioning_and_lineage, run_id=manual__2026-05-02T15:38:24+00:00, execution_date=20260502T153824, start_date=, end_date=20260502T101630
+[2026-05-02T15:46:30.209+0530] {dag.py:4410} INFO - [DAG TEST] end task task_id=track_versioning_and_lineage map_index=-1
+[2026-05-02T15:46:30.216+0530] {dag.py:4396} INFO - [DAG TEST] starting task_id=train_and_evaluate_model map_index=-1
+[2026-05-02T15:46:30.217+0530] {dag.py:4399} INFO - [DAG TEST] running task <TaskInstance: recomart_cli_end_to_end_pipeline.train_and_evaluate_model manual__2026-05-02T15:38:24+00:00 [scheduled]>
+[2026-05-02 15:46:30,224] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='train_and_evaluate_model' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:46:30.224+0530] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='train_and_evaluate_model' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:46:30.224+0530] {taskinstance.py:732} INFO - ::endgroup::
+[2026-05-02 15:46:30,224] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-05-02T15:46:30.224+0530] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-05-02 15:46:30,224] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/08_model_training.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/08_model_training.log"\n    echo "Command: "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" model_training/train_recommendation_model.py" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/08_model_training.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/08_model_training.log"\n    "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" model_training/train_recommendation_model.py 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/08_model_training.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/08_model_training.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/08_model_training.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/08_model_training.log"\n    exit $EXIT_CODE\n    ']
+[2026-05-02T15:46:30.224+0530] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/08_model_training.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/08_model_training.log"\n    echo "Command: "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" model_training/train_recommendation_model.py" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/08_model_training.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/08_model_training.log"\n    "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" model_training/train_recommendation_model.py 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/08_model_training.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/08_model_training.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/08_model_training.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/08_model_training.log"\n    exit $EXIT_CODE\n    ']
+[2026-05-02 15:46:30,228] {subprocess.py:99} INFO - Output:
+[2026-05-02T15:46:30.228+0530] {subprocess.py:99} INFO - Output:
+[2026-05-02 15:46:30,235] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:30.235+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:30,237] {subprocess.py:106} INFO - Starting command at Sat May  2 15:46:30 IST 2026
+[2026-05-02T15:46:30.237+0530] {subprocess.py:106} INFO - Starting command at Sat May  2 15:46:30 IST 2026
+[2026-05-02 15:46:30,240] {subprocess.py:106} INFO - Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python model_training/train_recommendation_model.py
+[2026-05-02T15:46:30.240+0530] {subprocess.py:106} INFO - Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python model_training/train_recommendation_model.py
+[2026-05-02 15:46:30,242] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:30.242+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:31,938] {subprocess.py:106} INFO - 2026-05-02 15:46:31,938 | INFO | recomart_model_training | Starting model training. run_id=b14f3158-eb22-44e4-9a60-4c6ec3e0c8ea
+[2026-05-02T15:46:31.938+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:31,938 | INFO | recomart_model_training | Starting model training. run_id=b14f3158-eb22-44e4-9a60-4c6ec3e0c8ea
+[2026-05-02 15:46:33,289] {subprocess.py:106} INFO - RecoMart model training pipeline:   0%|          | 0/12 [00:00<?, ?step/s]Connecting to Snowflake:   0%|          | 0/12 [00:00<?, ?step/s]         Connecting to Snowflake:   8%|▊         | 1/12 [00:00<00:04,  2.56step/s]Creating model tracking objects:   8%|▊         | 1/12 [00:00<00:04,  2.56step/s]Creating model tracking objects:  17%|█▋        | 2/12 [00:01<00:06,  1.60step/s]Finding latest feature batch:  17%|█▋        | 2/12 [00:01<00:06,  1.60step/s]   2026-05-02 15:46:33,288 | INFO | recomart_model_training | Using source_validation_batch_id=20260502031153
+[2026-05-02T15:46:33.289+0530] {subprocess.py:106} INFO - RecoMart model training pipeline:   0%|          | 0/12 [00:00<?, ?step/s]Connecting to Snowflake:   0%|          | 0/12 [00:00<?, ?step/s]         Connecting to Snowflake:   8%|▊         | 1/12 [00:00<00:04,  2.56step/s]Creating model tracking objects:   8%|▊         | 1/12 [00:00<00:04,  2.56step/s]Creating model tracking objects:  17%|█▋        | 2/12 [00:01<00:06,  1.60step/s]Finding latest feature batch:  17%|█▋        | 2/12 [00:01<00:06,  1.60step/s]   2026-05-02 15:46:33,288 | INFO | recomart_model_training | Using source_validation_batch_id=20260502031153
+[2026-05-02 15:46:34,280] {subprocess.py:106} INFO - Finding latest feature batch:  25%|██▌       | 3/12 [00:01<00:03,  2.42step/s]Loading training data:  25%|██▌       | 3/12 [00:01<00:03,  2.42step/s]       2026-05-02 15:46:34,279 | INFO | recomart_model_training | Loaded training rows: 10693
+[2026-05-02T15:46:34.280+0530] {subprocess.py:106} INFO - Finding latest feature batch:  25%|██▌       | 3/12 [00:01<00:03,  2.42step/s]Loading training data:  25%|██▌       | 3/12 [00:01<00:03,  2.42step/s]       2026-05-02 15:46:34,279 | INFO | recomart_model_training | Loaded training rows: 10693
+[2026-05-02 15:46:34,407] {subprocess.py:106} INFO - Loading training data:  33%|███▎      | 4/12 [00:02<00:05,  1.56step/s]Splitting train/test data:  33%|███▎      | 4/12 [00:02<00:05,  1.56step/s]Building user-item matrix:  42%|████▏     | 5/12 [00:02<00:04,  1.56step/s]Training SVD model:  50%|█████     | 6/12 [00:02<00:03,  1.56step/s]       Evaluating model:  58%|█████▊    | 7/12 [00:02<00:03,  1.56step/s]
+[2026-05-02T15:46:34.407+0530] {subprocess.py:106} INFO - Loading training data:  33%|███▎      | 4/12 [00:02<00:05,  1.56step/s]Splitting train/test data:  33%|███▎      | 4/12 [00:02<00:05,  1.56step/s]Building user-item matrix:  42%|████▏     | 5/12 [00:02<00:04,  1.56step/s]Training SVD model:  50%|█████     | 6/12 [00:02<00:03,  1.56step/s]       Evaluating model:  58%|█████▊    | 7/12 [00:02<00:03,  1.56step/s]
+[2026-05-02 15:46:34,474] {subprocess.py:106} INFO - Evaluating Precision/Recall/NDCG@10:   0%|          | 0/388 [00:00<?, ?user/s][A
+[2026-05-02T15:46:34.474+0530] {subprocess.py:106} INFO - Evaluating Precision/Recall/NDCG@10:   0%|          | 0/388 [00:00<?, ?user/s][A
+[2026-05-02 15:46:34,582] {subprocess.py:106} INFO - Evaluating Precision/Recall/NDCG@10:   1%|          | 4/388 [00:00<00:09, 39.91user/s][A
+[2026-05-02T15:46:34.582+0530] {subprocess.py:106} INFO - Evaluating Precision/Recall/NDCG@10:   1%|          | 4/388 [00:00<00:09, 39.91user/s][A
+[2026-05-02 15:46:34,621] {subprocess.py:106} INFO - Evaluating Precision/Recall/NDCG@10:   3%|▎         | 10/388 [00:00<00:07, 48.44user/s][AEvaluating Precision/Recall/NDCG@10: 100%|██████████| 388/388 [00:00<00:00, 1549.30user/s]
+[2026-05-02T15:46:34.621+0530] {subprocess.py:106} INFO - Evaluating Precision/Recall/NDCG@10:   3%|▎         | 10/388 [00:00<00:07, 48.44user/s][AEvaluating Precision/Recall/NDCG@10: 100%|██████████| 388/388 [00:00<00:00, 1549.30user/s]
+[2026-05-02 15:46:34,637] {subprocess.py:106} INFO - Evaluating model:  67%|██████▋   | 8/12 [00:02<00:01,  3.90step/s]Saving model artifact:  67%|██████▋   | 8/12 [00:02<00:01,  3.90step/s]Generating recommendations:  75%|███████▌  | 9/12 [00:02<00:00,  3.90step/s]
+[2026-05-02T15:46:34.637+0530] {subprocess.py:106} INFO - Evaluating model:  67%|██████▋   | 8/12 [00:02<00:01,  3.90step/s]Saving model artifact:  67%|██████▋   | 8/12 [00:02<00:01,  3.90step/s]Generating recommendations:  75%|███████▌  | 9/12 [00:02<00:00,  3.90step/s]
+[2026-05-02 15:46:34,638] {subprocess.py:106} INFO - Generating sample recommendations:   0%|          | 0/20 [00:00<?, ?user/s][AGenerating sample recommendations: 100%|██████████| 20/20 [00:00<00:00, 10853.42user/s]
+[2026-05-02T15:46:34.638+0530] {subprocess.py:106} INFO - Generating sample recommendations:   0%|          | 0/20 [00:00<?, ?user/s][AGenerating sample recommendations: 100%|██████████| 20/20 [00:00<00:00, 10853.42user/s]
+[2026-05-02 15:46:35,705] {subprocess.py:106} INFO - Writing model report:  83%|████████▎ | 10/12 [00:02<00:00,  3.90step/s]     Logging to MLflow:  92%|█████████▏| 11/12 [00:02<00:00,  3.90step/s]   Logging to MLflow: 100%|██████████| 12/12 [00:02<00:00,  6.92step/s]Writing metadata to Snowflake: 100%|██████████| 12/12 [00:02<00:00,  6.92step/s]
+[2026-05-02T15:46:35.705+0530] {subprocess.py:106} INFO - Writing model report:  83%|████████▎ | 10/12 [00:02<00:00,  3.90step/s]     Logging to MLflow:  92%|█████████▏| 11/12 [00:02<00:00,  3.90step/s]   Logging to MLflow: 100%|██████████| 12/12 [00:02<00:00,  6.92step/s]Writing metadata to Snowflake: 100%|██████████| 12/12 [00:02<00:00,  6.92step/s]
+[2026-05-02 15:46:35,705] {subprocess.py:106} INFO - Preparing recommendation insert payload:   0%|          | 0/200 [00:00<?, ?row/s][APreparing recommendation insert payload: 100%|██████████| 200/200 [00:00<00:00, 305818.74row/s]
+[2026-05-02T15:46:35.705+0530] {subprocess.py:106} INFO - Preparing recommendation insert payload:   0%|          | 0/200 [00:00<?, ?row/s][APreparing recommendation insert payload: 100%|██████████| 200/200 [00:00<00:00, 305818.74row/s]
+[2026-05-02 15:46:36,162] {subprocess.py:106} INFO - Model training completed: : 13step [00:04,  6.92step/s]                         Model training completed: : 13step [00:04,  3.08step/s]
+[2026-05-02T15:46:36.162+0530] {subprocess.py:106} INFO - Model training completed: : 13step [00:04,  6.92step/s]                         Model training completed: : 13step [00:04,  3.08step/s]
+[2026-05-02 15:46:36,163] {subprocess.py:106} INFO - 2026-05-02 15:46:36,162 | INFO | recomart_model_training | Model training completed successfully. run_id=b14f3158-eb22-44e4-9a60-4c6ec3e0c8ea
+[2026-05-02T15:46:36.163+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:36,162 | INFO | recomart_model_training | Model training completed successfully. run_id=b14f3158-eb22-44e4-9a60-4c6ec3e0c8ea
+[2026-05-02 15:46:36,163] {subprocess.py:106} INFO - 2026-05-02 15:46:36,162 | INFO | recomart_model_training | Metrics: {
+[2026-05-02T15:46:36.163+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:36,162 | INFO | recomart_model_training | Metrics: {
+[2026-05-02 15:46:36,163] {subprocess.py:106} INFO -   "precision_at_k": 0.008333333333333337,
+[2026-05-02T15:46:36.163+0530] {subprocess.py:106} INFO -   "precision_at_k": 0.008333333333333337,
+[2026-05-02 15:46:36,164] {subprocess.py:106} INFO -   "recall_at_k": 0.08333333333333333,
+[2026-05-02T15:46:36.164+0530] {subprocess.py:106} INFO -   "recall_at_k": 0.08333333333333333,
+[2026-05-02 15:46:36,164] {subprocess.py:106} INFO -   "ndcg_at_k": 0.048749011071743176,
+[2026-05-02T15:46:36.164+0530] {subprocess.py:106} INFO -   "ndcg_at_k": 0.048749011071743176,
+[2026-05-02 15:46:36,164] {subprocess.py:106} INFO -   "hit_rate_at_k": 0.08333333333333333,
+[2026-05-02T15:46:36.164+0530] {subprocess.py:106} INFO -   "hit_rate_at_k": 0.08333333333333333,
+[2026-05-02 15:46:36,165] {subprocess.py:106} INFO -   "evaluated_users": 384
+[2026-05-02T15:46:36.165+0530] {subprocess.py:106} INFO -   "evaluated_users": 384
+[2026-05-02 15:46:36,165] {subprocess.py:106} INFO - }
+[2026-05-02T15:46:36.165+0530] {subprocess.py:106} INFO - }
+[2026-05-02 15:46:36,360] {subprocess.py:106} INFO - 2026-05-02 15:46:36,359 | INFO | recomart_model_training | Snowflake connection closed
+[2026-05-02T15:46:36.360+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:36,359 | INFO | recomart_model_training | Snowflake connection closed
+[2026-05-02 15:46:36,535] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:36.535+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:36,539] {subprocess.py:106} INFO - Finished command at Sat May  2 15:46:36 IST 2026 with exit code 0
+[2026-05-02T15:46:36.539+0530] {subprocess.py:106} INFO - Finished command at Sat May  2 15:46:36 IST 2026 with exit code 0
+[2026-05-02 15:46:36,541] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:36.541+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:36,541] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-05-02T15:46:36.541+0530] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-05-02T15:46:36.546+0530] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-05-02T15:46:36.546+0530] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=recomart_cli_end_to_end_pipeline, task_id=train_and_evaluate_model, run_id=manual__2026-05-02T15:38:24+00:00, execution_date=20260502T153824, start_date=, end_date=20260502T101636
+[2026-05-02T15:46:36.550+0530] {dag.py:4410} INFO - [DAG TEST] end task task_id=train_and_evaluate_model map_index=-1
+[2026-05-02T15:46:36.558+0530] {dag.py:4396} INFO - [DAG TEST] starting task_id=generate_reports map_index=-1
+[2026-05-02T15:46:36.558+0530] {dag.py:4399} INFO - [DAG TEST] running task <TaskInstance: recomart_cli_end_to_end_pipeline.generate_reports manual__2026-05-02T15:38:24+00:00 [scheduled]>
+[2026-05-02 15:46:36,565] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='generate_reports' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:46:36.565+0530] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='generate_reports' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:46:36.565+0530] {taskinstance.py:732} INFO - ::endgroup::
+[2026-05-02 15:46:36,566] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-05-02T15:46:36.566+0530] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-05-02 15:46:36,566] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/09_generate_reports.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/09_generate_reports.log"\n    echo "Command: "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" reporting/generate_reports.py" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/09_generate_reports.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/09_generate_reports.log"\n    "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" reporting/generate_reports.py 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/09_generate_reports.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/09_generate_reports.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/09_generate_reports.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/09_generate_reports.log"\n    exit $EXIT_CODE\n    ']
+[2026-05-02T15:46:36.566+0530] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/09_generate_reports.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/09_generate_reports.log"\n    echo "Command: "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" reporting/generate_reports.py" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/09_generate_reports.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/09_generate_reports.log"\n    "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" reporting/generate_reports.py 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/09_generate_reports.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/09_generate_reports.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/09_generate_reports.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/09_generate_reports.log"\n    exit $EXIT_CODE\n    ']
+[2026-05-02 15:46:36,570] {subprocess.py:99} INFO - Output:
+[2026-05-02T15:46:36.570+0530] {subprocess.py:99} INFO - Output:
+[2026-05-02 15:46:36,577] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:36.577+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:36,580] {subprocess.py:106} INFO - Starting command at Sat May  2 15:46:36 IST 2026
+[2026-05-02T15:46:36.580+0530] {subprocess.py:106} INFO - Starting command at Sat May  2 15:46:36 IST 2026
+[2026-05-02 15:46:36,582] {subprocess.py:106} INFO - Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python reporting/generate_reports.py
+[2026-05-02T15:46:36.582+0530] {subprocess.py:106} INFO - Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python reporting/generate_reports.py
+[2026-05-02 15:46:36,584] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:36.584+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:37,093] {subprocess.py:106} INFO - 2026-05-02 15:46:37,092 | INFO | recomart_report_generator | Starting RecoMart report generation
+[2026-05-02T15:46:37.093+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:37,092 | INFO | recomart_report_generator | Starting RecoMart report generation
+[2026-05-02 15:46:42,861] {subprocess.py:106} INFO - 2026-05-02 15:46:42,861 | INFO | recomart_report_generator | RecoMart report generation completed successfully
+[2026-05-02T15:46:42.861+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:42,861 | INFO | recomart_report_generator | RecoMart report generation completed successfully
+[2026-05-02 15:46:43,043] {subprocess.py:106} INFO - 2026-05-02 15:46:43,043 | INFO | recomart_report_generator | Snowflake connection closed
+[2026-05-02T15:46:43.043+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:43,043 | INFO | recomart_report_generator | Snowflake connection closed
+[2026-05-02 15:46:43,044] {subprocess.py:106} INFO - 
+[2026-05-02T15:46:43.044+0530] {subprocess.py:106} INFO - 
+[2026-05-02 15:46:43,044] {subprocess.py:106} INFO - RecoMart Reports Generated
+[2026-05-02T15:46:43.044+0530] {subprocess.py:106} INFO - RecoMart Reports Generated
+[2026-05-02 15:46:43,044] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:43.044+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:43,045] {subprocess.py:106} INFO - - reports/data_quality_report.md
+[2026-05-02T15:46:43.045+0530] {subprocess.py:106} INFO - - reports/data_quality_report.md
+[2026-05-02 15:46:43,045] {subprocess.py:106} INFO - - reports/eda_report.md
+[2026-05-02T15:46:43.045+0530] {subprocess.py:106} INFO - - reports/eda_report.md
+[2026-05-02 15:46:43,045] {subprocess.py:106} INFO - - reports/feature_engineering_report.md
+[2026-05-02T15:46:43.045+0530] {subprocess.py:106} INFO - - reports/feature_engineering_report.md
+[2026-05-02 15:46:43,046] {subprocess.py:106} INFO - - reports/feature_store_report.md
+[2026-05-02T15:46:43.046+0530] {subprocess.py:106} INFO - - reports/feature_store_report.md
+[2026-05-02 15:46:43,046] {subprocess.py:106} INFO - - reports/lineage_report.md
+[2026-05-02T15:46:43.046+0530] {subprocess.py:106} INFO - - reports/lineage_report.md
+[2026-05-02 15:46:43,046] {subprocess.py:106} INFO - - reports/model_performance_report.md
+[2026-05-02T15:46:43.046+0530] {subprocess.py:106} INFO - - reports/model_performance_report.md
+[2026-05-02 15:46:43,047] {subprocess.py:106} INFO - - reports/orchestration_report.md
+[2026-05-02T15:46:43.047+0530] {subprocess.py:106} INFO - - reports/orchestration_report.md
+[2026-05-02 15:46:43,047] {subprocess.py:106} INFO - - reports/report_index.md
+[2026-05-02T15:46:43.047+0530] {subprocess.py:106} INFO - - reports/report_index.md
+[2026-05-02 15:46:43,048] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:43.048+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:43,048] {subprocess.py:106} INFO - Detailed CSV exports are available under reports/exports/
+[2026-05-02T15:46:43.048+0530] {subprocess.py:106} INFO - Detailed CSV exports are available under reports/exports/
+[2026-05-02 15:46:43,145] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:43.145+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:43,148] {subprocess.py:106} INFO - Finished command at Sat May  2 15:46:43 IST 2026 with exit code 0
+[2026-05-02T15:46:43.148+0530] {subprocess.py:106} INFO - Finished command at Sat May  2 15:46:43 IST 2026 with exit code 0
+[2026-05-02 15:46:43,150] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:43.150+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:43,150] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-05-02T15:46:43.150+0530] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-05-02T15:46:43.155+0530] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-05-02T15:46:43.155+0530] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=recomart_cli_end_to_end_pipeline, task_id=generate_reports, run_id=manual__2026-05-02T15:38:24+00:00, execution_date=20260502T153824, start_date=, end_date=20260502T101643
+[2026-05-02T15:46:43.159+0530] {dag.py:4410} INFO - [DAG TEST] end task task_id=generate_reports map_index=-1
+[2026-05-02T15:46:43.167+0530] {dag.py:4396} INFO - [DAG TEST] starting task_id=final_health_check map_index=-1
+[2026-05-02T15:46:43.167+0530] {dag.py:4399} INFO - [DAG TEST] running task <TaskInstance: recomart_cli_end_to_end_pipeline.final_health_check manual__2026-05-02T15:38:24+00:00 [scheduled]>
+[2026-05-02 15:46:43,174] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='final_health_check' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:46:43.174+0530] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='final_health_check' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:46:43.174+0530] {taskinstance.py:732} INFO - ::endgroup::
+[2026-05-02 15:46:43,175] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-05-02T15:46:43.175+0530] {subprocess.py:78} INFO - Tmp dir root location: /var/folders/5l/ggx_ps317gg8f1skc6s5fnl40000gn/T
+[2026-05-02 15:46:43,175] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/10_final_health_check.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/10_final_health_check.log"\n    echo "Command: "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" orchestration/run_sql_file.py sql/orchestration/final_health_check.sql" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/10_final_health_check.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/10_final_health_check.log"\n    "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" orchestration/run_sql_file.py sql/orchestration/final_health_check.sql 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/10_final_health_check.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/10_final_health_check.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/10_final_health_check.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/10_final_health_check.log"\n    exit $EXIT_CODE\n    ']
+[2026-05-02T15:46:43.175+0530] {subprocess.py:88} INFO - Running command: ['/bin/bash', '-c', '\n    set -e\n    cd "/Users/sd/Desktop/recomart_pipeline"\n    mkdir -p logs/airflow\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/10_final_health_check.log"\n    echo "Starting command at $(date)" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/10_final_health_check.log"\n    echo "Command: "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" orchestration/run_sql_file.py sql/orchestration/final_health_check.sql" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/10_final_health_check.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/10_final_health_check.log"\n    "/Users/sd/Desktop/recomart_pipeline/.venv/bin/python" orchestration/run_sql_file.py sql/orchestration/final_health_check.sql 2>&1 | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/10_final_health_check.log"\n    EXIT_CODE=${PIPESTATUS[0]}\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/10_final_health_check.log"\n    echo "Finished command at $(date) with exit code $EXIT_CODE" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/10_final_health_check.log"\n    echo "============================================================" | tee -a "/Users/sd/Desktop/recomart_pipeline/logs/airflow/10_final_health_check.log"\n    exit $EXIT_CODE\n    ']
+[2026-05-02 15:46:43,178] {subprocess.py:99} INFO - Output:
+[2026-05-02T15:46:43.178+0530] {subprocess.py:99} INFO - Output:
+[2026-05-02 15:46:43,185] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:43.185+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:43,188] {subprocess.py:106} INFO - Starting command at Sat May  2 15:46:43 IST 2026
+[2026-05-02T15:46:43.188+0530] {subprocess.py:106} INFO - Starting command at Sat May  2 15:46:43 IST 2026
+[2026-05-02 15:46:43,190] {subprocess.py:106} INFO - Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python orchestration/run_sql_file.py sql/orchestration/final_health_check.sql
+[2026-05-02T15:46:43.190+0530] {subprocess.py:106} INFO - Command: /Users/sd/Desktop/recomart_pipeline/.venv/bin/python orchestration/run_sql_file.py sql/orchestration/final_health_check.sql
+[2026-05-02 15:46:43,192] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:43.192+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:43,752] {subprocess.py:106} INFO - 2026-05-02 15:46:43,751 | INFO | recomart_sql_runner | ================================================================================
+[2026-05-02T15:46:43.752+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:43,751 | INFO | recomart_sql_runner | ================================================================================
+[2026-05-02 15:46:43,753] {subprocess.py:106} INFO - 2026-05-02 15:46:43,752 | INFO | recomart_sql_runner | RecoMart SQL runner started
+[2026-05-02T15:46:43.753+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:43,752 | INFO | recomart_sql_runner | RecoMart SQL runner started
+[2026-05-02 15:46:43,753] {subprocess.py:106} INFO - 2026-05-02 15:46:43,752 | INFO | recomart_sql_runner | Project root: /Users/sd/Desktop/recomart_pipeline
+[2026-05-02T15:46:43.753+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:43,752 | INFO | recomart_sql_runner | Project root: /Users/sd/Desktop/recomart_pipeline
+[2026-05-02 15:46:43,753] {subprocess.py:106} INFO - 2026-05-02 15:46:43,752 | INFO | recomart_sql_runner | Environment file: /Users/sd/Desktop/recomart_pipeline/.env
+[2026-05-02T15:46:43.753+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:43,752 | INFO | recomart_sql_runner | Environment file: /Users/sd/Desktop/recomart_pipeline/.env
+[2026-05-02 15:46:43,753] {subprocess.py:106} INFO - 2026-05-02 15:46:43,752 | INFO | recomart_sql_runner | SQL files received: ['sql/orchestration/final_health_check.sql']
+[2026-05-02T15:46:43.753+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:43,752 | INFO | recomart_sql_runner | SQL files received: ['sql/orchestration/final_health_check.sql']
+[2026-05-02 15:46:44,372] {subprocess.py:106} INFO - 2026-05-02 15:46:44,372 | INFO | recomart_sql_runner | Connected to Snowflake successfully
+[2026-05-02T15:46:44.372+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,372 | INFO | recomart_sql_runner | Connected to Snowflake successfully
+[2026-05-02 15:46:44,373] {subprocess.py:106} INFO - 2026-05-02 15:46:44,372 | INFO | recomart_sql_runner | Executing SQL file: /Users/sd/Desktop/recomart_pipeline/sql/orchestration/final_health_check.sql
+[2026-05-02T15:46:44.373+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,372 | INFO | recomart_sql_runner | Executing SQL file: /Users/sd/Desktop/recomart_pipeline/sql/orchestration/final_health_check.sql
+[2026-05-02 15:46:44,374] {subprocess.py:106} INFO - 2026-05-02 15:46:44,373 | INFO | recomart_sql_runner | Total SQL statements found: 3
+[2026-05-02T15:46:44.374+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,373 | INFO | recomart_sql_runner | Total SQL statements found: 3
+[2026-05-02 15:46:44,374] {subprocess.py:106} INFO - 2026-05-02 15:46:44,374 | INFO | recomart_sql_runner | ================================================================================
+[2026-05-02T15:46:44.374+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,374 | INFO | recomart_sql_runner | ================================================================================
+[2026-05-02 15:46:44,374] {subprocess.py:106} INFO - 2026-05-02 15:46:44,374 | INFO | recomart_sql_runner | Running statement 1/3
+[2026-05-02T15:46:44.374+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,374 | INFO | recomart_sql_runner | Running statement 1/3
+[2026-05-02 15:46:44,375] {subprocess.py:106} INFO - 2026-05-02 15:46:44,374 | INFO | recomart_sql_runner | SQL preview: USE ROLE ACCOUNTADMIN
+[2026-05-02T15:46:44.375+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,374 | INFO | recomart_sql_runner | SQL preview: USE ROLE ACCOUNTADMIN
+[2026-05-02 15:46:44,645] {subprocess.py:106} INFO - 2026-05-02 15:46:44,644 | INFO | recomart_sql_runner | Statement 1 completed successfully
+[2026-05-02T15:46:44.645+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,644 | INFO | recomart_sql_runner | Statement 1 completed successfully
+[2026-05-02 15:46:44,645] {subprocess.py:106} INFO - 2026-05-02 15:46:44,645 | INFO | recomart_sql_runner | Statement 1: result preview columns=['status']
+[2026-05-02T15:46:44.645+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,645 | INFO | recomart_sql_runner | Statement 1: result preview columns=['status']
+[2026-05-02 15:46:44,646] {subprocess.py:106} INFO - 2026-05-02 15:46:44,645 | INFO | recomart_sql_runner | Statement 1: row=('Statement executed successfully.',)
+[2026-05-02T15:46:44.646+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,645 | INFO | recomart_sql_runner | Statement 1: row=('Statement executed successfully.',)
+[2026-05-02 15:46:44,647] {subprocess.py:106} INFO - 2026-05-02 15:46:44,645 | INFO | recomart_sql_runner | ================================================================================
+[2026-05-02T15:46:44.647+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,645 | INFO | recomart_sql_runner | ================================================================================
+[2026-05-02 15:46:44,647] {subprocess.py:106} INFO - 2026-05-02 15:46:44,645 | INFO | recomart_sql_runner | Running statement 2/3
+[2026-05-02T15:46:44.647+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,645 | INFO | recomart_sql_runner | Running statement 2/3
+[2026-05-02 15:46:44,648] {subprocess.py:106} INFO - 2026-05-02 15:46:44,645 | INFO | recomart_sql_runner | SQL preview: USE DATABASE RECOMART_DB
+[2026-05-02T15:46:44.648+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,645 | INFO | recomart_sql_runner | SQL preview: USE DATABASE RECOMART_DB
+[2026-05-02 15:46:44,771] {subprocess.py:106} INFO - 2026-05-02 15:46:44,770 | INFO | recomart_sql_runner | Statement 2 completed successfully
+[2026-05-02T15:46:44.771+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,770 | INFO | recomart_sql_runner | Statement 2 completed successfully
+[2026-05-02 15:46:44,771] {subprocess.py:106} INFO - 2026-05-02 15:46:44,771 | INFO | recomart_sql_runner | Statement 2: result preview columns=['status']
+[2026-05-02T15:46:44.771+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,771 | INFO | recomart_sql_runner | Statement 2: result preview columns=['status']
+[2026-05-02 15:46:44,771] {subprocess.py:106} INFO - 2026-05-02 15:46:44,771 | INFO | recomart_sql_runner | Statement 2: row=('Statement executed successfully.',)
+[2026-05-02T15:46:44.771+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,771 | INFO | recomart_sql_runner | Statement 2: row=('Statement executed successfully.',)
+[2026-05-02 15:46:44,771] {subprocess.py:106} INFO - 2026-05-02 15:46:44,771 | INFO | recomart_sql_runner | ================================================================================
+[2026-05-02T15:46:44.771+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,771 | INFO | recomart_sql_runner | ================================================================================
+[2026-05-02 15:46:44,771] {subprocess.py:106} INFO - 2026-05-02 15:46:44,771 | INFO | recomart_sql_runner | Running statement 3/3
+[2026-05-02T15:46:44.771+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,771 | INFO | recomart_sql_runner | Running statement 3/3
+[2026-05-02 15:46:44,771] {subprocess.py:106} INFO - 2026-05-02 15:46:44,771 | INFO | recomart_sql_runner | SQL preview: SELECT 'RAW_EVENTS' AS CHECK_NAME, COUNT(*) AS RECORD_COUNT FROM RAW.RAW_RECOMART_EVENTS UNION ALL SELECT 'VALIDATED_EVENTS' AS CHECK_NAME, COUNT(*) AS RECORD_COUNT FROM VALIDATED.RECOMART_EVENTS UNION ALL SELECT 'CURATED_USER_ITEM_INTERACTIONS' AS CHECK_NAME, COUNT(*) AS RECORD_COUNT FROM CURATED.U
+[2026-05-02T15:46:44.771+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,771 | INFO | recomart_sql_runner | SQL preview: SELECT 'RAW_EVENTS' AS CHECK_NAME, COUNT(*) AS RECORD_COUNT FROM RAW.RAW_RECOMART_EVENTS UNION ALL SELECT 'VALIDATED_EVENTS' AS CHECK_NAME, COUNT(*) AS RECORD_COUNT FROM VALIDATED.RECOMART_EVENTS UNION ALL SELECT 'CURATED_USER_ITEM_INTERACTIONS' AS CHECK_NAME, COUNT(*) AS RECORD_COUNT FROM CURATED.U
+[2026-05-02 15:46:44,924] {subprocess.py:106} INFO - 2026-05-02 15:46:44,924 | INFO | recomart_sql_runner | Statement 3 completed successfully
+[2026-05-02T15:46:44.924+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,924 | INFO | recomart_sql_runner | Statement 3 completed successfully
+[2026-05-02 15:46:44,925] {subprocess.py:106} INFO - 2026-05-02 15:46:44,924 | INFO | recomart_sql_runner | Statement 3: result preview columns=['CHECK_NAME', 'RECORD_COUNT']
+[2026-05-02T15:46:44.925+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,924 | INFO | recomart_sql_runner | Statement 3: result preview columns=['CHECK_NAME', 'RECORD_COUNT']
+[2026-05-02 15:46:44,925] {subprocess.py:106} INFO - 2026-05-02 15:46:44,924 | INFO | recomart_sql_runner | Statement 3: row=('RAW_EVENTS', 38585414)
+[2026-05-02T15:46:44.925+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,924 | INFO | recomart_sql_runner | Statement 3: row=('RAW_EVENTS', 38585414)
+[2026-05-02 15:46:44,926] {subprocess.py:106} INFO - 2026-05-02 15:46:44,924 | INFO | recomart_sql_runner | Statement 3: row=('VALIDATED_EVENTS', 38585414)
+[2026-05-02T15:46:44.926+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,924 | INFO | recomart_sql_runner | Statement 3: row=('VALIDATED_EVENTS', 38585414)
+[2026-05-02 15:46:44,926] {subprocess.py:106} INFO - 2026-05-02 15:46:44,924 | INFO | recomart_sql_runner | Statement 3: row=('CURATED_USER_ITEM_INTERACTIONS', 10725895)
+[2026-05-02T15:46:44.926+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,924 | INFO | recomart_sql_runner | Statement 3: row=('CURATED_USER_ITEM_INTERACTIONS', 10725895)
+[2026-05-02 15:46:44,926] {subprocess.py:106} INFO - 2026-05-02 15:46:44,925 | INFO | recomart_sql_runner | Statement 3: row=('OFFLINE_FEATURES', 10725895)
+[2026-05-02T15:46:44.926+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,925 | INFO | recomart_sql_runner | Statement 3: row=('OFFLINE_FEATURES', 10725895)
+[2026-05-02 15:46:44,927] {subprocess.py:106} INFO - 2026-05-02 15:46:44,925 | INFO | recomart_sql_runner | Statement 3: row=('MODEL_RUNS', 7)
+[2026-05-02T15:46:44.927+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,925 | INFO | recomart_sql_runner | Statement 3: row=('MODEL_RUNS', 7)
+[2026-05-02 15:46:44,927] {subprocess.py:106} INFO - 2026-05-02 15:46:44,925 | INFO | recomart_sql_runner | All SQL files executed successfully
+[2026-05-02T15:46:44.927+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:44,925 | INFO | recomart_sql_runner | All SQL files executed successfully
+[2026-05-02 15:46:45,122] {subprocess.py:106} INFO - 2026-05-02 15:46:45,122 | INFO | recomart_sql_runner | Snowflake connection closed
+[2026-05-02T15:46:45.122+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:45,122 | INFO | recomart_sql_runner | Snowflake connection closed
+[2026-05-02 15:46:45,123] {subprocess.py:106} INFO - 2026-05-02 15:46:45,122 | INFO | recomart_sql_runner | RecoMart SQL runner finished
+[2026-05-02T15:46:45.123+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:45,122 | INFO | recomart_sql_runner | RecoMart SQL runner finished
+[2026-05-02 15:46:45,123] {subprocess.py:106} INFO - 2026-05-02 15:46:45,122 | INFO | recomart_sql_runner | ================================================================================
+[2026-05-02T15:46:45.123+0530] {subprocess.py:106} INFO - 2026-05-02 15:46:45,122 | INFO | recomart_sql_runner | ================================================================================
+[2026-05-02 15:46:45,224] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:45.224+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:45,227] {subprocess.py:106} INFO - Finished command at Sat May  2 15:46:45 IST 2026 with exit code 0
+[2026-05-02T15:46:45.227+0530] {subprocess.py:106} INFO - Finished command at Sat May  2 15:46:45 IST 2026 with exit code 0
+[2026-05-02 15:46:45,229] {subprocess.py:106} INFO - ============================================================
+[2026-05-02T15:46:45.229+0530] {subprocess.py:106} INFO - ============================================================
+[2026-05-02 15:46:45,229] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-05-02T15:46:45.229+0530] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-05-02T15:46:45.233+0530] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-05-02T15:46:45.234+0530] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=recomart_cli_end_to_end_pipeline, task_id=final_health_check, run_id=manual__2026-05-02T15:38:24+00:00, execution_date=20260502T153824, start_date=, end_date=20260502T101645
+[2026-05-02T15:46:45.237+0530] {dag.py:4410} INFO - [DAG TEST] end task task_id=final_health_check map_index=-1
+[2026-05-02T15:46:45.245+0530] {dag.py:4396} INFO - [DAG TEST] starting task_id=pipeline_success map_index=-1
+[2026-05-02T15:46:45.246+0530] {dag.py:4399} INFO - [DAG TEST] running task <TaskInstance: recomart_cli_end_to_end_pipeline.pipeline_success manual__2026-05-02T15:38:24+00:00 [scheduled]>
+[2026-05-02 15:46:45,253] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='pipeline_success' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:46:45.253+0530] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart-data-platform' AIRFLOW_CTX_DAG_ID='recomart_cli_end_to_end_pipeline' AIRFLOW_CTX_TASK_ID='pipeline_success' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T15:38:24+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T15:38:24+00:00'
+[2026-05-02T15:46:45.253+0530] {taskinstance.py:732} INFO - ::endgroup::
+[2026-05-02T15:46:45.254+0530] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-05-02T15:46:45.254+0530] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=recomart_cli_end_to_end_pipeline, task_id=pipeline_success, run_id=manual__2026-05-02T15:38:24+00:00, execution_date=20260502T153824, start_date=, end_date=20260502T101645
+[2026-05-02T15:46:45.257+0530] {dag.py:4410} INFO - [DAG TEST] end task task_id=pipeline_success map_index=-1
+[2026-05-02T15:46:45.259+0530] {dagrun.py:854} INFO - Marking run <DagRun recomart_cli_end_to_end_pipeline @ 2026-05-02 15:38:24+00:00: manual__2026-05-02T15:38:24+00:00, state:running, queued_at: None. externally triggered: False> successful
+[2026-05-02T15:46:45.259+0530] {dagrun.py:905} INFO - DagRun Finished: dag_id=recomart_cli_end_to_end_pipeline, execution_date=2026-05-02 15:38:24+00:00, run_id=manual__2026-05-02T15:38:24+00:00, run_start_date=2026-05-02 15:38:24+00:00, run_end_date=2026-05-02 10:16:45.259125+00:00, run_duration=-19298.740875, state=success, external_trigger=False, run_type=manual, data_interval_start=2026-05-02 15:38:24+00:00, data_interval_end=2026-05-02 15:38:24+00:00, dag_hash=None

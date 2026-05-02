@@ -1,6 +1,6 @@
 # Data Quality Report
 
-**Generated At:** 2026-04-30 15:20:16 UTC
+**Generated At:** 2026-05-02 10:16:38 UTC
 
 **Project:** RecoMart Recommendation Data Pipeline
 
@@ -11,6 +11,10 @@
 
 |   VALIDATION_BATCH_ID | STATUS   |   RULE_COUNT | FIRST_RULE_EXECUTED_TS     | LAST_RULE_EXECUTED_TS      |
 |----------------------:|:---------|-------------:|:---------------------------|:---------------------------|
+|        20260502031153 | FAILED   |            1 | 2026-05-02 03:15:07.452000 | 2026-05-02 03:15:07.452000 |
+|        20260502031153 | PASSED   |            7 | 2026-05-02 03:15:06.139000 | 2026-05-02 03:15:10.496000 |
+|        20260502024231 | FAILED   |            1 | 2026-05-02 02:45:15.669000 | 2026-05-02 02:45:15.669000 |
+|        20260502024231 | PASSED   |            7 | 2026-05-02 02:45:14.200000 | 2026-05-02 02:45:18.292000 |
 |        20260430081645 | FAILED   |            1 | 2026-04-30 08:18:36.675000 | 2026-04-30 08:18:36.675000 |
 |        20260430081645 | PASSED   |            7 | 2026-04-30 08:18:35.387000 | 2026-04-30 08:18:38.685000 |
 |        20260430075931 | FAILED   |            1 | 2026-04-30 08:01:49.356000 | 2026-04-30 08:01:49.356000 |
@@ -31,6 +35,22 @@
 
 |   VALIDATION_BATCH_ID | RULE_ID   | TARGET_TABLE                     |   TOTAL_RECORDS |   FAILED_RECORDS |   PASSED_RECORDS |   FAILURE_PERCENTAGE | STATUS   | MESSAGE                                              | EXECUTED_TS                |
 |----------------------:|:----------|:---------------------------------|----------------:|-----------------:|-----------------:|---------------------:|:---------|:-----------------------------------------------------|:---------------------------|
+|        20260502031153 | DQ008     | RAW.RAW_EXTERNAL_PRODUCTS        |            1400 |                0 |                1 |                 0    | PASSED   | External API should return at least one product      | 2026-05-02 03:15:10.496000 |
+|        20260502031153 | DQ007     | RAW.RAW_RECOMART_CATEGORY_TREE   |           23366 |                0 |            23366 |                 0    | PASSED   | Category ID should not be null                       | 2026-05-02 03:15:10.164000 |
+|        20260502031153 | DQ006     | RAW.RAW_RECOMART_ITEM_PROPERTIES |       283862628 |                0 |        283862628 |                 0    | PASSED   | Item property fields should not be null              | 2026-05-02 03:15:09.696000 |
+|        20260502031153 | DQ005     | RAW.RAW_RECOMART_EVENTS          |        38585414 |                0 |         38585414 |                 0    | PASSED   | Transaction events should have transaction_id        | 2026-05-02 03:15:09.065000 |
+|        20260502031153 | DQ004     | RAW.RAW_RECOMART_EVENTS          |        38585414 |         35829773 |          2755641 |                92.86 | FAILED   | Duplicate event records should not exist             | 2026-05-02 03:15:07.452000 |
+|        20260502031153 | DQ003     | RAW.RAW_RECOMART_EVENTS          |        38585414 |                0 |         38585414 |                 0    | PASSED   | Event type should be view, addtocart, or transaction | 2026-05-02 03:15:06.995000 |
+|        20260502031153 | DQ002     | RAW.RAW_RECOMART_EVENTS          |        38585414 |                0 |         38585414 |                 0    | PASSED   | Item ID should not be null                           | 2026-05-02 03:15:06.594000 |
+|        20260502031153 | DQ001     | RAW.RAW_RECOMART_EVENTS          |        38585414 |                0 |         38585414 |                 0    | PASSED   | Visitor ID should not be null                        | 2026-05-02 03:15:06.139000 |
+|        20260502024231 | DQ008     | RAW.RAW_EXTERNAL_PRODUCTS        |            1000 |                0 |                1 |                 0    | PASSED   | External API should return at least one product      | 2026-05-02 02:45:18.292000 |
+|        20260502024231 | DQ007     | RAW.RAW_RECOMART_CATEGORY_TREE   |           16690 |                0 |            16690 |                 0    | PASSED   | Category ID should not be null                       | 2026-05-02 02:45:17.964000 |
+|        20260502024231 | DQ006     | RAW.RAW_RECOMART_ITEM_PROPERTIES |       202759020 |                0 |        202759020 |                 0    | PASSED   | Item property fields should not be null              | 2026-05-02 02:45:17.569000 |
+|        20260502024231 | DQ005     | RAW.RAW_RECOMART_EVENTS          |        27561010 |                0 |         27561010 |                 0    | PASSED   | Transaction events should have transaction_id        | 2026-05-02 02:45:17.051000 |
+|        20260502024231 | DQ004     | RAW.RAW_RECOMART_EVENTS          |        27561010 |         24805369 |          2755641 |                90    | FAILED   | Duplicate event records should not exist             | 2026-05-02 02:45:15.669000 |
+|        20260502024231 | DQ003     | RAW.RAW_RECOMART_EVENTS          |        27561010 |                0 |         27561010 |                 0    | PASSED   | Event type should be view, addtocart, or transaction | 2026-05-02 02:45:15.250000 |
+|        20260502024231 | DQ002     | RAW.RAW_RECOMART_EVENTS          |        27561010 |                0 |         27561010 |                 0    | PASSED   | Item ID should not be null                           | 2026-05-02 02:45:14.803000 |
+|        20260502024231 | DQ001     | RAW.RAW_RECOMART_EVENTS          |        27561010 |                0 |         27561010 |                 0    | PASSED   | Visitor ID should not be null                        | 2026-05-02 02:45:14.200000 |
 |        20260430081645 | DQ008     | RAW.RAW_EXTERNAL_PRODUCTS        |             400 |                0 |                1 |                 0    | PASSED   | External API should return at least one product      | 2026-04-30 08:18:38.685000 |
 |        20260430081645 | DQ007     | RAW.RAW_RECOMART_CATEGORY_TREE   |            6676 |                0 |             6676 |                 0    | PASSED   | Category ID should not be null                       | 2026-04-30 08:18:38.299000 |
 |        20260430081645 | DQ006     | RAW.RAW_RECOMART_ITEM_PROPERTIES |        81103608 |                0 |         81103608 |                 0    | PASSED   | Item property fields should not be null              | 2026-04-30 08:18:37.872000 |
@@ -87,7 +107,7 @@
 
 |   VALIDATION_BATCH_ID | VALIDATION_RUN_TS          | IS_VALID   | VALIDATION_MESSAGE     |   RECORD_COUNT |
 |----------------------:|:---------------------------|:-----------|:-----------------------|---------------:|
-|        20260430081645 | 2026-04-30 08:17:46.363000 | False      | Duplicate event record |        8268763 |
-|        20260430081645 | 2026-04-30 08:17:46.363000 | True       | Valid record           |        2755641 |
+|        20260502031153 | 2026-05-02 03:12:36.485000 | False      | Duplicate event record |       35829773 |
+|        20260502031153 | 2026-05-02 03:12:36.485000 | True       | Valid record           |        2755641 |
 
 ---

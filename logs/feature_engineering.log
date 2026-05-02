@@ -268,3 +268,111 @@
 2026-04-30 20:49:48,161 | INFO | recomart_feature_engineering | Statement executed successfully
 2026-04-30 20:49:48,161 | INFO | recomart_feature_engineering | RecoMart feature engineering completed successfully
 2026-04-30 20:49:48,405 | INFO | recomart_feature_engineering | Snowflake connection closed
+2026-05-02 15:16:03,755 | INFO | recomart_feature_engineering | Starting RecoMart feature engineering pipeline
+2026-05-02 15:16:04,414 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/00_create_feature_objects.sql
+2026-05-02 15:16:04,539 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:04,648 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:04,774 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:04,898 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:05,014 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:05,141 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:05,258 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:05,384 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:05,385 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/01_create_user_activity_features.sql
+2026-05-02 15:16:05,501 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:05,610 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:05,893 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:06,009 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:06,127 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:06,463 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:09,330 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:09,331 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/02_create_item_popularity_features.sql
+2026-05-02 15:16:09,436 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:09,544 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:09,741 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:09,863 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:09,981 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:10,354 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:11,580 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:11,580 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/03_create_user_category_affinity.sql
+2026-05-02 15:16:11,793 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:11,894 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:12,079 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:12,206 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:12,318 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:12,596 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:15,269 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:15,269 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/04_create_item_similarity_features.sql
+2026-05-02 15:16:15,388 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:15,492 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:15,635 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:15,749 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:15,878 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:16,151 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:16,400 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:18,149 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:19,673 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:19,673 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/05_create_training_dataset.sql
+2026-05-02 15:16:19,780 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:19,887 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:20,035 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:20,163 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:20,281 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:20,594 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:22,335 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:16:22,336 | INFO | recomart_feature_engineering | RecoMart feature engineering completed successfully
+2026-05-02 15:16:22,509 | INFO | recomart_feature_engineering | Snowflake connection closed
+2026-05-02 15:45:56,945 | INFO | recomart_feature_engineering | Starting RecoMart feature engineering pipeline
+2026-05-02 15:45:57,534 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/00_create_feature_objects.sql
+2026-05-02 15:45:57,700 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:45:57,814 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:45:57,940 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:45:58,062 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:45:58,178 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:45:58,300 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:45:58,421 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:45:58,538 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:45:58,539 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/01_create_user_activity_features.sql
+2026-05-02 15:45:58,644 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:45:58,741 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:45:58,976 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:45:59,085 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:45:59,192 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:45:59,411 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:02,162 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:02,163 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/02_create_item_popularity_features.sql
+2026-05-02 15:46:02,266 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:02,368 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:02,516 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:02,623 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:02,731 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:02,985 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:03,804 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:03,805 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/03_create_user_category_affinity.sql
+2026-05-02 15:46:03,957 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:04,057 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:04,210 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:04,321 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:04,435 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:04,642 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:06,996 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:06,996 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/04_create_item_similarity_features.sql
+2026-05-02 15:46:07,100 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:07,201 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:07,352 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:07,460 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:07,566 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:07,784 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:07,958 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:09,634 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:11,074 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:11,075 | INFO | recomart_feature_engineering | Executing SQL file: sql/feature_engineering/05_create_training_dataset.sql
+2026-05-02 15:46:11,179 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:11,283 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:11,438 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:11,568 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:11,683 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:11,883 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:13,829 | INFO | recomart_feature_engineering | Statement executed successfully
+2026-05-02 15:46:13,830 | INFO | recomart_feature_engineering | RecoMart feature engineering completed successfully
+2026-05-02 15:46:13,999 | INFO | recomart_feature_engineering | Snowflake connection closed

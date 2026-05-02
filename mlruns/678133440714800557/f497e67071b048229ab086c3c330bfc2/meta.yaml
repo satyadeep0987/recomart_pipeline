@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/sd/Desktop/recomart_pipeline/mlruns/678133440714800557/f497e67071b048229ab086c3c330bfc2/artifacts
+end_time: 1777715205322
+entry_point_name: ''
+experiment_id: '678133440714800557'
+lifecycle_stage: active
+run_id: f497e67071b048229ab086c3c330bfc2
+run_name: recomart_svd_recommender_bf8e9ced-46e7-4aa8-a376-95133dc88830
+run_uuid: f497e67071b048229ab086c3c330bfc2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777715205310
+status: 3
+tags: []
+user_id: sd

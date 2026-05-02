@@ -1,0 +1,145 @@
+2026-05-02 15:36:17,196 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:36:17,196 | INFO | recomart_sql_runner | RecoMart SQL runner started
+2026-05-02 15:36:17,196 | INFO | recomart_sql_runner | Project root: /Users/sd/Desktop/recomart_pipeline
+2026-05-02 15:36:17,196 | INFO | recomart_sql_runner | Environment file: /Users/sd/Desktop/recomart_pipeline/.env
+2026-05-02 15:36:17,196 | INFO | recomart_sql_runner | SQL files received: ['sql/load_raw_from_s3.sql']
+2026-05-02 15:36:18,228 | INFO | recomart_sql_runner | Connected to Snowflake successfully
+2026-05-02 15:36:18,229 | INFO | recomart_sql_runner | Executing SQL file: /Users/sd/Desktop/recomart_pipeline/sql/load_raw_from_s3.sql
+2026-05-02 15:36:18,232 | INFO | recomart_sql_runner | Total SQL statements found: 15
+2026-05-02 15:36:18,232 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:36:18,232 | INFO | recomart_sql_runner | Running statement 1/15
+2026-05-02 15:36:18,232 | INFO | recomart_sql_runner | SQL preview: USE ROLE ACCOUNTADMIN
+2026-05-02 15:36:18,397 | INFO | recomart_sql_runner | Statement 1 completed successfully
+2026-05-02 15:36:18,397 | INFO | recomart_sql_runner | Statement 1: result preview columns=['status']
+2026-05-02 15:36:18,397 | INFO | recomart_sql_runner | Statement 1: row=('Statement executed successfully.',)
+2026-05-02 15:36:18,397 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:36:18,397 | INFO | recomart_sql_runner | Running statement 2/15
+2026-05-02 15:36:18,398 | INFO | recomart_sql_runner | SQL preview: USE WAREHOUSE COMPUTE_WH
+2026-05-02 15:36:18,513 | INFO | recomart_sql_runner | Statement 2 completed successfully
+2026-05-02 15:36:18,514 | INFO | recomart_sql_runner | Statement 2: result preview columns=['status']
+2026-05-02 15:36:18,514 | INFO | recomart_sql_runner | Statement 2: row=('Statement executed successfully.',)
+2026-05-02 15:36:18,514 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:36:18,514 | INFO | recomart_sql_runner | Running statement 3/15
+2026-05-02 15:36:18,514 | INFO | recomart_sql_runner | SQL preview: USE DATABASE RECOMART_DB
+2026-05-02 15:36:18,635 | INFO | recomart_sql_runner | Statement 3 completed successfully
+2026-05-02 15:36:18,635 | INFO | recomart_sql_runner | Statement 3: result preview columns=['status']
+2026-05-02 15:36:18,635 | INFO | recomart_sql_runner | Statement 3: row=('Statement executed successfully.',)
+2026-05-02 15:36:18,636 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:36:18,636 | INFO | recomart_sql_runner | Running statement 4/15
+2026-05-02 15:36:18,636 | INFO | recomart_sql_runner | SQL preview: USE SCHEMA RAW
+2026-05-02 15:36:18,742 | INFO | recomart_sql_runner | Statement 4 completed successfully
+2026-05-02 15:36:18,742 | INFO | recomart_sql_runner | Statement 4: result preview columns=['status']
+2026-05-02 15:36:18,742 | INFO | recomart_sql_runner | Statement 4: row=('Statement executed successfully.',)
+2026-05-02 15:36:18,743 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:36:18,743 | INFO | recomart_sql_runner | Running statement 5/15
+2026-05-02 15:36:18,743 | INFO | recomart_sql_runner | SQL preview: SET LOAD_BATCH_ID = TO_VARCHAR(CURRENT_TIMESTAMP(), 'YYYYMMDDHH24MISS')
+2026-05-02 15:36:18,859 | INFO | recomart_sql_runner | Statement 5 completed successfully
+2026-05-02 15:36:18,859 | INFO | recomart_sql_runner | Statement 5: result preview columns=['status']
+2026-05-02 15:36:18,859 | INFO | recomart_sql_runner | Statement 5: row=('Statement executed successfully.',)
+2026-05-02 15:36:18,859 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:36:18,860 | INFO | recomart_sql_runner | Running statement 6/15
+2026-05-02 15:36:18,860 | INFO | recomart_sql_runner | SQL preview: SELECT $LOAD_BATCH_ID AS CURRENT_LOAD_BATCH_ID
+2026-05-02 15:36:18,974 | INFO | recomart_sql_runner | Statement 6 completed successfully
+2026-05-02 15:36:18,975 | INFO | recomart_sql_runner | Statement 6: result preview columns=['CURRENT_LOAD_BATCH_ID']
+2026-05-02 15:36:18,975 | INFO | recomart_sql_runner | Statement 6: row=('20260502030618',)
+2026-05-02 15:36:18,975 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:36:18,975 | INFO | recomart_sql_runner | Running statement 7/15
+2026-05-02 15:36:18,976 | INFO | recomart_sql_runner | SQL preview: COPY INTO RAW.RAW_RECOMART_EVENTS ( EVENT_TIMESTAMP_MS, VISITOR_ID, EVENT_TYPE, ITEM_ID, TRANSACTION_ID, SOURCE_FILE_NAME, INGESTION_DATE, BATCH_ID ) FROM ( SELECT TRY_TO_NUMBER($1) AS EVENT_TIMESTAMP_MS, TRY_TO_NUMBER($2) AS VISITOR_ID, $3::VARCHAR AS EVENT_TYPE, TRY_TO_NUMBER($4) AS ITEM_ID, TRY_T
+2026-05-02 15:36:25,251 | INFO | recomart_sql_runner | Statement 7 completed successfully
+2026-05-02 15:36:25,251 | INFO | recomart_sql_runner | Statement 7: result preview columns=['file', 'status', 'rows_parsed', 'rows_loaded', 'error_limit', 'errors_seen', 'first_error', 'first_error_line', 'first_error_character', 'first_error_column_name']
+2026-05-02 15:36:25,251 | INFO | recomart_sql_runner | Statement 7: row=('s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-04-30/events.csv', 'LOADED', 2756101, 2756101, 2756101, 0, None, None, None, None)
+2026-05-02 15:36:25,252 | INFO | recomart_sql_runner | Statement 7: row=('s3://recomartdatalake/raw/recomart/events/ingestion_date=2026-05-02/events.csv', 'LOADED', 2756101, 2756101, 2756101, 0, None, None, None, None)
+2026-05-02 15:36:25,252 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:36:25,252 | INFO | recomart_sql_runner | Running statement 8/15
+2026-05-02 15:36:25,252 | INFO | recomart_sql_runner | SQL preview: COPY INTO RAW.RAW_RECOMART_ITEM_PROPERTIES ( PROPERTY_TIMESTAMP_MS, ITEM_ID, PROPERTY_NAME, PROPERTY_VALUE, SOURCE_FILE_NAME, INGESTION_DATE, BATCH_ID ) FROM ( SELECT TRY_TO_NUMBER($1) AS PROPERTY_TIMESTAMP_MS, TRY_TO_NUMBER($2) AS ITEM_ID, $3::VARCHAR AS PROPERTY_NAME, $4::VARCHAR AS PROPERTY_VALUE
+2026-05-02 15:36:48,086 | INFO | recomart_sql_runner | Statement 8 completed successfully
+2026-05-02 15:36:48,087 | INFO | recomart_sql_runner | Statement 8: result preview columns=['file', 'status', 'rows_parsed', 'rows_loaded', 'error_limit', 'errors_seen', 'first_error', 'first_error_line', 'first_error_character', 'first_error_column_name']
+2026-05-02 15:36:48,087 | INFO | recomart_sql_runner | Statement 8: row=('s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part2.csv', 'LOADED', 9275903, 9275903, 9275903, 0, None, None, None, None)
+2026-05-02 15:36:48,087 | INFO | recomart_sql_runner | Statement 8: row=('s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-04-30/item_properties_part2.csv', 'LOADED', 9275903, 9275903, 9275903, 0, None, None, None, None)
+2026-05-02 15:36:48,087 | INFO | recomart_sql_runner | Statement 8: row=('s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-04-30/item_properties_part1.csv', 'LOADED', 10999999, 10999999, 10999999, 0, None, None, None, None)
+2026-05-02 15:36:48,087 | INFO | recomart_sql_runner | Statement 8: row=('s3://recomartdatalake/raw/recomart/item_properties/ingestion_date=2026-05-02/item_properties_part1.csv', 'LOADED', 10999999, 10999999, 10999999, 0, None, None, None, None)
+2026-05-02 15:36:48,087 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:36:48,087 | INFO | recomart_sql_runner | Running statement 9/15
+2026-05-02 15:36:48,087 | INFO | recomart_sql_runner | SQL preview: COPY INTO RAW.RAW_RECOMART_CATEGORY_TREE ( CATEGORY_ID, PARENT_CATEGORY_ID, SOURCE_FILE_NAME, INGESTION_DATE, BATCH_ID ) FROM ( SELECT TRY_TO_NUMBER($1) AS CATEGORY_ID, TRY_TO_NUMBER($2) AS PARENT_CATEGORY_ID, METADATA$FILENAME AS SOURCE_FILE_NAME, TRY_TO_DATE( REGEXP_SUBSTR( METADATA$FILENAME, 'ing
+2026-05-02 15:36:49,520 | INFO | recomart_sql_runner | Statement 9 completed successfully
+2026-05-02 15:36:49,521 | INFO | recomart_sql_runner | Statement 9: result preview columns=['file', 'status', 'rows_parsed', 'rows_loaded', 'error_limit', 'errors_seen', 'first_error', 'first_error_line', 'first_error_character', 'first_error_column_name']
+2026-05-02 15:36:49,521 | INFO | recomart_sql_runner | Statement 9: row=('s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-04-30/category_tree.csv', 'LOADED', 1669, 1669, 1669, 0, None, None, None, None)
+2026-05-02 15:36:49,521 | INFO | recomart_sql_runner | Statement 9: row=('s3://recomartdatalake/raw/recomart/category_tree/ingestion_date=2026-05-02/category_tree.csv', 'LOADED', 1669, 1669, 1669, 0, None, None, None, None)
+2026-05-02 15:36:49,521 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:36:49,521 | INFO | recomart_sql_runner | Running statement 10/15
+2026-05-02 15:36:49,522 | INFO | recomart_sql_runner | SQL preview: COPY INTO RAW.RAW_EXTERNAL_PRODUCTS ( PRODUCT_JSON, SOURCE_FILE_NAME, INGESTION_DATE, BATCH_ID ) FROM ( SELECT $1 AS PRODUCT_JSON, METADATA$FILENAME AS SOURCE_FILE_NAME, TRY_TO_DATE( REGEXP_SUBSTR( METADATA$FILENAME, 'ingestion_date=([0-9]{4}-[0-9]{2}-[0-9]{2})', 1, 1, 'e', 1 ) ) AS INGESTION_DATE, 
+2026-05-02 15:36:51,261 | INFO | recomart_sql_runner | Statement 10 completed successfully
+2026-05-02 15:36:51,261 | INFO | recomart_sql_runner | Statement 10: result preview columns=['file', 'status', 'rows_parsed', 'rows_loaded', 'error_limit', 'errors_seen', 'first_error', 'first_error_line', 'first_error_character', 'first_error_column_name']
+2026-05-02 15:36:51,261 | INFO | recomart_sql_runner | Statement 10: row=('s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-05-02/products.json', 'LOADED', 1, 1, 1, 0, None, None, None, None)
+2026-05-02 15:36:51,261 | INFO | recomart_sql_runner | Statement 10: row=('s3://recomartdatalake/raw/external_api/dummyjson_products/ingestion_date=2026-04-30/products.json', 'LOADED', 1, 1, 1, 0, None, None, None, None)
+2026-05-02 15:36:51,261 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:36:51,261 | INFO | recomart_sql_runner | Running statement 11/15
+2026-05-02 15:36:51,262 | INFO | recomart_sql_runner | SQL preview: INSERT INTO OPS.INGESTION_AUDIT_LOG ( BATCH_ID, SOURCE_SYSTEM, SOURCE_NAME, SOURCE_PATH, TARGET_TABLE, FILE_NAME, ROWS_LOADED, ROWS_FAILED, INGESTION_STATUS, ERROR_MESSAGE, START_TS, END_TS ) SELECT $LOAD_BATCH_ID, 'RECOMART', 'events', 's3://recomartdatalake/raw/recomart/events/', 'RAW.RAW_RECOMART
+2026-05-02 15:36:51,875 | INFO | recomart_sql_runner | Statement 11 completed successfully
+2026-05-02 15:36:51,876 | INFO | recomart_sql_runner | Statement 11: result preview columns=['number of rows inserted']
+2026-05-02 15:36:51,876 | INFO | recomart_sql_runner | Statement 11: row=(1,)
+2026-05-02 15:36:51,876 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:36:51,876 | INFO | recomart_sql_runner | Running statement 12/15
+2026-05-02 15:36:51,876 | INFO | recomart_sql_runner | SQL preview: INSERT INTO OPS.INGESTION_AUDIT_LOG ( BATCH_ID, SOURCE_SYSTEM, SOURCE_NAME, SOURCE_PATH, TARGET_TABLE, FILE_NAME, ROWS_LOADED, ROWS_FAILED, INGESTION_STATUS, ERROR_MESSAGE, START_TS, END_TS ) SELECT $LOAD_BATCH_ID, 'RECOMART', 'item_properties', 's3://recomartdatalake/raw/recomart/item_properties/',
+2026-05-02 15:36:52,387 | INFO | recomart_sql_runner | Statement 12 completed successfully
+2026-05-02 15:36:52,387 | INFO | recomart_sql_runner | Statement 12: result preview columns=['number of rows inserted']
+2026-05-02 15:36:52,388 | INFO | recomart_sql_runner | Statement 12: row=(1,)
+2026-05-02 15:36:52,388 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:36:52,388 | INFO | recomart_sql_runner | Running statement 13/15
+2026-05-02 15:36:52,388 | INFO | recomart_sql_runner | SQL preview: INSERT INTO OPS.INGESTION_AUDIT_LOG ( BATCH_ID, SOURCE_SYSTEM, SOURCE_NAME, SOURCE_PATH, TARGET_TABLE, FILE_NAME, ROWS_LOADED, ROWS_FAILED, INGESTION_STATUS, ERROR_MESSAGE, START_TS, END_TS ) SELECT $LOAD_BATCH_ID, 'RECOMART', 'category_tree', 's3://recomartdatalake/raw/recomart/category_tree/', 'RA
+2026-05-02 15:36:52,770 | INFO | recomart_sql_runner | Statement 13 completed successfully
+2026-05-02 15:36:52,771 | INFO | recomart_sql_runner | Statement 13: result preview columns=['number of rows inserted']
+2026-05-02 15:36:52,771 | INFO | recomart_sql_runner | Statement 13: row=(1,)
+2026-05-02 15:36:52,771 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:36:52,771 | INFO | recomart_sql_runner | Running statement 14/15
+2026-05-02 15:36:52,771 | INFO | recomart_sql_runner | SQL preview: INSERT INTO OPS.INGESTION_AUDIT_LOG ( BATCH_ID, SOURCE_SYSTEM, SOURCE_NAME, SOURCE_PATH, TARGET_TABLE, FILE_NAME, ROWS_LOADED, ROWS_FAILED, INGESTION_STATUS, ERROR_MESSAGE, START_TS, END_TS ) SELECT $LOAD_BATCH_ID, 'DUMMYJSON_API', 'external_products', 's3://recomartdatalake/raw/external_api/dummyjs
+2026-05-02 15:36:53,206 | INFO | recomart_sql_runner | Statement 14 completed successfully
+2026-05-02 15:36:53,207 | INFO | recomart_sql_runner | Statement 14: result preview columns=['number of rows inserted']
+2026-05-02 15:36:53,207 | INFO | recomart_sql_runner | Statement 14: row=(1,)
+2026-05-02 15:36:53,207 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:36:53,207 | INFO | recomart_sql_runner | Running statement 15/15
+2026-05-02 15:36:53,207 | INFO | recomart_sql_runner | SQL preview: SELECT 'RAW_RECOMART_EVENTS' AS TABLE_NAME, $LOAD_BATCH_ID AS BATCH_ID, COUNT(*) AS ROW_COUNT FROM RAW.RAW_RECOMART_EVENTS WHERE BATCH_ID = $LOAD_BATCH_ID UNION ALL SELECT 'RAW_RECOMART_ITEM_PROPERTIES' AS TABLE_NAME, $LOAD_BATCH_ID AS BATCH_ID, COUNT(*) AS ROW_COUNT FROM RAW.RAW_RECOMART_ITEM_PROPE
+2026-05-02 15:36:53,729 | INFO | recomart_sql_runner | Statement 15 completed successfully
+2026-05-02 15:36:53,730 | INFO | recomart_sql_runner | Statement 15: result preview columns=['TABLE_NAME', 'BATCH_ID', 'ROW_COUNT']
+2026-05-02 15:36:53,730 | INFO | recomart_sql_runner | Statement 15: row=('RAW_RECOMART_EVENTS', '20260502030618', 5512202)
+2026-05-02 15:36:53,730 | INFO | recomart_sql_runner | Statement 15: row=('RAW_RECOMART_ITEM_PROPERTIES', '20260502030618', 40551804)
+2026-05-02 15:36:53,730 | INFO | recomart_sql_runner | Statement 15: row=('RAW_RECOMART_CATEGORY_TREE', '20260502030618', 3338)
+2026-05-02 15:36:53,731 | INFO | recomart_sql_runner | Statement 15: row=('RAW_EXTERNAL_PRODUCTS', '20260502030618', 2)
+2026-05-02 15:36:53,731 | INFO | recomart_sql_runner | All SQL files executed successfully
+2026-05-02 15:36:53,903 | INFO | recomart_sql_runner | Snowflake connection closed
+2026-05-02 15:36:53,903 | INFO | recomart_sql_runner | RecoMart SQL runner finished
+2026-05-02 15:36:53,903 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:46:43,751 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:46:43,752 | INFO | recomart_sql_runner | RecoMart SQL runner started
+2026-05-02 15:46:43,752 | INFO | recomart_sql_runner | Project root: /Users/sd/Desktop/recomart_pipeline
+2026-05-02 15:46:43,752 | INFO | recomart_sql_runner | Environment file: /Users/sd/Desktop/recomart_pipeline/.env
+2026-05-02 15:46:43,752 | INFO | recomart_sql_runner | SQL files received: ['sql/orchestration/final_health_check.sql']
+2026-05-02 15:46:44,372 | INFO | recomart_sql_runner | Connected to Snowflake successfully
+2026-05-02 15:46:44,372 | INFO | recomart_sql_runner | Executing SQL file: /Users/sd/Desktop/recomart_pipeline/sql/orchestration/final_health_check.sql
+2026-05-02 15:46:44,373 | INFO | recomart_sql_runner | Total SQL statements found: 3
+2026-05-02 15:46:44,374 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:46:44,374 | INFO | recomart_sql_runner | Running statement 1/3
+2026-05-02 15:46:44,374 | INFO | recomart_sql_runner | SQL preview: USE ROLE ACCOUNTADMIN
+2026-05-02 15:46:44,644 | INFO | recomart_sql_runner | Statement 1 completed successfully
+2026-05-02 15:46:44,645 | INFO | recomart_sql_runner | Statement 1: result preview columns=['status']
+2026-05-02 15:46:44,645 | INFO | recomart_sql_runner | Statement 1: row=('Statement executed successfully.',)
+2026-05-02 15:46:44,645 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:46:44,645 | INFO | recomart_sql_runner | Running statement 2/3
+2026-05-02 15:46:44,645 | INFO | recomart_sql_runner | SQL preview: USE DATABASE RECOMART_DB
+2026-05-02 15:46:44,770 | INFO | recomart_sql_runner | Statement 2 completed successfully
+2026-05-02 15:46:44,771 | INFO | recomart_sql_runner | Statement 2: result preview columns=['status']
+2026-05-02 15:46:44,771 | INFO | recomart_sql_runner | Statement 2: row=('Statement executed successfully.',)
+2026-05-02 15:46:44,771 | INFO | recomart_sql_runner | ================================================================================
+2026-05-02 15:46:44,771 | INFO | recomart_sql_runner | Running statement 3/3
+2026-05-02 15:46:44,771 | INFO | recomart_sql_runner | SQL preview: SELECT 'RAW_EVENTS' AS CHECK_NAME, COUNT(*) AS RECORD_COUNT FROM RAW.RAW_RECOMART_EVENTS UNION ALL SELECT 'VALIDATED_EVENTS' AS CHECK_NAME, COUNT(*) AS RECORD_COUNT FROM VALIDATED.RECOMART_EVENTS UNION ALL SELECT 'CURATED_USER_ITEM_INTERACTIONS' AS CHECK_NAME, COUNT(*) AS RECORD_COUNT FROM CURATED.U
+2026-05-02 15:46:44,924 | INFO | recomart_sql_runner | Statement 3 completed successfully
+2026-05-02 15:46:44,924 | INFO | recomart_sql_runner | Statement 3: result preview columns=['CHECK_NAME', 'RECORD_COUNT']
+2026-05-02 15:46:44,924 | INFO | recomart_sql_runner | Statement 3: row=('RAW_EVENTS', 38585414)
+2026-05-02 15:46:44,924 | INFO | recomart_sql_runner | Statement 3: row=('VALIDATED_EVENTS', 38585414)
+2026-05-02 15:46:44,924 | INFO | recomart_sql_runner | Statement 3: row=('CURATED_USER_ITEM_INTERACTIONS', 10725895)
+2026-05-02 15:46:44,925 | INFO | recomart_sql_runner | Statement 3: row=('OFFLINE_FEATURES', 10725895)
+2026-05-02 15:46:44,925 | INFO | recomart_sql_runner | Statement 3: row=('MODEL_RUNS', 7)
+2026-05-02 15:46:44,925 | INFO | recomart_sql_runner | All SQL files executed successfully
+2026-05-02 15:46:45,122 | INFO | recomart_sql_runner | Snowflake connection closed
+2026-05-02 15:46:45,122 | INFO | recomart_sql_runner | RecoMart SQL runner finished
+2026-05-02 15:46:45,122 | INFO | recomart_sql_runner | ================================================================================
